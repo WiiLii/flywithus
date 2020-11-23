@@ -1,0 +1,43 @@
+h2 {
+	margin-top: 1em;
+	text-align: center;
+}
+
+#headerContent {
+	width: 100%;
+	background-color: #464646;
+	margin-bottom: 1em;
+}
+
+#headerContent img {
+	margin: 0 auto;
+	display: block;
+	padding: 5px 0;
+}
+
+#homeBtn {
+	margin: 0 auto;
+	display: block;
+}
+
+.footer {
+	padding-top: 0.8em;
+	color: #FFFFFF;
+	width: 100%;
+}
+
+.container {
+	background-color: #edece4;
+}
+
+@media(max-width:767px) {
+	.img-responsive {
+		display: none;
+	}
+	#headerContent {
+		margin-bottom: 0;
+	}
+	p {
+		text-align: left;
+	}
+}

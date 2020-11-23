@@ -1,0 +1,152 @@
+a.navbar-brand {
+    padding: 0;
+}
+
+.navbar-brand>img {
+    height: 100%;
+    margin: auto;
+    width: auto;
+}
+
+.navbar-header{
+    left: 50%;
+    position: relative;
+    transform: translateX(-50%);
+}
+
+.container {
+ margin-top: 50px;
+}
+
+#headerContent {
+    width: 100%;
+    background-color: #464646;
+}
+
+#headerContent img {
+    margin: 0 auto;
+    display: block;
+    padding: 5px 0;
+}
+
+h2 {
+    text-align: center;
+    font-family: 'Lobster Two', cursive;
+}
+
+#banner {
+    margin-top: 1em;
+    width: 100%;
+    height: 100%;
+}
+
+#loginButton {
+    display: none;
+}
+
+#mobileDirectory {
+    display: none;
+}
+
+.container {
+    background-color: #edece4;
+}
+
+.panel {
+    margin-top: 1em;
+}
+
+#submitBtn {
+    float: right;
+    border-radius: 25px;
+    text-align: justify;
+}
+
+.subtext {
+    font-size: small;
+    color: #FFF;
+}
+
+.footer {
+    padding-top: 0.8em;
+    color: #FFFFFF;
+    width: 100%;
+}
+
+@media(max-width:767px) {
+    h1, p{
+        font-weight: 600;
+    }
+    #loginButton {
+        font-family: 'Lobster Two', cursive;
+        display: inline-block;
+        width: 100%;
+        margin-bottom: .5em;
+        padding: 0.5em;
+        background-color: #464646;
+        border-color: #464646;
+        font-weight: 700;
+        font-size: 2em;
+        color: #FFF;
+    }
+
+    .mobile-btn {
+        display: inline-block;
+        width: 100%;
+        margin-bottom: .5em;
+        background-color: #464646;
+        border-color: #464646;
+        font-weight: 700;
+        color: #3ca727;
+    }
+
+    #loginButton:hover,.mobile-btn:hover {
+        background-color: #5D5554;
+        border-color: #5D5554;
+        color: #3ca727;
+    }
+
+    a {
+        text-align: center;
+        width: 100%;
+        padding: 1em;
+    }
+
+    #desktopLogIn, #directory, #banner {
+        display: none;
+    }
+
+    div#mobileDirectory {
+        display: inline-block;
+        margin-left: 0.5em;
+        margin-right: 0.5em;
+    }
+
+    .panel {
+        margin-top: 0;
+        margin-bottom: 1em;
+    }
+
+    .container {
+        background-color: transparent;
+    }
+
+    body {
+        background-color: #edece4;
+    }
+
+    button.navbar-toggle{
+        display: none;
+    }
+
+    a.navbar-brand>img {
+        height: 100%;
+        padding: 0;
+        width: auto;
+    }
+
+    .navbar-inverse {
+        padding: 5px 0;
+    }
+
+}
