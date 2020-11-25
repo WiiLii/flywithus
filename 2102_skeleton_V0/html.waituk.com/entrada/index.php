@@ -339,12 +339,19 @@ if (isset($_POST['session'])) {
 			</div>
 			<!-- main container -->
 			<main id="main">
+
 				<form class="" action="<?php $_SERVER["PHP_SELF"]; ?>" method="post">
-					<!---<button type="button" data-toggle="modal" data-target="#surveyModal" name="">survey</button>-->
-					<button type="submit" data-toggle="modal" data-target="#surveyModal" name="session">survey</button>
+
+					<?php if (isset($_SESSION['email'])) {
+					echo '<button type="submit" data-toggle="modal" data-target="#surveyModal" name="session">survey</button>';
+						echo '<button type="submit" data-toggle="modal" data-target="#surveyModal1" name="session1">takeagn</button>';
+					}
+					else{
+							echo '<button type="submit" data-toggle="modal" data-target="#surveyModal1" name="session">survey</button>';
+					}?>
 				</form>
 				<!---- odal to show --->
-			<!---	<form class="" action="<?php $_SERVER["PHP_SELF"]; ?>" method="post">
+			<!---	<form class="" action="<?php //$_SERVER["PHP_SELF"]; ?>" method="post">
 				<div class="modal fade" id="surveyModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 			    <div class="modal-dialog" role="document">
 			      <div class="modal-content">

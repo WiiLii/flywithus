@@ -39,29 +39,38 @@ if(!isset($_SESSION['email'])){
               <span class="icon icon-user"></span>
               <span class="text">Login</span>
             </a>
-          </li>';
- }else {
-   echo '<li class="visible-xs visible-sm">
-       <a href="">
-         <span class="icon icon-user"></span>
-         <span class="text">Login</span>
-       </a>
-     </li>';
- }
-  // code...
-
- ?>
-          <li class="visible-xs visible-sm">
-            <a href="login.php">
-              <span class="icon icon-user"></span>
-              <span class="text">Login</span>
-            </a>
           </li>
           <li class="hidden-xs hidden-sm v-divider">
             <a href="login.php">
               <span class="icon icon-user"></span>
             </a>
-          </li>
+          </li>';
+ }else {
+   echo '<li class="visible-xs visible-sm nav-visible dropdown last-dropdown v-divider">
+           <a href="logout.php" data-toggle="dropdown">
+             <span class="icon icon-user"></span>
+           </a>
+           <div class="dropdown-menu dropdown-xs">
+             <div class="drop-wrap cart-wrap">
+
+               <ul class="cart-list">
+
+                   <div class="text-holder">
+
+                     <div class="text-wrap">
+                       <strong class="name"style="float:rght;"><a href="logout.php">log Out</a></strong>
+
+                     </div>
+                   </div>
+               </ul>
+             </div>
+           </div>
+         </li>';
+ }
+  // code...
+
+ ?>
+
           <li class="visible-xs visible-sm nav-visible dropdown last-dropdown v-divider">
             <a href="my-cart.php" data-toggle="dropdown">
               <span class="icon icon-cart"></span>
