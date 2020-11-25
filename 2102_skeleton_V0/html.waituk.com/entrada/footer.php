@@ -4,15 +4,7 @@
  <footer id="footer">
    <div class="container">
      <!-- newsletter form -->
-     <form action="https://html.waituk.com/entrada/php/subscribe.html" id="signup" method="post" class="newsletter-form">
-       <fieldset>
-         <div class="input-holder">
-           <input type="email" class="form-control" placeholder="Email Address" name="subscriber_email" id="subscriber_email">
-           <input type="submit" value="GO">
-         </div>
-         <span class="info" id="subscribe_message">To receive news, updates and tour packages via email.</span>
-       </fieldset>
-     </form>
+
      <!-- footer links -->
      <div class="row footer-holder">
        <nav class="col-sm-4 col-lg-2 footer-nav active">

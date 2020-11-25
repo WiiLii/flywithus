@@ -33,18 +33,18 @@
 
 
           <li class="visible-xs visible-sm">
-            <a href="login.html">
+            <a href="login.php">
               <span class="icon icon-user"></span>
               <span class="text">Login</span>
             </a>
           </li>
           <li class="hidden-xs hidden-sm v-divider">
-            <a href="login.html">
+            <a href="login.php">
               <span class="icon icon-user"></span>
             </a>
           </li>
           <li class="visible-xs visible-sm nav-visible dropdown last-dropdown v-divider">
-            <a href="my-cart.html" data-toggle="dropdown">
+            <a href="my-cart.php" data-toggle="dropdown">
               <span class="icon icon-cart"></span>
               <span class="text hidden-md hidden-lg">Cart</span>
               <span class="text hidden-xs hidden-sm">3</span>
@@ -158,7 +158,7 @@
     </nav>
   </div>
   <!-- search form -->
-  <form class="search-form" action="#">
+
     <fieldset>
       <a href="#" class="search-opener hidden-md hidden-lg">
         <span class="icon-search"></span>
@@ -233,5 +233,5 @@
         </div>
       </div>
     </fieldset>
-  </form>
+
 </header>

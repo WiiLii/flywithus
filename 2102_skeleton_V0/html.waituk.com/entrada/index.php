@@ -1,3 +1,17 @@
+<?php
+
+if (isset($_POST['session'])) {
+		session_start();
+	if(!isset($_SESSION['email'])){
+
+				header('location:login.php');
+
+	}
+	else{
+				header('location:survey.php');
+	}
+}
+			?>
 <!DOCTYPE html>
 <html>
 
@@ -37,6 +51,8 @@
 	<div id="wrapper">
 		<div class="page-wrapper">
 		<?php include 'header.php'; ?>
+
+
 			<!-- main banner -->
 			<div class="banner banner-home">
 				<!-- revolution slider starts -->
@@ -130,6 +146,9 @@
 									data-actions='[{"event":"click","action":"jumptoslide","slide":"rs-164","delay":""}]'
 									data-responsive_offset="on">
 									<a class="btn btn-banner" href="#">PURCHASE</a>
+
+
+
 								</div>
 							</li>
 
@@ -320,6 +339,10 @@
 			</div>
 			<!-- main container -->
 			<main id="main">
+
+					<form class="" action="<?php $_SERVER["PHP_SELF"] ?>" method="post">
+							<button type="submit" name="session">survey</button>
+					</form>
 
 				<!-- article list holder -->
 				<div class="content-block content-spacing">
@@ -690,7 +713,7 @@
 					</div>
 				</section>
 
-			
+
 			</main>
 		</div>
 		<!-- main footer -->
