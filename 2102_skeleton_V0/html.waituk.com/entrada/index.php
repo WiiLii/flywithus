@@ -339,10 +339,34 @@ if (isset($_POST['session'])) {
 			</div>
 			<!-- main container -->
 			<main id="main">
+				<form class="" action="<?php $_SERVER["PHP_SELF"]; ?>" method="post">
+					<!---<button type="button" data-toggle="modal" data-target="#surveyModal" name="">survey</button>-->
+					<button type="submit" data-toggle="modal" data-target="#surveyModal" name="session">survey</button>
+				</form>
+				<!---- odal to show --->
+			<!---	<form class="" action="<?php $_SERVER["PHP_SELF"]; ?>" method="post">
+				<div class="modal fade" id="surveyModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			    <div class="modal-dialog" role="document">
+			      <div class="modal-content">
+			        <div class="modal-header">
+			          <h5 class="modal-title" id="exampleModalLabel">please log in</h5>
+			          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+			            <span aria-hidden="true">×</span>
+			          </button>
+			        </div>
+			        <div class="modal-body">click here</div>
 
-					<form class="" action="<?php $_SERVER["PHP_SELF"] ?>" method="post">
-							<button type="submit" name="session">survey</button>
-					</form>
+			        <div class="modal-footer">
+			          <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+			          <a class="btn btn-primary" type="submit" name="session">survey</a>
+			        </div>
+								</form>
+			      </div>
+			    </div>
+			  </div>--->
+
+
+
 
 				<!-- article list holder -->
 				<div class="content-block content-spacing">

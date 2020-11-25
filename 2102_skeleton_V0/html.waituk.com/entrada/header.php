@@ -31,7 +31,26 @@
               <li><a href="hotels.php" >Hotels</a </li>
               <li><a href="flights.php">Flights</a></li>
 
+<?php
+session_start();
+if(!isset($_SESSION['email'])){
+				echo '<li class="visible-xs visible-sm">
+            <a href="login.php">
+              <span class="icon icon-user"></span>
+              <span class="text">Login</span>
+            </a>
+          </li>';
+ }else {
+   echo '<li class="visible-xs visible-sm">
+       <a href="">
+         <span class="icon icon-user"></span>
+         <span class="text">Login</span>
+       </a>
+     </li>';
+ }
+  // code...
 
+ ?>
           <li class="visible-xs visible-sm">
             <a href="login.php">
               <span class="icon icon-user"></span>

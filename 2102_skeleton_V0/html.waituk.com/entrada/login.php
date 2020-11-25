@@ -57,6 +57,7 @@
 								<div class="top-box">
 									<span class="holder height">Login</span>
 								</div>
+								<form class="" action="login_process.php" method="post">
 								<div class="form-holder">
 									<div class="wrap">
 										<div class="hold">
@@ -68,10 +69,11 @@
 											<input type="password" name="password" id="password" class="form-control">
 										</div>
 										<div class="btn-hold">
-											<button type="submit" class="btn btn-default">Login</button>
+											<button type="submit" name="login_submit" class="btn btn-default">Login</button>
 										</div>
 									</div>
 								</div>
+							</form>
 							</div>
 							<div class="col-md-6">
 								<div class="top-box">
