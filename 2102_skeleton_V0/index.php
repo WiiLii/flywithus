@@ -14,8 +14,6 @@ if (isset($_POST['session'])) {
 			?>
 <!DOCTYPE html>
 <html>
-
-<!-- Mirrored from html.waituk.com/entrada/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 17 Sep 2020 05:32:17 GMT -->
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -195,7 +193,7 @@ if (isset($_POST['session'])) {
 										<article class="col-sm-6 col-md-4 article has-hover-s3">
 											<div class="img-wrap">
 												<a href="#">
-													<img src="../../html-i0ipxhws.netdna-ssl.com/entrada/img/listing/img-01.jpg" height="215" width="370" alt="image description">
+													<img src="img/listing/img-01.jpg" height="215" width="370" alt="image description">
 												</a>
 												<div class="img-caption text-uppercase">Discover Timeless</div>
 												<div class="hover-article">
@@ -365,7 +363,7 @@ if (isset($_POST['session'])) {
 										<article class="col-sm-6 col-md-4 article has-hover-s3">
 											<div class="img-wrap">
 												<a href="#">
-													<img src="../../html-i0ipxhws.netdna-ssl.com/entrada/img/listing/img-01.jpg" height="215" width="370" alt="image description">
+													<img src="img/listing/img-01.jpg" height="215" width="370" alt="image description">
 												</a>
 												<div class="img-caption text-uppercase">Discover Timeless</div>
 												<div class="hover-article">
@@ -535,7 +533,7 @@ if (isset($_POST['session'])) {
 										<article class="col-sm-6 col-md-4 article has-hover-s3">
 											<div class="img-wrap">
 												<a href="#">
-													<img src="../../html-i0ipxhws.netdna-ssl.com/entrada/img/listing/img-01.jpg" height="215" width="370" alt="image description">
+													<img src="img/listing/img-01.jpg" height="215" width="370" alt="image description">
 												</a>
 												<div class="img-caption text-uppercase">Discover Timeless</div>
 												<div class="hover-article">
@@ -705,7 +703,7 @@ if (isset($_POST['session'])) {
 										<article class="col-sm-6 col-md-4 article has-hover-s3">
 											<div class="img-wrap">
 												<a href="#">
-													<img src="../../html-i0ipxhws.netdna-ssl.com/entrada/img/listing/img-01.jpg" height="215" width="370" alt="image description">
+													<img src="img/listing/img-01.jpg" height="215" width="370" alt="image description">
 												</a>
 												<div class="img-caption text-uppercase">Discover Timeless</div>
 												<div class="hover-article">
@@ -913,13 +911,11 @@ if (isset($_POST['session'])) {
 	<script type="text/javascript" src="vendors/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
 	<script type="text/javascript" src="vendors/revolution/js/extensions/revolution.extension.actions.min.js"></script>
 	<script type="text/javascript" src="vendors/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
-	<script type="text/javascript" src="../../html-i0ipxhws.netdna-ssl.com/entrada/vendors/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
+	<script type="text/javascript" src="vendors/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
 	<script type="text/javascript" src="vendors/revolution/js/extensions/revolution.extension.video.min.js"></script>
 	<script type="text/javascript" src="vendors/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
 	<script type="text/javascript" src="vendors/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
 	<!-- revolutions slider script -->
 	<script src="js/revolution.js"></script>
 </body>
-
-<!-- Mirrored from html.waituk.com/entrada/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 17 Sep 2020 05:36:31 GMT -->
 </html>

@@ -9,6 +9,7 @@
     <div class="logo" >
       <a href="index.php">
         <img class="normal" src="img/brand.png" alt="FlyWithUs">
+        <img class="gray-logo" src="img/brand.png" alt="FlyWithUs">
       </a>
     </div>
     <!-- main navigation -->
