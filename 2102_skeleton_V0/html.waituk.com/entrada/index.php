@@ -1,3 +1,17 @@
+<?php
+
+if (isset($_POST['session'])) {
+		session_start();
+	if(!isset($_SESSION['email'])){
+
+				header('location:login.php');
+
+	}
+	else{
+				header('location:survey.php');
+	}
+}
+			?>
 <!DOCTYPE html>
 <html>
 
@@ -138,6 +152,17 @@
 			</div>
 			<!-- main container -->
 			<main id="main">
+				<!--- session for the buttons ya -->
+				<form class="" action="<?php $_SERVER["PHP_SELF"]; ?>" method="post">
+
+					<?php if (isset($_SESSION['email'])) {
+					echo '<button type="submit" data-toggle="modal" data-target="#surveyModal" name="session">survey</button>';
+						echo '<button type="submit" data-toggle="modal" data-target="#surveyModal1" name="session1">takeagn</button>';
+					}
+					else{
+							echo '<button type="submit" data-toggle="modal" data-target="#surveyModal1" name="session">survey</button>';
+					}?>
+				</form>
 				<!-- article list holder -->
 				<div class="content-block content-spacing">
 					<div class="container">

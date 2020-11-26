@@ -1,3 +1,5 @@
+<?php
+ ?>
 <!DOCTYPE html>
 <html>
 
@@ -6,7 +8,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>flywithus</title>
+	<title>Entrada</title>
 	<!-- favion -->
 	<link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
 	<!-- link to font awesome -->
@@ -49,58 +51,69 @@
 				</div>
 				<div class="inner-main common-spacing container">
 					<!-- form -->
-					<form class="twocol-form" action="#">
+					<div class="twocol-form" >
 						<div class="row">
 							<div class="col-md-6">
 								<div class="top-box">
 									<span class="holder height">Login</span>
 								</div>
+								<form class="" action="login_process.php" method="post">
 								<div class="form-holder">
 									<div class="wrap">
 										<div class="hold">
-											<label for="uname">Username or Email</label>
-											<input type="text" id="uname" class="form-control">
+											<label for="email">Email</label>
+											<input type="text" id="email" name="email" placeholder="e.g.mama@gmail.com"class="form-control">
 										</div>
 										<div class="hold">
-											<label for="pass">Password</label>
-											<input type="password" id="pass" class="form-control">
+											<label for="password">Password</label>
+											<input type="password" name="password" id="password" class="form-control">
 										</div>
 										<div class="btn-hold">
-											<button type="submit" class="btn btn-default">Login</button>
+											<button type="submit" name="login_submit" class="btn btn-default">Login</button>
 										</div>
 									</div>
 								</div>
+							</form>
 							</div>
 							<div class="col-md-6">
 								<div class="top-box">
 									<span class="holder height">Register</span>
 								</div>
-								<div class="form-holder">
+								<!--- form submit to register --->
+
+
+							<form class="" action="login_process.php" method="post">
+										<div class="form-holder">
 									<div class="wrap">
 										<div class="hold">
-											<label for="name">Name</label>
-											<input type="text" id="name" class="form-control">
+											<label >Name</label>
+											<input type="text" id="fname"name="fname" value="" class="form-control">
 										</div>
 										<div class="hold">
-											<label for="uname1">Username</label>
-											<input type="text" id="uname1" class="form-control">
+											<label >Last name</label>
+											<input type="text" id="lanme"name="lname"value="" class="form-control">
 										</div>
 										<div class="hold">
-											<label for="email">Email</label>
-											<input type="email" id="email" class="form-control">
+											<label >Email</label>
+											<input type="email" id="regi_email"name ="regi_email" class="form-control">
 										</div>
 										<div class="hold">
-											<label for="reg-pass">Password</label>
-											<input type="password" id="reg-pass" class="form-control">
+											<label >Password</label>
+											<input type="password" id="reg_pass" name ="reg_pass"value="" class="form-control">
+										</div>
+										<div class="hold">
+											<label for="reg-pass1">Re-type Password</label>
+											<input type="password" id="reg_pass1" name ="reg_pass1" value=""class="form-control">
 										</div>
 										<div class="btn-hold">
-											<button type="submit" class="btn btn-default">Register</button>
+											<button type="submit" name="regi_submit" v class="btn btn-default">Register</button>
 										</div>
 									</div>
 								</div>
-							</div>
+							</form>
 						</div>
-					</form>
+						</div>
+					</div>
 				</div>
 			</main>
 		</div>

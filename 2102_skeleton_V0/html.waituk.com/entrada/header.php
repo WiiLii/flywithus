@@ -30,18 +30,46 @@
               <li><a href="hotels.php" >Hotels</a </li>
               <li><a href="flights.php">Flights</a></li>
 
+              <?php
+              session_start();
+              if(!isset($_SESSION['email'])){
+              				echo '<li class="visible-xs visible-sm">
+                          <a href="login.php">
+                            <span class="icon icon-user"></span>
+                            <span class="text">Login</span>
+                          </a>
+                        </li>
+                        <li class="hidden-xs hidden-sm v-divider">
+                          <a href="login.php">
+                            <span class="icon icon-user"></span>
+                          </a>
+                        </li>';
+               }else {
+                 echo '<li class="visible-xs visible-sm nav-visible dropdown last-dropdown v-divider">
+                         <a href="logout.php" data-toggle="dropdown">
+                           <span class="icon icon-user"></span>
+                         </a>
+                         <div class="dropdown-menu dropdown-xs">
+                           <div class="drop-wrap cart-wrap">
 
-          <li class="visible-xs visible-sm">
-            <a href="login.html">
-              <span class="icon icon-user"></span>
-              <span class="text">Login</span>
-            </a>
-          </li>
-          <li class="hidden-xs hidden-sm v-divider">
-            <a href="login.html">
-              <span class="icon icon-user"></span>
-            </a>
-          </li>
+                             <ul class="cart-list">
+
+                                 <div class="text-holder">
+
+                                   <div class="text-wrap">
+                                     <strong class="name"style="float:rght;"><a href="logout.php">log Out</a></strong>
+
+                                   </div>
+                                 </div>
+                             </ul>
+                           </div>
+                         </div>
+                       </li>';
+               }
+                // code...
+
+               ?>
+
           <li class="visible-xs visible-sm nav-visible dropdown last-dropdown v-divider">
             <a href="my-cart.html" data-toggle="dropdown">
               <span class="icon icon-cart"></span>
