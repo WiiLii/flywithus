@@ -1,0 +1,148 @@
+h1 {
+    font-size: 5em;
+    font-family: arial,helvetica;
+    color: #fff;
+    margin: 0;
+    padding:0;
+    text-align: center;
+}
+
+.section{
+    text-align:center;
+}
+
+#section0,
+#section1,
+#section2,
+#section3{
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#section0{
+    background-image: url(../images/slide-02.jpg);
+    padding: 6% 0 0 0;
+}
+#section1 {
+    background-image: url(../images/slide-01.jpg);
+    padding: 6% 0 0 0;
+}
+#section2{
+    background-image: url(../images/slide-03.jpg);
+    padding: 6% 0 0 0;
+}
+#section3{
+    background-image: url(../images/slide-04.jpg);
+    padding: 6% 0 0 0;
+}
+
+.section>p.short {
+    text-align: center;
+}
+
+.section>p {
+    font-size: 1.5em;
+    color: #fff8de;
+    padding: 0 15em;
+    text-align: left;
+}
+.section>h1, .section>p {
+    background-color: rgba(0,0,0,0.7);
+}
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+.green {
+    color: #85c778;
+    font-weight: bold;
+}
+
+.learn {
+    color: #ecd956;
+}
+
+.link{
+    color: #d4554a;
+}
+
+.link2{
+    color: #fba535;
+}
+
+.navbar-inverse {
+    width: 100%;
+    z-index: 100;
+    padding: 0 100px;
+}
+
+a.navbar-brand {
+    padding: 0;
+}
+
+.navbar-brand>img {
+    height: 100%;
+    padding: 0;
+    width: auto;
+}
+
+#loginButton, #mobileDirectory {
+    display: none;
+}
+
+.container {
+    background-color: transparent;
+    /*background-color: #edece4;*/
+}
+
+.subtext {
+    font-size: small;
+    color: #FFF;
+}
+
+.footer {
+    color: #FFFFFF;
+    width: 100%;
+}
+
+@media(max-width:767px) {
+
+    .mobile-btn {
+        display: inline-block;
+        width: 100%;
+        margin-bottom: .5em;
+        background-color: #464646;
+        border-color: #464646;
+        font-weight: 700;
+        color: #3ca727;
+    }
+
+    #directory {
+        display: none;
+    }
+
+    #mobileDirectory {
+        display: inline-block;
+        margin: 50px 0;
+    }
+
+    .container {
+        background-color: white;
+    }
+
+    button.navbar-toggle{
+        display: none;
+    }
+
+    a.navbar-brand>img {
+        height: 100%;
+        padding: 0;
+        width: auto;
+    }
+
+    .navbar-inverse {
+        padding: 5px 0;
+    }
+}
