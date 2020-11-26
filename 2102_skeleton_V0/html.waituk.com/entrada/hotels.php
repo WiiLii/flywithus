@@ -67,7 +67,6 @@
 									<div class="select-col">
 										<select class="filter-select">
 											<option value="Holiday Type">Holiday Type</option>
-											<option value="Holiday Type">Scuba Diving</option>
 											<option value="Holiday Type">Adventurous Trips</option>
 											<option value="Holiday Type">Night Life Trips</option>
 											<option value="Holiday Type">Nature Lover Trips</option>
