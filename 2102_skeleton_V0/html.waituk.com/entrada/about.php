@@ -6,7 +6,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Entrada</title>
+	<title>flywithus</title>
 	<!-- favion -->
 	<link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
 	<!-- link to font awesome -->
@@ -99,7 +99,7 @@
 				<div class="content-block bg-gray">
 					<div class="container">
 						<header class="content-heading">
-							<h2 class="main-heading">ABOUT ENTRADA</h2>
+							<h2 class="main-heading">ABOUT flywithus</h2>
 							<strong class="main-subtitle">A work of art is above all an adventure of mind!</strong>
 							<div class="seperator"></div>
 						</header>
@@ -236,7 +236,7 @@
 									<span class="icon-egypt"></span>
 								</div>
 								<div class="description">
-									<strong class="content-title">Entrada Histori</strong>
+									<strong class="content-title">flywithus History</strong>
 									<p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitu</p>
 								</div>
 							</div>

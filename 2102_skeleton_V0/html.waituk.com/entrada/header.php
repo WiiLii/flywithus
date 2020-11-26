@@ -6,10 +6,9 @@
 <header id="header" class="white-header">
   <div class="container-fluid">
     <!-- logo -->
-    <div class="logo">
+    <div class="logo" >
       <a href="index.php">
-        <img class="normal" src="img/logos/logo.svg" alt="FlyWithUs">
-        <img class="gray-logo" src="img/logos/logo-gray.svg" alt="FlyWithUs">
+        <img class="normal" src="img/brand.png" alt="FlyWithUs">
       </a>
     </div>
     <!-- main navigation -->

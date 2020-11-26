@@ -6,7 +6,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Entrada</title>
+	<title>flywithus</title>
 	<!-- favion -->
 	<link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
 	<!-- link to font awesome -->
@@ -36,6 +36,70 @@
 			<!-- main container -->
 			<main id="main">
         <!--body-->
+				<div class="content-block content-sub">
+					<div class="container">
+						<div class="filter-option">
+							<div class="layout-action">
+								<a href="#" class="link link-list"><span class="icon-list"></span></a>
+								<a href="#" class="link link-grid active"><span class="icon-grid"></span></a>
+							</div>
+							<div class="select-holder">
+								<a href="#" class="btn btn-primary btn-filter"><i class="fa fa-sliders"></i> Filter</a>
+								<div class="filter-slide">
+									<div class="select-col">
+										<select class="filter-select">
+											<option value="Holiday Type">Holiday Type</option>
+											<option value="Holiday Type">Adventurous Trips</option>
+											<option value="Holiday Type">Night Life Trips</option>
+											<option value="Holiday Type">Nature Lover Trips</option>
+											<option value="Holiday Type">Shopping Trips</option>
+											<option value="Holiday Type">Culturally Curious Trips</option>
+											<option value="Holiday Type">Romantic Trips</option>
+										</select>
+									</div>
+									<div class="select-col">
+										<select class="filter-select">
+											<option value="Country">Country</option>
+											<option value="Country">Korea</option>
+											<option value="Country">China</option>
+											<option value="Country">Thailand</option>
+											<option value="Country">Japan</option>
+										</select>
+									</div>
+									<div class="select-col">
+										<select class="filter-select">
+											<option value="Difficulty">Difficulty</option>
+											<option value="Difficulty">Fairly Easy</option>
+											<option value="Difficulty">Moderate</option>
+											<option value="Difficulty">Challenging</option>
+											<option value="Difficulty">Difficult</option>
+											<option value="Difficulty">Very Difficult</option>
+										</select>
+									</div>
+									<div class="select-col">
+										<select class="filter-select">
+											<option value="Dates">Seasonal</option>
+											<option value="Dates">January - March</option>
+											<option value="Dates">April - June</option>
+											<option value="Dates">July - September</option>
+											<option value="Dates">October - December</option>
+										</select>
+									</div>
+									<div class="select-col">
+										<select class="filter-select">
+											<option value="Price Range">Price Range</option>
+											<option value="Price Range">$1 - $499</option>
+											<option value="Price Range">$500 - $999</option>
+											<option value="Price Range">$1000 - $1499</option>
+											<option value="Price Range">$1500 - $2999</option>
+											<option value="Price Range">$3000+</option>
+										</select>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 				<!-- dates and prices tab content -->
 				<div role="tabpanel" class="tab-pane" id="tab06">
 					<div class="table-container">
@@ -48,8 +112,8 @@
 											<span class="sub-text">Confirmed Dates</span>
 										</th>
 										<th>
-											<strong class="date-text">Trip Status</strong>
-											<span class="sub-text">Trip Status</span>
+											<strong class="date-text">Airlines</strong>
+											<span class="sub-text">Airlines</span>
 										</th>
 										<th>
 											<strong class="date-text">Price (PP)</strong>
@@ -165,6 +229,7 @@
 				</div>
 			</main>
 		</div>
+
 		<!-- main footer -->
 <?php include 'footer.php'; ?>
 	</div>

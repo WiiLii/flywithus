@@ -3,53 +3,30 @@
  ?>
  <footer id="footer">
    <div class="container">
-     <!-- newsletter form -->
-     <form action="https://html.waituk.com/entrada/php/subscribe.html" id="signup" method="post" class="newsletter-form">
-       <fieldset>
-         <div class="input-holder">
-           <input type="email" class="form-control" placeholder="Email Address" name="subscriber_email" id="subscriber_email">
-           <input type="submit" value="GO">
-         </div>
-         <span class="info" id="subscribe_message">To receive news, updates and tour packages via email.</span>
-       </fieldset>
-     </form>
      <!-- footer links -->
      <div class="row footer-holder">
-       <nav class="col-sm-4 col-lg-2 footer-nav active">
-         <h3>About Entrada</h3>
-         <ul class="slide">
-           <li><a href="#">The Company</a></li>
-           <li><a href="#">Our Values</a></li>
-           <li><a href="#">Responsiblity</a></li>
-           <li><a href="#">Our Mission</a></li>
-           <li><a href="#">Opportunity</a></li>
-           <li><a href="#">Safety Concerns</a></li>
-         </ul>
-       </nav>
        <nav class="col-sm-4 col-lg-2 footer-nav">
          <h3>Destinations</h3>
          <ul class="slide">
-           <li><a href="#">Nepal</a></li>
+           <li><a href="#">Korea</a></li>
+           <li><a href="#">China</a></li>
            <li><a href="#">Thailand</a></li>
-           <li><a href="#">Vietnam</a></li>
-           <li><a href="#">Fiji Island</a></li>
-           <li><a href="#">United States</a></li>
-           <li><a href="#">Australia</a></li>
+           <li><a href="#">Japan</a></li>
          </ul>
        </nav>
        <nav class="col-sm-4 col-lg-2 footer-nav">
-         <h3>themes</h3>
+         <h3>Holiday Types</h3>
          <ul class="slide">
-           <li><a href="#">Hiking and Camping</a></li>
-           <li><a href="#">Trekking Tours</a></li>
-           <li><a href="#">Jungle Safaris</a></li>
-           <li><a href="#">Bungee Jumping</a></li>
-           <li><a href="#">Wildlife &amp; Polar</a></li>
-           <li><a href="#">Peak Climbing</a></li>
+           <li><a href="#">Adventurous Trips</a></li>
+           <li><a href="#">Night Life Trips</a></li>
+           <li><a href="#">Nature Lover Trips</a></li>
+           <li><a href="#">Shopping Trips</a></li>
+           <li><a href="#">Culturally Curious Trips</a></li>
+           <li><a href="#">Romantic Trips</a></li>
          </ul>
        </nav>
        <nav class="col-sm-4 col-lg-2 footer-nav">
-         <h3>reservation</h3>
+         <h3>Hotels</h3>
          <ul class="slide">
            <li><a href="#">Booking Conditions</a></li>
            <li><a href="#">My Bookings</a></li>
@@ -60,9 +37,9 @@
          </ul>
        </nav>
        <nav class="col-sm-4 col-lg-2 footer-nav">
-         <h3>ask Entrada</h3>
+         <h3>Flights</h3>
          <ul class="slide">
-           <li><a href="#">Why Entrada?</a></li>
+           <li><a href="#">Why flywithus?</a></li>
            <li><a href="#">Ask an Expert</a></li>
            <li><a href="#">Safety Updates</a></li>
            <li><a href="#">We Help When...</a></li>
@@ -70,22 +47,22 @@
          </ul>
        </nav>
        <nav class="col-sm-4 col-lg-2 footer-nav last">
-         <h3>contact Entrada</h3>
+         <h3>Contact Flywithus</h3>
          <ul class="slide address-block">
-           <li class="wrap-text"><span class="icon-tel"></span> <a href="tel:02072077878">(020) 72077878</a></li>
-           <li class="wrap-text"><span class="icon-fax"></span> <a href="tel:02088828282">(020) 88828282</a></li>
-           <li class="wrap-text"><span class="icon-email"></span> <a href="mailto:info@entrada.com">info@entrada.com</a></li>
-           <li><span class="icon-home"></span> <address>707 London Road Isleworth, Middx TW7 7QD</address></li>
+           <li class="wrap-text"><span class="icon-tel"></span> <a href="tel:12345678">(65) 12345678</a></li>
+           <li class="wrap-text"><span class="icon-fax"></span> <a href="tel:87654321">(65) 87654321</a></li>
+           <li class="wrap-text"><span class="icon-email"></span> <a href="mailto:info@flywithus.com">info@flywithus.com</a></li>
+           <li><span class="icon-home"></span> <address>172 Ang Mo Kio Avenue 8, 567739</address></li>
          </ul>
        </nav>
      </div>
      <!-- social wrap -->
      <ul class="social-wrap">
-       <li class="facebook"><a href="#">
+       <li class="facebook"><a href="https://www.facebook.com/SingaporeTech/?ref=page_internal">
          <span class="icon-facebook"></span>
          <strong class="txt">Like Us</strong>
        </a></li>
-       <li class="twitter"><a href="#">
+       <li class="twitter"><a href="https://twitter.com/singaporetech?lang=en">
          <span class="icon-twitter"></span>
          <strong class="txt">Follow On</strong>
        </a></li>
@@ -112,7 +89,7 @@
        <div class="row">
          <div class="col-lg-6">
            <!-- copyright -->
-           <strong class="copyright"><i class="fa fa-copyright"></i> Copyright 2016 - Entrada - An Adventure Theme - by  <a href="#">Waituk</a></strong>
+           <strong class="copyright"><i class="fa fa-copyright"></i> Copyright 2016 - flywithus - An Adventure Theme - by  <a href="#">Waituk</a></strong>
          </div>
          <div class="col-lg-6">
            <ul class="payment-option">
