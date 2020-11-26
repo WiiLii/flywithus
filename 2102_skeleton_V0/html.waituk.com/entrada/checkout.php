@@ -6,7 +6,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Entrada</title>
+	<title>flywithus</title>
 	<!-- favion -->
 	<link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
 	<!-- link to font awesome -->
@@ -127,7 +127,7 @@
 													</label>
 												</header>
 												<div class="info-hold">
-													<p>Please send your cheque to Entrada Inc. Address, Thank You!</p>
+													<p>Please send your cheque to flywithus Inc. Address, Thank You!</p>
 												</div>
 											</li>
 											<li>

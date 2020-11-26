@@ -6,7 +6,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Entrada</title>
+	<title>flywithus</title>
 	<!-- favion -->
 	<link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
 	<!-- link to font awesome -->
@@ -191,10 +191,9 @@
 							<ul class="nav nav-tabs text-center" role="tablist">
 								<li role="presentation" class="active"><a href="#tab01" aria-controls="tab01" role="tab" data-toggle="tab">Overview</a></li>
 								<li role="presentation"><a href="#tab02" aria-controls="tab02" role="tab" data-toggle="tab">Itinerary</a></li>
-								<li role="presentation"><a href="#tab03" aria-controls="tab03" role="tab" data-toggle="tab">Lodging</a></li>
-								<li role="presentation"><a href="#tab04" aria-controls="tab04" role="tab" data-toggle="tab">Faq &amp; Review</a></li>
-								<li role="presentation"><a href="#tab05" aria-controls="tab05" role="tab" data-toggle="tab">Gallery</a></li>
-								<li role="presentation"><a href="#tab06" aria-controls="tab06" role="tab" data-toggle="tab">Dates &amp; Price</a></li>
+								<li role="presentation"><a href="#tab03" aria-controls="tab03" role="tab" data-toggle="tab">Faq &amp; Review</a></li>
+								<li role="presentation"><a href="#tab04" aria-controls="tab04" role="tab" data-toggle="tab">Gallery</a></li>
+								<li role="presentation"><a href="#tab05" aria-controls="tab05" role="tab" data-toggle="tab">Dates &amp; Price</a></li>
 							</ul>
 						</div>
 					</nav>
@@ -369,49 +368,8 @@
 								</div>
 							</div>
 						</div>
-						<!-- accomodation tab content -->
-						<div role="tabpanel" class="tab-pane" id="tab03">
-							<div class="row">
-								<div class="col-md-6">
-									<strong class="header-box">Hotels, Tea Houses and Lodges</strong>
-									<div class="detail">
-										<p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. </p>
-										<p>Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. </p>
-										<p>Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. </p>
-										<p>Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. </p>
-										<p>Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam.</p>
-										<p>Ulins aliquam massa nisl quis neque. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. </p>
-										<p>Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam.</p>
-										<p>Ulins aliquam massa nisl quis neque. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. </p>
-										<p>Ulins aliquam massa nisl quis neque. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. </p>
-										<p>Suspendisse gin orci enim.</p>
-									</div>
-								</div>
-								<div class="col-md-6 accomodation-block">
-									<strong class="header-box">The tour package inclusions and exclusions at a glance</strong>
-									<div class="text-box">
-										<div class="holder">
-											<strong class="title">Shared Rooms included in teh Price</strong>
-											<span class="sub-title">Items that are covered in the cost of tour price.</span>
-											<div class="img-holder">
-												<img src="img/generic/img-10.jpg" height="467" width="700" alt="image description">
-											</div>
-										</div>
-									</div>
-									<div class="text-box not-included">
-										<div class="holder">
-											<strong class="title">Individual Rooms not included in the Price</strong>
-											<span class="sub-title">Items that are covered in the cost of tour price.</span>
-											<div class="img-holder">
-												<img src="img/generic/img-11.jpg" height="467" width="700" alt="image description">
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
 						<!-- faq and review tab content -->
-						<div role="tabpanel" class="tab-pane" id="tab04">
+						<div role="tabpanel" class="tab-pane" id="tab03">
 							<div class="row">
 								<div class="col-md-6">
 									<div class="question-select">
@@ -628,7 +586,7 @@
 							</div>
 						</div>
 						<!-- gallery tab content -->
-						<div role="tabpanel" class="tab-pane" id="tab05">
+						<div role="tabpanel" class="tab-pane" id="tab04">
 							<ul class="row gallery-list has-center">
 								<li class="col-sm-6">
 									<a class="fancybox" data-fancybox-group="group" href="img/gallery/img-10-2.jpg" title="Caption Goes Here">
@@ -750,7 +708,7 @@
 							</ul>
 						</div>
 						<!-- dates and prices tab content -->
-						<div role="tabpanel" class="tab-pane" id="tab06">
+						<div role="tabpanel" class="tab-pane" id="tab05">
 							<div class="table-container">
 								<div class="table-responsive">
 									<table class="table table-striped">
@@ -878,6 +836,7 @@
 						</div>
 					</div>
 				</div>
+
 				<!-- recent block -->
 				<aside class="recent-block recent-gray recent-wide-thumbnail">
 					<div class="container">
