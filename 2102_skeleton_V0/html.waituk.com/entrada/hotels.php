@@ -6,7 +6,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Entrada</title>
+	<title>flywithus</title>
 	<!-- favion -->
 	<link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
 	<!-- link to font awesome -->
@@ -36,13 +36,14 @@
 				<div class="banner-text">
 					<div class="center-text">
 						<div class="container">
-							<h1>Adventures 2016</h1>
-							<strong class="subtitle">Four Column Adventure Grid View</strong>
+							<h1>Perfect Hotels Just For You</h1>
+							<strong class="subtitle">We’re passionate about travel.
+							</br> So when it comes to booking the perfect hotel - we’ve got you covered! </strong>
 							<!-- breadcrumb -->
 							<nav class="breadcrumbs">
 								<ul>
 									<li><a href="#">HOME</a></li>
-									<li><a href="#">ADVENTURES</a></li>
+									<li><a href="#">HOTELS</a></li>
 									<li><span>ALL</span></li>
 								</ul>
 							</nav>
@@ -66,22 +67,21 @@
 									<div class="select-col">
 										<select class="filter-select">
 											<option value="Holiday Type">Holiday Type</option>
-											<option value="Holiday Type">Beach Holidays</option>
-											<option value="Holiday Type">Weekend Trips</option>
-											<option value="Holiday Type">Summer and Sun</option>
-											<option value="Holiday Type">Water Sports</option>
-											<option value="Holiday Type">Scuba Diving</option>
+											<option value="Holiday Type">Adventurous Trips</option>
+											<option value="Holiday Type">Night Life Trips</option>
+											<option value="Holiday Type">Nature Lover Trips</option>
+											<option value="Holiday Type">Shopping Trips</option>
+											<option value="Holiday Type">Culturally Curious Trips</option>
+											<option value="Holiday Type">Romantic Trips</option>
 										</select>
 									</div>
 									<div class="select-col">
 										<select class="filter-select">
 											<option value="Country">Country</option>
-											<option value="Country">Switzerland</option>
+											<option value="Country">Korea</option>
+											<option value="Country">China</option>
 											<option value="Country">Thailand</option>
-											<option value="Country">Australia</option>
-											<option value="Country">New Zealand</option>
-											<option value="Country">North America</option>
-											<option value="Country">Czechoslovakia</option>
+											<option value="Country">Japan</option>
 										</select>
 									</div>
 									<div class="select-col">
@@ -321,118 +321,6 @@
 											<img src="img/listing/img-26.jpg" height="228" width="350" alt="image description">
 										</div>
 										<h3 class="small-space"><a href="tour-detail.html">Sleeping with Sea Lion</a></h3>
-										<span class="info">Nordic Walk, Swiss Alps or French Hiking?</span>
-										<aside class="meta">
-											<span class="country">
-												<span class="icon-world"> </span>12 Countries
-											</span>
-											<span class="activity">
-												<span class="icon-acitivities"> </span>79 Activities
-											</span>
-										</aside>
-										<p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.</p>
-										<a href="tour-detail.html" class="btn btn-default">explore</a>
-										<footer>
-											<ul class="social-networks">
-												<li><a href="#"><span class="icon-twitter"></span></a></li>
-												<li><a href="#"><span class="icon-google-plus"></span></a></li>
-												<li><a href="#"><span class="icon-facebook"></span></a></li>
-												<li><a href="#"><span class="icon-linkedin"></span></a></li>
-											</ul>
-											<span class="price">from <span>$2749</span></span>
-										</footer>
-									</div>
-								</article>
-								<article class="col-sm-6 col-md-4 col-lg-3 article has-hover-s1">
-									<div class="thumbnail">
-										<div class="img-wrap">
-											<img src="img/listing/img-27.jpg" height="228" width="350" alt="image description">
-										</div>
-										<h3 class="small-space"><a href="tour-detail.html">Following the Zebras</a></h3>
-										<span class="info">Nordic Walk, Swiss Alps or French Hiking?</span>
-										<aside class="meta">
-											<span class="country">
-												<span class="icon-world"> </span>12 Countries
-											</span>
-											<span class="activity">
-												<span class="icon-acitivities"> </span>79 Activities
-											</span>
-										</aside>
-										<p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.</p>
-										<a href="tour-detail.html" class="btn btn-default">explore</a>
-										<footer>
-											<ul class="social-networks">
-												<li><a href="#"><span class="icon-twitter"></span></a></li>
-												<li><a href="#"><span class="icon-google-plus"></span></a></li>
-												<li><a href="#"><span class="icon-facebook"></span></a></li>
-												<li><a href="#"><span class="icon-linkedin"></span></a></li>
-											</ul>
-											<span class="price">from <span>$2749</span></span>
-										</footer>
-									</div>
-								</article>
-								<article class="col-sm-6 col-md-4 col-lg-3 article has-hover-s1">
-									<div class="thumbnail">
-										<div class="img-wrap">
-											<img src="img/listing/img-28.jpg" height="228" width="350" alt="image description">
-										</div>
-										<h3 class="small-space"><a href="tour-detail.html">Discovering Wild Trails</a></h3>
-										<span class="info">Nordic Walk, Swiss Alps or French Hiking?</span>
-										<aside class="meta">
-											<span class="country">
-												<span class="icon-world"> </span>12 Countries
-											</span>
-											<span class="activity">
-												<span class="icon-acitivities"> </span>79 Activities
-											</span>
-										</aside>
-										<p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.</p>
-										<a href="tour-detail.html" class="btn btn-default">explore</a>
-										<footer>
-											<ul class="social-networks">
-												<li><a href="#"><span class="icon-twitter"></span></a></li>
-												<li><a href="#"><span class="icon-google-plus"></span></a></li>
-												<li><a href="#"><span class="icon-facebook"></span></a></li>
-												<li><a href="#"><span class="icon-linkedin"></span></a></li>
-											</ul>
-											<span class="price">from <span>$2749</span></span>
-										</footer>
-									</div>
-								</article>
-								<article class="col-sm-6 col-md-4 col-lg-3 article has-hover-s1">
-									<div class="thumbnail">
-										<div class="img-wrap">
-											<img src="img/listing/img-29.jpg" height="228" width="350" alt="image description">
-										</div>
-										<h3 class="small-space"><a href="tour-detail.html">Angola Safari for Family</a></h3>
-										<span class="info">Nordic Walk, Swiss Alps or French Hiking?</span>
-										<aside class="meta">
-											<span class="country">
-												<span class="icon-world"> </span>12 Countries
-											</span>
-											<span class="activity">
-												<span class="icon-acitivities"> </span>79 Activities
-											</span>
-										</aside>
-										<p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.</p>
-										<a href="tour-detail.html" class="btn btn-default">explore</a>
-										<footer>
-											<ul class="social-networks">
-												<li><a href="#"><span class="icon-twitter"></span></a></li>
-												<li><a href="#"><span class="icon-google-plus"></span></a></li>
-												<li><a href="#"><span class="icon-facebook"></span></a></li>
-												<li><a href="#"><span class="icon-linkedin"></span></a></li>
-											</ul>
-											<span class="price">from <span>$2749</span></span>
-										</footer>
-									</div>
-								</article>
-								<article class="col-sm-6 col-md-4 col-lg-3 article has-hover-s1">
-									<div class="thumbnail">
-										<div class="img-wrap">
-											<img src="img/listing/img-30.jpg" height="228" width="350" alt="image description">
-										</div>
-										<h3 class="small-space"><a href="tour-detail.html">Royal Safari in Peru</a></h3>
 										<span class="info">Nordic Walk, Swiss Alps or French Hiking?</span>
 										<aside class="meta">
 											<span class="country">

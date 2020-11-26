@@ -6,7 +6,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Entrada</title>
+	<title>flywithus</title>
 	<!-- favion -->
 	<link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
 	<!-- link to font awesome -->
@@ -36,15 +36,16 @@
 				<div class="banner-text">
 					<div class="center-text">
 						<div class="container">
-							<h1>Adventures in Thailand</h1>
-							<strong class="subtitle">The most detailed and modern Adventure theme!</strong>
+							<h1>Popular Theme Packages</h1>
+							<strong class="subtitle">Explore a variety of packages!
+							</br> Whatever your travel preference, you will find suitable holiday packages here. </strong>
 							<!-- breadcrumb -->
 							<nav class="breadcrumbs">
 								<ul>
 									<li><a href="#">HOME</a></li>
 									<li><a href="#">DESTINATION</a></li>
 									<li><a href="#">asia</a></li>
-									<li><span>THAILAND</span></li>
+									<li><span>KOREA</span></li>
 								</ul>
 							</nav>
 						</div>
@@ -66,24 +67,24 @@
 								<div class="select-holder">
 									<a href="#" class="btn btn-primary btn-filter"><i class="fa fa-sliders"></i> Filter</a>
 									<div class="filter-slide">
-										<div class="select-col">
+									<div class="select-col">
 											<select class="filter-select">
-												<option value="Holiday Type">Holiday Type</option>
-												<option value="Holiday Type">Beach Holidays</option>
-												<option value="Holiday Type">Weekend Trips</option>
-												<option value="Holiday Type">Summer and Sun</option>
-												<option value="Holiday Type">Water Sports</option>
-												<option value="Holiday Type">Scuba Diving</option>
+												<option value="Country">Country</option>
+												<option value="Country">Korea</option>
+												<option value="Country">China</option>
+												<option value="Country">Thailand</option>
+												<option value="Country">Japan</option>
 											</select>
 										</div>
 										<div class="select-col">
 											<select class="filter-select">
-												<option value="Difficulty">Difficulty</option>
-												<option value="Difficulty">Fairly Easy</option>
-												<option value="Difficulty">Moderate</option>
-												<option value="Difficulty">Challenging</option>
-												<option value="Difficulty">Difficult</option>
-												<option value="Difficulty">Very Difficult</option>
+												<option value="Holiday Type">Holiday Type</option>
+												<option value="Holiday Type">Adventurous Trips</option>
+												<option value="Holiday Type">Night Life Trips</option>
+												<option value="Holiday Type">Nature Lover Trips</option>
+												<option value="Holiday Type">Shopping Trips</option>
+												<option value="Holiday Type">Culturally Curious Trips</option>
+												<option value="Holiday Type">Romantic Trips</option>
 											</select>
 										</div>
 										<div class="select-col">
@@ -110,10 +111,10 @@
 									<div class="description">
 										<div class="col-left">
 											<header class="heading">
-												<h3><a href="#">Beach &amp; Resort Holiday in Thailand</a></h3>
-												<div class="info-day">17 Days</div>
+												<h3><a href="packages-detail.php">SEOUL</a></h3>
+												<div class="info-day">7+ Days</div>
 											</header>
-											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+											<p>Welcome to Seoul! Seoul was made for shopping and fun, so get your walking shoes on (but don’t forget to pack your dancing shoes as well), because this itinerary is all about the best places to shop and be entertained in the city.</p>
 											<div class="reviews-holder">
 												<div class="star-rating">
 													<span><span class="icon-star"></span></span>
@@ -124,42 +125,6 @@
 												</div>
 												<div class="info-rate">Based on 75 Reviews</div>
 											</div>
-											<footer class="info-footer">
-												<ul class="ico-list">
-													<li class="pop-opener">
-														<span class="icon-beach"></span>
-														<div class="popup">
-															Beach
-														</div>
-													</li>
-													<li class="pop-opener">
-														<span class="icon-boat"></span>
-														<div class="popup">
-															Boat
-														</div>
-													</li>
-													<li class="pop-opener">
-														<span class="icon-food-wine"></span>
-														<div class="popup">
-															Food Wine
-														</div>
-													</li>
-													<li class="pop-opener">
-														<span class="icon-water"></span>
-														<div class="popup">
-															Water
-														</div>
-													</li>
-												</ul>
-												<ul class="ico-action">
-													<li>
-														<a href="#"><span class="icon-share"></span></a>
-													</li>
-													<li>
-														<a href="#"><span class="icon-favs"></span></a>
-													</li>
-												</ul>
-											</footer>
 										</div>
 										<aside class="info-aside">
 											<span class="price">from <span>$2749</span></span>
@@ -167,7 +132,7 @@
 												<div class="ico">
 													<span class="icon-level2"></span>
 												</div>
-												<span class="text">EASY - LEISURLY</span>
+												<span class="text">SEOUL</span>
 											</div>
 											<a href="#" class="btn btn-default">explore</a>
 										</aside>
@@ -182,10 +147,10 @@
 									<div class="description">
 										<div class="col-left">
 											<header class="heading">
-												<h3><a href="#">Beach &amp; Resort Holiday in Thailand</a></h3>
-												<div class="info-day">17 Days</div>
+												<h3><a href="packages-detail.php">BUSAN</a></h3>
+												<div class="info-day">7+ Days</div>
 											</header>
-											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+											<p>Welcome to Busan! The city of Busan has announced the festival schedule for the second half of the year to revitalize the local economy. The city plans to organize various festivals for citizens and visitors to enjoy safely while following quarantine guidelines.</p>
 											<div class="reviews-holder">
 												<div class="star-rating">
 													<span><span class="icon-star"></span></span>
@@ -196,42 +161,6 @@
 												</div>
 												<div class="info-rate">Based on 75 Reviews</div>
 											</div>
-											<footer class="info-footer">
-												<ul class="ico-list">
-													<li class="pop-opener">
-														<span class="icon-beach"></span>
-														<div class="popup">
-															Beach
-														</div>
-													</li>
-													<li class="pop-opener">
-														<span class="icon-boat"></span>
-														<div class="popup">
-															Boat
-														</div>
-													</li>
-													<li class="pop-opener">
-														<span class="icon-food-wine"></span>
-														<div class="popup">
-															Food Wine
-														</div>
-													</li>
-													<li class="pop-opener">
-														<span class="icon-water"></span>
-														<div class="popup">
-															Water
-														</div>
-													</li>
-												</ul>
-												<ul class="ico-action">
-													<li>
-														<a href="#"><span class="icon-share"></span></a>
-													</li>
-													<li>
-														<a href="#"><span class="icon-favs"></span></a>
-													</li>
-												</ul>
-											</footer>
 										</div>
 										<aside class="info-aside">
 											<span class="price">from <span>$2749</span></span>
@@ -239,7 +168,7 @@
 												<div class="ico">
 													<span class="icon-level4"></span>
 												</div>
-												<span class="text">EASY - LEISURLY</span>
+												<span class="text">BUSAN</span>
 											</div>
 											<a href="#" class="btn btn-default">explore</a>
 										</aside>
@@ -254,10 +183,10 @@
 									<div class="description">
 										<div class="col-left">
 											<header class="heading">
-												<h3><a href="#">Beach &amp; Resort Holiday in Thailand</a></h3>
-												<div class="info-day">17 Days</div>
+												<h3><a href="packages-detail.php">GANGNAM</a></h3>
+												<div class="info-day">7+ Days</div>
 											</header>
-											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+											<p>Welcome to Gangnam! Gangnam literally means ‘south of the river,’ and this district in South Korea’s capital that lies along the banks of the Han, one of the country’s largest bodies of water. There’s plenty to do and see in this historically rich, fast-developing neighborhood. We explore some of the best.</p>
 											<div class="reviews-holder">
 												<div class="star-rating">
 													<span><span class="icon-star"></span></span>
@@ -268,42 +197,6 @@
 												</div>
 												<div class="info-rate">Based on 75 Reviews</div>
 											</div>
-											<footer class="info-footer">
-												<ul class="ico-list">
-													<li class="pop-opener">
-														<span class="icon-beach"></span>
-														<div class="popup">
-															Beach
-														</div>
-													</li>
-													<li class="pop-opener">
-														<span class="icon-boat"></span>
-														<div class="popup">
-															Boat
-														</div>
-													</li>
-													<li class="pop-opener">
-														<span class="icon-food-wine"></span>
-														<div class="popup">
-															Food Wine
-														</div>
-													</li>
-													<li class="pop-opener">
-														<span class="icon-water"></span>
-														<div class="popup">
-															Water
-														</div>
-													</li>
-												</ul>
-												<ul class="ico-action">
-													<li>
-														<a href="#"><span class="icon-share"></span></a>
-													</li>
-													<li>
-														<a href="#"><span class="icon-favs"></span></a>
-													</li>
-												</ul>
-											</footer>
 										</div>
 										<aside class="info-aside">
 											<span class="price">from <span>$2749</span></span>
@@ -311,151 +204,7 @@
 												<div class="ico">
 													<span class="icon-level5"></span>
 												</div>
-												<span class="text">EASY - LEISURLY</span>
-											</div>
-											<a href="#" class="btn btn-default">explore</a>
-										</aside>
-									</div>
-								</div>
-							</article>
-							<article class="article">
-								<div class="thumbnail">
-									<div class="img-wrap">
-										<img src="img/listing/img-38.jpg" height="240" width="350" alt="image description">
-									</div>
-									<div class="description">
-										<div class="col-left">
-											<header class="heading">
-												<h3><a href="#">Beach &amp; Resort Holiday in Thailand</a></h3>
-												<div class="info-day">17 Days</div>
-											</header>
-											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-											<div class="reviews-holder">
-												<div class="star-rating">
-													<span><span class="icon-star"></span></span>
-													<span><span class="icon-star"></span></span>
-													<span><span class="icon-star"></span></span>
-													<span><span class="icon-star"></span></span>
-													<span class="disable"><span class="icon-star"></span></span>
-												</div>
-												<div class="info-rate">Based on 75 Reviews</div>
-											</div>
-											<footer class="info-footer">
-												<ul class="ico-list">
-													<li class="pop-opener">
-														<span class="icon-beach"></span>
-														<div class="popup">
-															Beach
-														</div>
-													</li>
-													<li class="pop-opener">
-														<span class="icon-boat"></span>
-														<div class="popup">
-															Boat
-														</div>
-													</li>
-													<li class="pop-opener">
-														<span class="icon-food-wine"></span>
-														<div class="popup">
-															Food Wine
-														</div>
-													</li>
-													<li class="pop-opener">
-														<span class="icon-water"></span>
-														<div class="popup">
-															Water
-														</div>
-													</li>
-												</ul>
-												<ul class="ico-action">
-													<li>
-														<a href="#"><span class="icon-share"></span></a>
-													</li>
-													<li>
-														<a href="#"><span class="icon-favs"></span></a>
-													</li>
-												</ul>
-											</footer>
-										</div>
-										<aside class="info-aside">
-											<span class="price">from <span>$2749</span></span>
-											<div class="activity-level">
-												<div class="ico">
-													<span class="icon-level7"></span>
-												</div>
-												<span class="text">EASY - LEISURLY</span>
-											</div>
-											<a href="#" class="btn btn-default">explore</a>
-										</aside>
-									</div>
-								</div>
-							</article>
-							<article class="article">
-								<div class="thumbnail">
-									<div class="img-wrap">
-										<img src="img/listing/img-39.jpg" height="240" width="350" alt="image description">
-									</div>
-									<div class="description">
-										<div class="col-left">
-											<header class="heading">
-												<h3><a href="#">Beach &amp; Resort Holiday in Thailand</a></h3>
-												<div class="info-day">17 Days</div>
-											</header>
-											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-											<div class="reviews-holder">
-												<div class="star-rating">
-													<span><span class="icon-star"></span></span>
-													<span><span class="icon-star"></span></span>
-													<span><span class="icon-star"></span></span>
-													<span><span class="icon-star"></span></span>
-													<span class="disable"><span class="icon-star"></span></span>
-												</div>
-												<div class="info-rate">Based on 75 Reviews</div>
-											</div>
-											<footer class="info-footer">
-												<ul class="ico-list">
-													<li class="pop-opener">
-														<span class="icon-beach"></span>
-														<div class="popup">
-															Beach
-														</div>
-													</li>
-													<li class="pop-opener">
-														<span class="icon-boat"></span>
-														<div class="popup">
-															Boat
-														</div>
-													</li>
-													<li class="pop-opener">
-														<span class="icon-food-wine"></span>
-														<div class="popup">
-															Food Wine
-														</div>
-													</li>
-													<li class="pop-opener">
-														<span class="icon-water"></span>
-														<div class="popup">
-															Water
-														</div>
-													</li>
-												</ul>
-												<ul class="ico-action">
-													<li>
-														<a href="#"><span class="icon-share"></span></a>
-													</li>
-													<li>
-														<a href="#"><span class="icon-favs"></span></a>
-													</li>
-												</ul>
-											</footer>
-										</div>
-										<aside class="info-aside">
-											<span class="price">from <span>$2749</span></span>
-											<div class="activity-level">
-												<div class="ico">
-													<span class="icon-level8"></span>
-												</div>
-												<span class="text">EASY - LEISURLY</span>
+												<span class="text">GANGNAM</span>
 											</div>
 											<a href="#" class="btn btn-default">explore</a>
 										</aside>
