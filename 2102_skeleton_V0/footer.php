@@ -66,22 +66,7 @@
          <span class="icon-twitter"></span>
          <strong class="txt">Follow On</strong>
        </a></li>
-       <li class="google-plus"><a href="#">
-         <span class="icon-google-plus"></span>
-         <strong class="txt">+1 On Google</strong>
-       </a></li>
-       <li class="vimeo"><a href="#">
-         <span class="icon-vimeo"></span>
-         <strong class="txt">Share At</strong>
-       </a></li>
-       <li class="pin"><a href="#">
-         <span class="icon-pin"></span>
-         <strong class="txt">Pin It</strong>
-       </a></li>
-       <li class="dribble"><a href="#">
-         <span class="icon-dribble"></span>
-         <strong class="txt">Dribbble</strong>
-       </a></li>
+
      </ul>
    </div>
    <div class="footer-bottom">
@@ -89,7 +74,7 @@
        <div class="row">
          <div class="col-lg-6">
            <!-- copyright -->
-           <strong class="copyright"><i class="fa fa-copyright"></i> Copyright 2016 - flywithus - An Adventure Theme - by  <a href="#">Waituk</a></strong>
+           <strong class="copyright"><i class="fa fa-copyright"></i> Copyright 2020 - flywithus </a></strong>
          </div>
          <div class="col-lg-6">
            <ul class="payment-option">
