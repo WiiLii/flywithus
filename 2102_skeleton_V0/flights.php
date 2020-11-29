@@ -36,13 +36,10 @@
 			<!-- main container -->
 			<main id="main">
         <!--body-->
-				<div class="content-block content-sub">
+				<center><div class="content-block content-sub">
 					<div class="container">
+					<h2>Filters</h2>
 						<div class="filter-option">
-							<div class="layout-action">
-								<a href="#" class="link link-list"><span class="icon-list"></span></a>
-								<a href="#" class="link link-grid active"><span class="icon-grid"></span></a>
-							</div>
 							<div class="select-holder">
 								<a href="#" class="btn btn-primary btn-filter"><i class="fa fa-sliders"></i> Filter</a>
 								<div class="filter-slide">
@@ -99,7 +96,7 @@
 							</div>
 						</div>
 					</div>
-				</div>
+				</div></center>
 				<!-- dates and prices tab content -->
 				<div role="tabpanel" class="tab-pane" id="tab06">
 					<div class="table-container">

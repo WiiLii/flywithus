@@ -58,12 +58,8 @@
 				<div class="content-block content-sub">
 					<div class="container">
 						<div class="filter-option">
-							<strong class="result-info">179 TRIPS MATCHES YOUR SEARCH CRITERIA</strong>
+							<strong class="result-info">179 TRIPS MATCHES YOUR SEARCH CRITERIA</strong> <!-- NEED GENERATE THIS RESULT -->
 							<div class="layout-holder">
-								<div class="layout-action">
-									<a href="#" class="link link-list active"><span class="icon-list"></span></a>
-									<a href="#" class="link link-grid"><span class="icon-grid"></span></a>
-								</div>
 								<div class="select-holder">
 									<a href="#" class="btn btn-primary btn-filter"><i class="fa fa-sliders"></i> Filter</a>
 									<div class="filter-slide">
@@ -202,7 +198,7 @@
 											<span class="price">from <span>$2749</span></span>
 											<div class="activity-level">
 												<div class="ico">
-													<span class="icon-level5"></span>
+													<span class="icon-level8"></span>
 												</div>
 												<span class="text">GANGNAM</span>
 											</div>
@@ -253,32 +249,7 @@
 											<span>5 Days</span>
 											<span>$299</span>
 										</div>
-										<ul class="ico-list">
-											<li class="pop-opener">
-												<a href="#">
-													<span class="icon-hiking"></span>
-													<span class="popup">
-														Hiking
-													</span>
-												</a>
-											</li>
-											<li class="pop-opener">
-												<a href="#">
-													<span class="icon-mountain"></span>
-													<span class="popup">
-														Mountain
-													</span>
-												</a>
-											</li>
-											<li class="pop-opener">
-												<a href="#">
-													<span class="icon-level5"></span>
-													<span class="popup">
-														Level 5
-													</span>
-												</a>
-											</li>
-										</ul>
+										
 									</footer>
 								</div>
 							</article>
@@ -294,32 +265,7 @@
 											<span>5 Days</span>
 											<span>$299</span>
 										</div>
-										<ul class="ico-list">
-											<li class="pop-opener">
-												<a href="#">
-													<span class="icon-hiking"></span>
-													<span class="popup">
-														Hiking
-													</span>
-												</a>
-											</li>
-											<li class="pop-opener">
-												<a href="#">
-													<span class="icon-mountain"></span>
-													<span class="popup">
-														Mountain
-													</span>
-												</a>
-											</li>
-											<li class="pop-opener">
-												<a href="#">
-													<span class="icon-level5"></span>
-													<span class="popup">
-														Level 5
-													</span>
-												</a>
-											</li>
-										</ul>
+									
 									</footer>
 								</div>
 							</article>
@@ -335,32 +281,7 @@
 											<span>5 Days</span>
 											<span>$299</span>
 										</div>
-										<ul class="ico-list">
-											<li class="pop-opener">
-												<a href="#">
-													<span class="icon-hiking"></span>
-													<span class="popup">
-														Hiking
-													</span>
-												</a>
-											</li>
-											<li class="pop-opener">
-												<a href="#">
-													<span class="icon-mountain"></span>
-													<span class="popup">
-														Mountain
-													</span>
-												</a>
-											</li>
-											<li class="pop-opener">
-												<a href="#">
-													<span class="icon-level5"></span>
-													<span class="popup">
-														Level 5
-													</span>
-												</a>
-											</li>
-										</ul>
+										
 									</footer>
 								</div>
 							</article>
@@ -376,32 +297,7 @@
 											<span>5 Days</span>
 											<span>$299</span>
 										</div>
-										<ul class="ico-list">
-											<li class="pop-opener">
-												<a href="#">
-													<span class="icon-hiking"></span>
-													<span class="popup">
-														Hiking
-													</span>
-												</a>
-											</li>
-											<li class="pop-opener">
-												<a href="#">
-													<span class="icon-mountain"></span>
-													<span class="popup">
-														Mountain
-													</span>
-												</a>
-											</li>
-											<li class="pop-opener">
-												<a href="#">
-													<span class="icon-level5"></span>
-													<span class="popup">
-														Level 5
-													</span>
-												</a>
-											</li>
-										</ul>
+										
 									</footer>
 								</div>
 							</article>

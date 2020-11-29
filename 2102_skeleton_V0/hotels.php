@@ -54,13 +54,10 @@
 			<!-- main container -->
 			<main id="main">
 				<!-- content block -->
-				<div class="content-block content-sub">
+				<center><div class="content-block content-sub">
 					<div class="container">
+					<h2>Filters</h2>
 						<div class="filter-option">
-							<div class="layout-action">
-								<a href="#" class="link link-list"><span class="icon-list"></span></a>
-								<a href="#" class="link link-grid active"><span class="icon-grid"></span></a>
-							</div>
 							<div class="select-holder">
 								<a href="#" class="btn btn-primary btn-filter"><i class="fa fa-sliders"></i> Filter</a>
 								<div class="filter-slide">
@@ -115,7 +112,7 @@
 									</div>
 								</div>
 							</div>
-						</div>
+						</div></center>
 						<!-- main article section -->
 						<div class="content-holder content-sub-holder">
 							<div class="row db-3-col">
@@ -136,12 +133,11 @@
 										</aside>
 										<p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.</p>
 										<a href="tour-detail.html" class="btn btn-default">explore</a>
+										
 										<footer>
 											<ul class="social-networks">
-												<li><a href="#"><span class="icon-twitter"></span></a></li>
-												<li><a href="#"><span class="icon-google-plus"></span></a></li>
+												<li><a href="#"><span class="icon-twitter"></span></a></li>											
 												<li><a href="#"><span class="icon-facebook"></span></a></li>
-												<li><a href="#"><span class="icon-linkedin"></span></a></li>
 											</ul>
 											<span class="price">from <span>$2749</span></span>
 										</footer>
@@ -166,10 +162,8 @@
 										<a href="tour-detail.html" class="btn btn-default">explore</a>
 										<footer>
 											<ul class="social-networks">
-												<li><a href="#"><span class="icon-twitter"></span></a></li>
-												<li><a href="#"><span class="icon-google-plus"></span></a></li>
+												<li><a href="#"><span class="icon-twitter"></span></a></li>											
 												<li><a href="#"><span class="icon-facebook"></span></a></li>
-												<li><a href="#"><span class="icon-linkedin"></span></a></li>
 											</ul>
 											<span class="price">from <span>$2749</span></span>
 										</footer>
@@ -194,10 +188,8 @@
 										<a href="tour-detail.html" class="btn btn-default">explore</a>
 										<footer>
 											<ul class="social-networks">
-												<li><a href="#"><span class="icon-twitter"></span></a></li>
-												<li><a href="#"><span class="icon-google-plus"></span></a></li>
+												<li><a href="#"><span class="icon-twitter"></span></a></li>											
 												<li><a href="#"><span class="icon-facebook"></span></a></li>
-												<li><a href="#"><span class="icon-linkedin"></span></a></li>
 											</ul>
 											<span class="price">from <span>$2749</span></span>
 										</footer>
@@ -222,127 +214,14 @@
 										<a href="tour-detail.html" class="btn btn-default">explore</a>
 										<footer>
 											<ul class="social-networks">
-												<li><a href="#"><span class="icon-twitter"></span></a></li>
-												<li><a href="#"><span class="icon-google-plus"></span></a></li>
+												<li><a href="#"><span class="icon-twitter"></span></a></li>											
 												<li><a href="#"><span class="icon-facebook"></span></a></li>
-												<li><a href="#"><span class="icon-linkedin"></span></a></li>
 											</ul>
 											<span class="price">from <span>$2749</span></span>
 										</footer>
 									</div>
 								</article>
-								<article class="col-sm-6 col-md-4 col-lg-3 article has-hover-s1">
-									<div class="thumbnail">
-										<div class="img-wrap">
-											<img src="img/listing/img-23.jpg" height="228" width="350" alt="image description">
-										</div>
-										<h3 class="small-space"><a href="tour-detail.html">Angola Safari for Family</a></h3>
-										<span class="info">Nordic Walk, Swiss Alps or French Hiking?</span>
-										<aside class="meta">
-											<span class="country">
-												<span class="icon-world"> </span>12 Countries
-											</span>
-											<span class="activity">
-												<span class="icon-acitivities"> </span>79 Activities
-											</span>
-										</aside>
-										<p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.</p>
-										<a href="tour-detail.html" class="btn btn-default">explore</a>
-										<footer>
-											<ul class="social-networks">
-												<li><a href="#"><span class="icon-twitter"></span></a></li>
-												<li><a href="#"><span class="icon-google-plus"></span></a></li>
-												<li><a href="#"><span class="icon-facebook"></span></a></li>
-												<li><a href="#"><span class="icon-linkedin"></span></a></li>
-											</ul>
-											<span class="price">from <span>$2749</span></span>
-										</footer>
-									</div>
-								</article>
-								<article class="col-sm-6 col-md-4 col-lg-3 article has-hover-s1">
-									<div class="thumbnail">
-										<div class="img-wrap">
-											<img src="img/listing/img-24.jpg" height="228" width="350" alt="image description">
-										</div>
-										<h3 class="small-space"><a href="tour-detail.html">Royal Safari in Peru</a></h3>
-										<span class="info">Nordic Walk, Swiss Alps or French Hiking?</span>
-										<aside class="meta">
-											<span class="country">
-												<span class="icon-world"> </span>12 Countries
-											</span>
-											<span class="activity">
-												<span class="icon-acitivities"> </span>79 Activities
-											</span>
-										</aside>
-										<p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.</p>
-										<a href="tour-detail.html" class="btn btn-default">explore</a>
-										<footer>
-											<ul class="social-networks">
-												<li><a href="#"><span class="icon-twitter"></span></a></li>
-												<li><a href="#"><span class="icon-google-plus"></span></a></li>
-												<li><a href="#"><span class="icon-facebook"></span></a></li>
-												<li><a href="#"><span class="icon-linkedin"></span></a></li>
-											</ul>
-											<span class="price">from <span>$2749</span></span>
-										</footer>
-									</div>
-								</article>
-								<article class="col-sm-6 col-md-4 col-lg-3 article has-hover-s1">
-									<div class="thumbnail">
-										<div class="img-wrap">
-											<img src="img/listing/img-25.jpg" height="228" width="350" alt="image description">
-										</div>
-										<h3 class="small-space"><a href="tour-detail.html">Evening with Panda</a></h3>
-										<span class="info">Nordic Walk, Swiss Alps or French Hiking?</span>
-										<aside class="meta">
-											<span class="country">
-												<span class="icon-world"> </span>12 Countries
-											</span>
-											<span class="activity">
-												<span class="icon-acitivities"> </span>79 Activities
-											</span>
-										</aside>
-										<p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.</p>
-										<a href="tour-detail.html" class="btn btn-default">explore</a>
-										<footer>
-											<ul class="social-networks">
-												<li><a href="#"><span class="icon-twitter"></span></a></li>
-												<li><a href="#"><span class="icon-google-plus"></span></a></li>
-												<li><a href="#"><span class="icon-facebook"></span></a></li>
-												<li><a href="#"><span class="icon-linkedin"></span></a></li>
-											</ul>
-											<span class="price">from <span>$2749</span></span>
-										</footer>
-									</div>
-								</article>
-								<article class="col-sm-6 col-md-4 col-lg-3 article has-hover-s1">
-									<div class="thumbnail">
-										<div class="img-wrap">
-											<img src="img/listing/img-26.jpg" height="228" width="350" alt="image description">
-										</div>
-										<h3 class="small-space"><a href="tour-detail.html">Sleeping with Sea Lion</a></h3>
-										<span class="info">Nordic Walk, Swiss Alps or French Hiking?</span>
-										<aside class="meta">
-											<span class="country">
-												<span class="icon-world"> </span>12 Countries
-											</span>
-											<span class="activity">
-												<span class="icon-acitivities"> </span>79 Activities
-											</span>
-										</aside>
-										<p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.</p>
-										<a href="tour-detail.html" class="btn btn-default">explore</a>
-										<footer>
-											<ul class="social-networks">
-												<li><a href="#"><span class="icon-twitter"></span></a></li>
-												<li><a href="#"><span class="icon-google-plus"></span></a></li>
-												<li><a href="#"><span class="icon-facebook"></span></a></li>
-												<li><a href="#"><span class="icon-linkedin"></span></a></li>
-											</ul>
-											<span class="price">from <span>$2749</span></span>
-										</footer>
-									</div>
-								</article>
+								
 							</div>
 						</div>
 						<!-- pagination wrap -->

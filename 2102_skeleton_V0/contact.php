@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 
-<!-- Mirrored from html.waituk.com/entrada/contact.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 17 Sep 2020 05:39:41 GMT -->
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -278,5 +277,4 @@
 	<script src="js/jquery.main.js"></script>
 </body>
 
-<!-- Mirrored from html.waituk.com/entrada/contact.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 17 Sep 2020 05:39:42 GMT -->
 </html>
