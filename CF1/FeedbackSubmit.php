@@ -1,6 +1,6 @@
 <?php
-include_once '/functions/functions.php';
-include '/functions/sessions.php';
+include_once $_SERVER[ 'DOCUMENT_ROOT' ] .'/CF1/functions/functions.php';
+include $_SERVER[ 'DOCUMENT_ROOT' ] .'/CF1/functions/sessions.php';
 $connection = initialiseDB();
 ?>
 <!DOCTYPE html>
@@ -11,32 +11,38 @@ $connection = initialiseDB();
     </head>
     <body>
         <?php
-        $spiceID = filter_input(INPUT_POST, "spiceID");
+        // $spiceID = filter_input(INPUT_POST, "spiceID");
+        // $qnsCount = filter_input(INPUT_POST, "qnsCount");
+        //
+        // $refAware = filter_input(INPUT_POST, "Aware1");
+        // $refFeed = filter_input(INPUT_POST, "Aware2");
+        // $selQuery = " SELECT usertbl.userID, usertbl.spiceID ";
+        // $selQuery.= " FROM usertbl ";
+        // $selQuery.= " JOIN resultstbl ON usertbl.userID = resultstbl.userID  ";
+        // $selQuery.= " WHERE year(submissionTime) = year(CURDATE()) and spiceID = '$spiceID'";
+
+        $userID = "2";
         $qnsCount = filter_input(INPUT_POST, "qnsCount");
-
-        $refAware = filter_input(INPUT_POST, "Aware1");
-        $refFeed = filter_input(INPUT_POST, "Aware2");
-//        $selQuery = "SELECT userID, spiceID FROM usertbl WHERE spiceID = '$spiceID'";// and refAware is NULL";
-        $selQuery = " SELECT usertbl.userID, usertbl.spiceID ";
-        $selQuery.= " FROM usertbl ";
-        $selQuery.= " JOIN resultstbl ON usertbl.userID = resultstbl.userID  ";
-        $selQuery.= " WHERE year(submissionTime) = year(CURDATE()) and spiceID = '$spiceID'";
-
-
-
-        $result = mysqli_query($connection, $selQuery);
+        $age = filter_input(INPUT_POST, "Question1");
+        $relationship = filter_input(INPUT_POST, "Question2");
+        $travelGroup = filter_input(INPUT_POST, "Question3");
+        $groupDesc = filter_input(INPUT_POST, "Question4");
+        $season = filter_input(INPUT_POST, "Question5");
+        $activity = filter_input(INPUT_POST, "Question6");
+        $days = filter_input(INPUT_POST, "Question7");
+        $budget = filter_input(INPUT_POST, "Question8");
+        $accomodation = filter_input(INPUT_POST, "Question9");
+        $submissionTime = date( "Y-m-d H:i:s" );
 
        /* if (mysqli_num_rows($result) == 0) {
             $thankAlert = 'alert("You have already submitted previously!");';
         } else {
 */
-            $row = mysqli_fetch_array($result);
 
-            $query = " UPDATE resultstbl SET refAware = ?, refFeed = ? WHERE userID = ? ";
-            //$query = "INSERT into resultstbl (refAware, refFeed) VALUES (?,?) WHERE userID = ?";
-
+            //$query = " UPDATE resultstbl SET refAware = ?, refFeed = ? WHERE userID = ? ";
+            $query = "INSERT into results (userID, submissionTime, age, relationship, travelGroup, groupDesc, season, activity, days, budget, accomodation) VALUES (?,?,?,?,?,?,?,?,?,?,?)";
             $stmt = mysqli_prepare($connection, $query);
-            mysqli_stmt_bind_param($stmt, "ssi", $refAware, $refFeed, $row[0]) or die(mysqli_error($connection));
+            mysqli_stmt_bind_param($stmt, "issssssssss", $userID, $submissionTime, $age, $relationship,$travelGroup,$groupDesc,$season,$activity,$days,$budget,$accomodation) or die(mysqli_error($connection));
 
             if (!mysqli_stmt_execute($stmt)) {
                 echo "Execute failed: (" . $stmt->errno . ") " . $stmt->error;

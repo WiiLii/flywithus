@@ -280,7 +280,7 @@ function generateTips( $categoryID )
     }
 }
 
-function generateAllSurveyCategory( )
+function generateAllSurveyCategory()
 {
     global $connection;
 
@@ -344,19 +344,6 @@ function getUsername() {
     // }
     return $name;
 }
-
-//function generateCSS( $colorScheme )
-//{
-//    echo '<style>
-//    .bgcolor {
-//        background-color : ' . $colorScheme . ';
-//    }
-//    .borderTop {
-//        border: solid ' . $colorScheme . ' 6px;
-//        padding-bottom:3%;
-//    }
-//</style>';
-//}
 
 function generateJavascript( $categoryInitials, $questionCount, $checkBoxMarkedIndex, $dropDownListMarkedIndex )
 {
@@ -478,10 +465,6 @@ function generateQnA( $categoryID = 0, $categoryName = "Travel", $colorScheme = 
 
     mysqli_stmt_free_result( $stmt );
     mysqli_stmt_close( $stmt );
-    if ( !isset( $categoryInitials ) ) {
-        echo "No questions set for this category.";
-        return;
-    }
 
     generateJavascript( $categoryInitials, $questionIndex, $checkBoxMarkedIndex, $dropDownListMarkedIndex );
 
@@ -571,28 +554,145 @@ function getQuestionsAnswer( $questionID, $inputType, $questionIndex, $categoryI
     mysqli_stmt_close( $stmt );
 }
 
-function generateDropDownList( $categoryInitials, $questionIndex, $qDDLArray, $answerID )
+function generateSurveyForm()
+{
+    $name = getUsername();
+    global $connection;
+    $query = "select question, questionID, inputType from questions";
+
+    $result = mysqli_query( $connection, $query );
+
+    echo '<form action="FeedbackSubmit.php" method="post">';
+    echo '<div id="outerQns">';
+
+    $questionIndex = 1;
+    while ( $row = mysqli_fetch_array( $result ) ) {
+        echo '<section class="question">
+              <blockquote>
+              <p class="bold">Q' . $questionIndex . '. ' . $row[ 0 ] . '</p>
+              <div class="funkyradio">';
+        generateQnAForm( $row[ 1 ], $row[ 2 ], $questionIndex );
+        $questionIndex++;
+    }
+    //echo '<input type="hidden" value="' . $spiceID . '" name="spiceID">';
+    echo '<input type="hidden" value="' . ( $questionIndex - 1 ) . '" name="qnsCount">';
+    echo '</div>
+          <button class="btn btn-info btn-lg pull-right" data-target="#myModal" data-toggle="modal" type="button">Submit</button>
+          <div class="clearfix"></div>
+          <div class="modal fade" id="myModal" role="dialog">
+          <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+          <div class="modal-header">
+          <div class="bold">
+          <h4 class="modal-title">Aww yeah! <span class="glyphicon glyphicon-heart"></span></h4>
+          </div>
+          </div>
+          <div class="modal-body">
+          <p>Thanks,<span class="name"> '.$name.'!</span> Your perfect vacation awaits.</p>
+          </div>
+          <div class="modal-footer">
+          <button class="btn btn-primary" type="submit" onclick=window.location="index.php">Okay!</button>
+          </div>
+          </div>
+          </div>
+          </div>
+          ';
+    mysqli_free_result( $result );
+    echo '</form>';
+}
+
+function generateQnAForm( $questionID, $inputType, $questionIndex )
 {
 
-    echo ( '<select class="form-control" name="dd' . $categoryInitials . '0' . $questionIndex . '[' . $qDDLArray . ']">' );
+    global $connection;
+    $booleanDDL     = false;
+    $qCheckBoxArray = 1;
+    $qDDLArray      = 1;
+    $colNo          = 0;
+    $query = "SELECT answer, answerID FROM answers, questions"
+           . " WHERE (answers.questionID = questions.questionID)"
+           . " AND questions.questionID = ?";
+
+    $stmt = mysqli_prepare( $connection, $query );
+    mysqli_stmt_bind_param( $stmt, "i", $questionID );
+    mysqli_stmt_execute( $stmt );
+
+    mysqli_stmt_store_result( $stmt );
+    mysqli_stmt_bind_result( $stmt, $answer, $answerID );
+
+    $colNo          = 0;
+    $count = mysqli_stmt_num_rows($stmt);
+    while ( $result = mysqli_stmt_fetch( $stmt ) ) {
+        if ( $result ) {
+            echo '';
+            if ( $inputType == null || $inputType == "r" ) {
+                echo '<div class="funkyradio-primary">
+                      <input id="radio' .$answerID. '" class="choice" type="radio" name="Question' . $questionIndex . '" required value="' . $answer . '"/>
+                      <label for="radio' .$answerID. '">' .$answer. '</label>
+                      </div>
+                      ';
+            }
+            else if ( $inputType == "c" ) {
+                echo '<div class="funkyradio-primary">
+                      <input id="checkbox'.$answerID.'" name="cb0' .$questionIndex. '[' .$qCheckBoxArray. ']" type="checkbox"/>
+                      <label for="checkbox' .$answerID. '">' .$answer. '</label>
+                      </div>
+                      ';
+                $qCheckBoxArray++;
+            } else if ( $inputType == "d") {
+                echo ("$answer");
+                generateDropDownList($questionIndex, $qDDLArray, $answerID );
+                $qDDLArray++;
+                $booleanDDL = true;
+                echo '';
+            }
+             else {
+                echo ( "Please specify an input type." );
+            }
+            if ( $colNo < ($count-1) ) {
+                echo '';
+                $colNo++;
+            }
+
+            else {
+                echo '</div>
+                      </blockquote>
+                      </section>
+                      ';
+                $colNo = 0;
+            }
+        }
+
+        else {
+            die( "Database Query Failed" );
+            break;
+        }
+    }
+    mysqli_stmt_free_result( $stmt );
+    mysqli_stmt_close( $stmt );
+}
+function generateDropDownList($questionIndex, $qDDLArray, $answerID )
+{
+
+    echo ( '<select class="form-control" name="dd0' . $questionIndex . '[' . $qDDLArray . ']">' );
     //    echo ('<option value ="0"> None </option>');
-    getDDLChoices( $answerID, $categoryInitials, $questionIndex, $qDDLArray );
+    getDDLChoices( $answerID, $questionIndex, $qDDLArray );
     echo ( '</select>' );
 
 }
 
-function generateTravelDropDownList( $categoryInitials, $questionIndex, $qDDLArray, $answerID )
+function generateTravelDropDownList($questionIndex, $qDDLArray, $answerID )
 {
 
     echo ( '<div class="input-group">
-            <select class="form-control" name="dd' . $categoryInitials . '0' . $questionIndex . '[' . $qDDLArray . ']">' );
+            <select class="form-control" name="dd0' . $questionIndex . '[' . $qDDLArray . ']">' );
     //    echo ('<option value ="0"> None </option>');
-    getDDLChoices( $answerID, $categoryInitials, $questionIndex, $qDDLArray );
+    getDDLChoices( $answerID,$questionIndex, $qDDLArray );
     echo ( '</select><span class="input-group-addon" id="basic-addon2">times</span></div>' );
 
 }
 
-function getDDLChoices( $answerID, $categoryInitials, $questionIndex, $qDDLArray ) //todo
+function getDDLChoices( $answerID,$questionIndex, $qDDLArray ) //todo
 {
     global $connection;
 
@@ -609,7 +709,7 @@ function getDDLChoices( $answerID, $categoryInitials, $questionIndex, $qDDLArray
 
     while ( $result = mysqli_stmt_fetch( $stmt ) ) {
         if ( $result ) {
-            echo ( '<option value="' . $dropDownChoiceValue . '"  ' . checkDDLParameterValue( "dd" . $categoryInitials . '0' . $questionIndex . '[' . $qDDLArray . ']', $dropDownChoiceValue ) . '>' . $dropDownChoice . '</option>' );
+            echo ( '<option value="' . $dropDownChoiceValue . '"  ' . checkDDLParameterValue( "dd0". $questionIndex . '[' . $qDDLArray . ']', $dropDownChoiceValue ) . '>' . $dropDownChoice . '</option>' );
         } else {
             die( "Database query failed" );
             break;

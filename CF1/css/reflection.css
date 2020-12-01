@@ -1,7 +1,7 @@
 .container {
     width: auto;
     max-width: 680px;
-    padding: 0 15px;
+    padding: 0 30px;
 }
 
 h2 {
@@ -151,17 +151,17 @@ select.form-control {
 }
 
 .funkyradio input[type="radio"]:checked ~ label,.funkyradio input[type="checkbox"]:checked ~ label {
-    color: #4daba9;
+    color: #AFA176;
     background-color: #F8F8F8;
-    border-color: #4daba9;
-    box-shadow: 0 0 5px #4daba9;
+    border-color: #AFA176;
+    box-shadow: 0 0 5px #AFA176;
 }
 
 .funkyradio input[type="radio"]:checked ~ label:before,.funkyradio input[type="checkbox"]:checked ~ label:before {
     font-family: "Glyphicons Halflings";
     content: "\e013";
     text-indent: .8em;
-    background-color: #4daba9;
+    background-color: #AFA176;
 }
 
 .funkyradio input[type="radio"]:focus ~ label:before,.funkyradio input[type="checkbox"]:focus ~ label:before {
@@ -170,7 +170,7 @@ select.form-control {
 
 .funkyradio-primary input[type="radio"]:checked ~ label:before,.funkyradio-primary input[type="checkbox"]:checked ~ label:before {
     color: #fff;
-    background-color: #4daba9;
+    background-color: #AFA176;
 }
 
 .bold {

@@ -4,27 +4,26 @@ include $_SERVER[ 'DOCUMENT_ROOT' ] .'/CF1/functions/sessions.php';
 $connection = initialiseDB();
 ?>
 <!DOCTYPE html>
-<!--"Where every moment spent with you is a moment I treasure"-->
+<!--Pretend you read something insightful here-->
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Demographics</title>
-    <!--nV Addition-->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>flywithus</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    <link href="css/customstyle.css" rel="stylesheet" type="text/css">
-    <!--Previous Addition-->
+    <link href="css/reflection.css" rel="stylesheet" type="text/css">
     <script src="javascripts/getsurveyvalues.js"></script>
 </head>
 <body>
-<div id="contentBox">
-<?php generateCategoryTabs(); ?>
-<?php generateSurvey(0, "common"); ?>
+<?php include 'Header.php'; ?>
 <div class="container">
-    <?php include 'Footer.php'; ?>
-</div>
-</div>
+    <div class="row">
+    <?php
+    generateSurveyForm();
+    ?>
+<?php include 'Footer.php'; ?>
+    </div>
 </body>
 </html>
