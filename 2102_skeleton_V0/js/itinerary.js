@@ -26,3 +26,28 @@ for (var i = 0; i < data.table.length; i++) {
   async: false
 });
 }
+function clickHotel(){ // this to search the hotel base on the filter
+  hotelCountry = document.getElementById("hotelCountry").value;
+  hotelPrice = document.getElementById("hotelPrice").value;
+  //alert(hotelCountry+hotelPrice);
+  $.ajax({ // ajax from php validation
+  url: 'process_hotels.php',
+  type: 'POST',
+  dataType: 'JSON',
+  data: {action:'Search_hotel', hotelCountry:hotelCountry,hotelPrice:hotelPrice},
+  success: function(data) {
+//alert(data.table);
+for (var i = 0; i < data.table.length; i++) {
+  document.getElementById("hotelsTable").innerHTML = data.table;
+}
+//  console.log(data.table);
+
+  },
+  error: function(request,status,error) {
+    console.log(request);
+    alert(status);
+  },
+  async: false
+});
+
+}

@@ -60,7 +60,7 @@
 				<div class="content-block content-sub">
 					<div class="container">
 						<div class="filter-option">
-							<strong class="result-info">179 TRIPS MATCHES YOUR SEARCH CRITERIA</strong> <!-- NEED GENERATE THIS RESULT -->
+					 <!-- NEED GENERATE THIS RESULT -->
 							<div class="layout-holder">
 
 
@@ -101,7 +101,7 @@
 						<div class="content-holder list-view">
 							<!--- call ajax -->
 								<div class="" id="packagesTable">	</div>
-							<article class="article">
+						<!---	<article class="article">
 								<div class="thumbnail">
 									<div class="img-wrap">
 										<img src="img/listing/img-35.jpg" height="240" width="350" alt="image description">
@@ -130,8 +130,8 @@
 										</aside>
 									</div>
 								</div>
-							</article>
-				
+							</article>-->
+
 
 
 
@@ -143,27 +143,7 @@
 
 						</div>
 						<!-- pagination wrap -->
-						<nav class="pagination-wrap">
-							<div class="btn-prev">
-								<a href="#" aria-label="Previous">
-									<span class="icon-angle-right"></span>
-								</a>
-							</div>
-							<ul class="pagination">
-								<li><a href="#">1</a></li>
-								<li><a href="#">2</a></li>
-								<li><a href="#">3</a></li>
-								<li class="active"><a href="#">4</a></li>
-								<li><a href="#">5</a></li>
-								<li>...</li>
-								<li><a href="#">7</a></li>
-							</ul>
-							<div class="btn-next">
-								<a href="#" aria-label="Previous">
-									<span class="icon-angle-right"></span>
-								</a>
-							</div>
-						</nav>
+
 					</div>
 				</div>
 				<!-- recent block -->
