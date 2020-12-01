@@ -141,7 +141,17 @@ if (isset($_POST['session'])) {
 									data-splitout="none"
 									data-actions='[{"event":"click","action":"jumptoslide","slide":"rs-164","delay":""}]'
 									data-responsive_offset="on">
-									<a class="btn btn-banner" href="#">SURVEY</a>
+									<form class="" action="<?php $_SERVER["PHP_SELF"]; ?>" method="post">
+
+														<?php if (isset($_SESSION['email'])) {
+														echo '<button  class="btn btn-banner" type="submit" data-toggle="modal" data-target="#surveyModal" name="session">survey</button>';
+															echo '<button class="btn btn-banner"type="submit" data-toggle="modal" data-target="#surveyModal1" name="session1">Take Survey Again</button>';
+														}
+														else{
+																echo '<button class="btn btn-banner" type="submit" data-toggle="modal" data-target="#surveyModal1" name="session">survey</button>';
+														}?>
+													</form>
+
 								</div>
 							</li>
 						</ul>
@@ -151,16 +161,7 @@ if (isset($_POST['session'])) {
 			<!-- main container -->
 			<main id="main">
 				<!--- session for the buttons ya -->
-				<form class="" action="<?php $_SERVER["PHP_SELF"]; ?>" method="post">
 
-					<?php if (isset($_SESSION['email'])) {
-					echo '<button type="submit" data-toggle="modal" data-target="#surveyModal" name="session">survey</button>';
-						echo '<button type="submit" data-toggle="modal" data-target="#surveyModal1" name="session1">takeagn</button>';
-					}
-					else{
-							echo '<button type="submit" data-toggle="modal" data-target="#surveyModal1" name="session">survey</button>';
-					}?>
-				</form>
 				<!-- article list holder -->
 				<div class="content-block content-spacing">
 					<div class="container">
