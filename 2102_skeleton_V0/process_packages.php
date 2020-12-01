@@ -39,12 +39,13 @@ if ($country == "ALLC") {
   }
   else if ($price == "ALLP"){
       $sql = "SELECT * FROM itinerary GROUP by ItineraryCity";
+  }else {
+      $sql = "SELECT * FROM itinerary where itineraryCountry ='$country' and $selected";
   }
 }
 else {
-  $sql = "SELECT * FROM itinerary where itineraryName =$country and $selected";
-}
-if($price== "ALLP"){
+//  $sql = "SELECT * FROM itinerary where itineraryName =$country and $selected";
+if($price == "ALLP"){
   if ($country == "Japan") {
     $sql = "SELECT * FROM itinerary where itineraryCountry ='Japan'  GROUP by ItineraryCity";
   }
@@ -57,23 +58,28 @@ if($price== "ALLP"){
   else if ($country == "Thailand") {
   $sql = "SELECT * FROM itinerary where itineraryCountry ='Thailand'  GROUP by ItineraryCity";
   }
-  else if $country == "ALLC") {
+  else if ($country == "ALLC") {
     $sql = "SELECT * FROM itinerary GROUP by ItineraryCity";
+  }
+  else {
+      $sql = "SELECT * FROM itinerary where itineraryCountry ='$country' and $selected";
   }
 }
 else {
-  $sql = "SELECT * FROM itinerary where itineraryName =$country and $selected";
+  $sql = "SELECT * FROM itinerary where itineraryCountry ='$country' and $selected";
+}
 }
 
-$result = $db->query($sql);
 //$mytable = $sql;
+$result = $db->query($sql);
+
 if ($result->num_rows > 0) {
   // output data of each row
   while($row = $result->fetch_assoc()) {
   // $country_arr[] = $row['itineraryCountry'];
   //   $total_arr[] = $row['totalprice'];
   // $over_arr[] = $row['itineraryOverview'];
-//   $mytable[]=$row['totalPrice'];
+  // $mytable[]=$row['totalPrice'];
   $mytable[]='<article class="article">
     <div class="thumbnail">
         <div class="img-wrap">
