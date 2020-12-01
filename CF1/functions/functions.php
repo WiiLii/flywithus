@@ -1,8 +1,5 @@
 <?php
 
-require $_SERVER[ 'DOCUMENT_ROOT' ] . '/CF1/Classes/CategoryClass.php';
-require $_SERVER[ 'DOCUMENT_ROOT' ] . '/CF1/Classes/FormulaeClass.php';
-require $_SERVER[ 'DOCUMENT_ROOT' ] . '/CF1/Classes/ResultClass.php';
 
 function redirect_to( $url )
 {
@@ -43,28 +40,12 @@ function escapeString( $text )
     return mysqli_real_escape_string( $connection, $text );
 }
 
-function errorLogin( )
-{
-    $url = "";
-    $url .= rawurlencode( "index.php" );
-    $url .= "?" . "error=" . urlencode( "Try again with another username or password." );
-    redirect_to( $url );
-}
-
-function errorMessage( $errorMsg = "Error. Please try again." )
-{
-    $url = "";
-    $url .= rawurlencode( "index.php" );
-    $url .= "?" . "error=" . urlencode( $errorMsg );
-    redirect_to( $url );
-}
-
 function initialiseDB( )
 {
     $dbhost     = "127.0.0.1";
     $dbuser     = "root";
     $dbpass     = "";
-    $dbname     = "flywithus";
+    $dbname     = "2102_travel";
     $connection = mysqli_connect( $dbhost, $dbuser, $dbpass, $dbname );
 
     if ( mysqli_connect_errno() ) {
@@ -74,171 +55,6 @@ function initialiseDB( )
     return $connection;
 }
 
-function logout( )
-{
-    destroySession();
-    redirect_to( "index.php" );
-}
-
-function login( $userid, $password )
-{
-    //[REDACTED]
-}
-
-function checkSurveyDone( )
-{
-    //This function checks if the user has attempted the challenge in the current year.
-    global $connection;
-
-    $spiceID              = $_SESSION[ 'spiceID' ];
-    $userID               = getExistingUserID( $spiceID );
-    $_SESSION[ 'userID' ] = $userID;
-
-    $query  = " SELECT resultstbl.userID ";
-    $query .= " FROM resultstbl ";
-    $query .= " JOIN usertbl ON usertbl.userID = resultstbl.userID ";
-    $query .= " WHERE year(submissionTime) = year(CURDATE()) AND resultstbl.userID = ? ";
-    $query .= " limit 1; ";
-
-    $stmt = mysqli_prepare( $connection, $query );
-
-    mysqli_stmt_bind_param( $stmt, "s", $userID );
-    mysqli_stmt_execute( $stmt );
-
-    $result = mysqli_stmt_fetch( $stmt );
-
-    mysqli_stmt_close( $stmt );
-    //for debugging purposes
-    if ( !$result or $spiceID == 'p1432208' ) {
-        return false;
-    } else {
-        return true;
-    }
-//    if ( !$result ) {
-//        return false;
-//    } else {
-//        return true;
-//    }
-}
-
-
-function generatePageCategory( )
-{
-    global $connection;
-
-    $query = " SELECT categoryID, categoryName, colorScheme FROM flywithus.categorytbl ";
-    $query .= " WHERE ((disabled IS null) OR (disabled = 'no') OR (disabled = '') ) ";
-    $query .= " AND (common IS NULL ";
-    $query .= " OR common = 'no');";
-
-    $stmt = mysqli_prepare( $connection, $query );
-    mysqli_stmt_execute( $stmt );
-
-    mysqli_stmt_store_result( $stmt );
-    mysqli_stmt_bind_result( $stmt, $categoryID, $categoryName, $colorScheme );
-
-    $categoryArray = array( );
-
-    $arrayIndex = 0;
-    while ( $result = mysqli_stmt_fetch( $stmt ) ) {
-        if ( $result ) {
-
-            $category = new CategoryClass();
-            $category->setCategoryID( $categoryID );
-            $category->setCategoryName( $categoryName );
-            $category->setColorScheme( $colorScheme );
-
-            $categoryArray[ $arrayIndex ] = $category;
-            $arrayIndex++;
-        } else {
-            die( "Database query failed" );
-            break;
-        }
-    }
-
-    mysqli_stmt_free_result( $stmt );
-    mysqli_stmt_close( $stmt );
-
-    return $categoryArray;
-}
-
-function generateCommonPageCategory( )
-{
-    global $connection;
-
-    $query = " SELECT categorytbl.categoryID, categoryName, colorScheme FROM categorytbl ";
-    $query .= " WHERE ((disabled IS null) OR (disabled = 'no') OR (disabled = '') ) ";
-    $query .= " AND common = 'yes';";
-
-    $stmt = mysqli_prepare( $connection, $query );
-
-    mysqli_stmt_execute( $stmt );
-
-    mysqli_stmt_store_result( $stmt );
-    mysqli_stmt_bind_result( $stmt, $categoryID, $categoryName, $colorScheme );
-
-    $categoryArray = array( );
-
-    $arrayIndex = 0;
-    while ( $result = mysqli_stmt_fetch( $stmt ) ) {
-        if ( $result ) {
-
-            $category = new CategoryClass();
-            $category->setCategoryID( $categoryID );
-            $category->setCategoryName( $categoryName );
-            $category->setColorScheme( $colorScheme );
-
-            $categoryArray[ $arrayIndex ] = $category;
-            $arrayIndex++;
-        } else {
-            die( "Database query failed" );
-            break;
-        }
-    }
-
-    mysqli_stmt_free_result( $stmt );
-    mysqli_stmt_close( $stmt );
-
-    return $categoryArray;
-}
-
-function generateSurvey( $indexCount = 0, $common = NULL )
-{
-
-    if ( $common == NULL ) {
-        $categoryArray = generatePageCategory();
-    } else {
-        $categoryArray = generateCommonPageCategory();
-    }
-
-    if ( filter_input( INPUT_POST, 'page' ) != null ) {
-        $indexCount = filter_input( INPUT_POST, 'page' );
-    }
-    $categoryID   = $categoryArray[ $indexCount ]->getCategoryID();
-    $categoryName = $categoryArray[ $indexCount ]->getCategoryName();
-//    $colorScheme  = $categoryArray[ $indexCount ]->getColorScheme();
-//    generateCSS( $colorScheme );
-
-    //store in session current survey
-    $_SESSION[ 'currentSurveyCategory' ] = $categoryName;
-
-    echo '<div class="container">';
-
-    generateQnA( $categoryID, $categoryName );
-
-    if ( $common == NULL ) {
-        generateTips($categoryID);
-        generatePrevNextButton( $indexCount, ( count( $categoryArray ) - 1 ) );
-    } else {
-        generateCommonPrevNextButton( $indexCount, ( count( $categoryArray ) - 1 ) );
-    }
-
-    $currentIndexCount = $indexCount;
-    if ( $common == NULL ) {
-        $currentIndexCount += 1;
-    }
-    $_SESSION[ 'pageIndexCount' ] = $currentIndexCount;
-}
 
 function generateTips( $categoryID )
 {
@@ -280,48 +96,7 @@ function generateTips( $categoryID )
     }
 }
 
-function generateAllSurveyCategory()
-{
-    global $connection;
 
-    $query = " SELECT categoryID, categoryName, colorScheme FROM flywithus.categorytbl ";
-    $query .= " WHERE ((disabled IS null) OR (disabled = 'no') OR (disabled = '') ) ";
-
-    $stmt = mysqli_prepare( $connection, $query );
-
-    mysqli_stmt_execute( $stmt );
-
-    mysqli_stmt_store_result( $stmt );
-    mysqli_stmt_bind_result( $stmt, $categoryID, $categoryName, $colorScheme );
-
-    $categoryArray = array( );
-
-    $arrayIndex = 0;
-    while ( $result = mysqli_stmt_fetch( $stmt ) ) {
-        if ( $result ) {
-            $qnsQuery = "SELECT count(questionID) FROM questiontbl WHERE categoryID = $categoryID";
-            $results  = mysqli_query( $connection, $qnsQuery );
-            $qnsCount = mysqli_fetch_array( $results );
-
-            $category = new CategoryClass();
-            $category->setCategoryName( $categoryName );
-            $category->setColorScheme( $colorScheme );
-            $category->setQuestionCount( $qnsCount );
-
-            $categoryArray[ $arrayIndex ] = $category;
-            $arrayIndex++;
-            mysqli_free_result( $results );
-        } else {
-            die( "Database query failed" );
-            break;
-        }
-    }
-
-    mysqli_stmt_free_result( $stmt );
-    mysqli_stmt_close( $stmt );
-
-    return $categoryArray;
-}
 
 function welcomeUser( )
 {

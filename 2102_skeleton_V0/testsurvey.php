@@ -1,5 +1,4 @@
 <?php
-// base on ur file location 
 include_once   $_SERVER[ 'DOCUMENT_ROOT' ].'/2102_projects/flywithus/CF1/functions/functions.php';
 //include $_SERVER[ 'DOCUMENT_ROOT' ] .'/CF1/functions/sessions.php';
 $connection = initialiseDB();

@@ -49,6 +49,7 @@ if (isset($_POST['regi_submit'])) {
               echo "success here";
               session_start();
                 $_SESSION['email'] = $regi_email;
+                
                 header('Location: index.php');
           }else{
             echo "fail here";

@@ -1,6 +1,6 @@
 <?php
 include_once $_SERVER[ 'DOCUMENT_ROOT' ] .'/CF1/functions/functions.php';
-include $_SERVER[ 'DOCUMENT_ROOT' ] .'/CF1/functions/sessions.php';
+//include $_SERVER[ 'DOCUMENT_ROOT' ] .'/CF1/functions/sessions.php';
 $connection = initialiseDB();
 ?>
 <!DOCTYPE html>
@@ -17,13 +17,13 @@ $connection = initialiseDB();
     <script src="javascripts/getsurveyvalues.js"></script>
 </head>
 <body>
-<?php include 'Header.php'; ?>
+<?php include 'header.php'; ?>
 <div class="container">
     <div class="row">
     <?php
     generateSurveyForm();
     ?>
-<?php include 'Footer.php'; ?>
+<?php include 'footer.php'; ?>
     </div>
 </body>
 </html>
