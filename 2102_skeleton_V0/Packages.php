@@ -5,6 +5,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>flywithus</title>
 	<!-- favion -->
@@ -19,9 +20,10 @@
 	<link media="all" rel="stylesheet" href="css/bootstrap.css">
 	<!-- include main css -->
 	<link media="all" rel="stylesheet" href="css/main.css">
+
 </head>
-<body>
-	<div class="preloader" id="pageLoad">
+<body onload="searching();">
+	<div class="preloader" id="pageLoad" >
 		<div class="holder">
 			<div class="coffee_cup"></div>
 		</div>
@@ -60,45 +62,45 @@
 						<div class="filter-option">
 							<strong class="result-info">179 TRIPS MATCHES YOUR SEARCH CRITERIA</strong> <!-- NEED GENERATE THIS RESULT -->
 							<div class="layout-holder">
+
+
 								<div class="select-holder">
-									<a href="#" class="btn btn-primary btn-filter"><i class="fa fa-sliders"></i> Filter</a>
+									<a href="#" class="btn btn-primary btn-filter"><i class="fa fa-sliders" ></i> Filter</a>
 									<div class="filter-slide">
 									<div class="select-col">
-											<select class="filter-select">
-												<option value="Country">Country</option>
-												<option value="Country">Korea</option>
-												<option value="Country">China</option>
-												<option value="Country">Thailand</option>
-												<option value="Country">Japan</option>
+											<select class="filter-select" id="country" name="country">
+												<option value="ALLC">Country</option>
+												<option value="Korea">Korea</option>
+												<option value="China">China</option>
+												<option value="Thailand">Thailand</option>
+												<option value="Japan">Japan</option>
 											</select>
 										</div>
+
 										<div class="select-col">
-											<select class="filter-select">
-												<option value="Holiday Type">Holiday Type</option>
-												<option value="Holiday Type">Adventurous Trips</option>
-												<option value="Holiday Type">Night Life Trips</option>
-												<option value="Holiday Type">Nature Lover Trips</option>
-												<option value="Holiday Type">Shopping Trips</option>
-												<option value="Holiday Type">Culturally Curious Trips</option>
-												<option value="Holiday Type">Romantic Trips</option>
+											<select class="filter-select"  id="price" name="price">
+												<option value="ALLP">Price Range</option>
+												<option value="one">$</option>
+												<option value="two">$$</option>
+												<option value="three">$$$</option>
+
 											</select>
 										</div>
-										<div class="select-col">
-											<select class="filter-select">
-												<option value="Price Range">Price Range</option>
-												<option value="Price Range">$1 - $499</option>
-												<option value="Price Range">$500 - $999</option>
-												<option value="Price Range">$1000 - $1499</option>
-												<option value="Price Range">$1500 - $2999</option>
-												<option value="Price Range">$3000+</option>
-											</select>
-										</div>
+											<div class="select-col">
+													<button type="submit"  class="btn btn-default"  name="filter_submit" onclick="searching();"> SEARCH</button>
+											</div>
+
+
 									</div>
 								</div>
+
+
 							</div>
 						</div>
 						<!-- list view -->
 						<div class="content-holder list-view">
+							<!--- call ajax -->
+								<div class="" id="packagesTable">	</div>
 							<article class="article">
 								<div class="thumbnail">
 									<div class="img-wrap">
@@ -112,14 +114,8 @@
 											</header>
 											<p>Welcome to Seoul! Seoul was made for shopping and fun, so get your walking shoes on (but don’t forget to pack your dancing shoes as well), because this itinerary is all about the best places to shop and be entertained in the city.</p>
 											<div class="reviews-holder">
-												<div class="star-rating">
-													<span><span class="icon-star"></span></span>
-													<span><span class="icon-star"></span></span>
-													<span><span class="icon-star"></span></span>
-													<span><span class="icon-star"></span></span>
-													<span class="disable"><span class="icon-star"></span></span>
-												</div>
-												<div class="info-rate">Based on 75 Reviews</div>
+
+												<h3>places</h3>
 											</div>
 										</div>
 										<aside class="info-aside">
@@ -135,78 +131,16 @@
 									</div>
 								</div>
 							</article>
-							<article class="article">
-								<div class="thumbnail">
-									<div class="img-wrap">
-										<img src="img/listing/img-36.jpg" height="240" width="350" alt="image description">
-									</div>
-									<div class="description">
-										<div class="col-left">
-											<header class="heading">
-												<h3><a href="packages-detail.php">BUSAN</a></h3>
-												<div class="info-day">7+ Days</div>
-											</header>
-											<p>Welcome to Busan! The city of Busan has announced the festival schedule for the second half of the year to revitalize the local economy. The city plans to organize various festivals for citizens and visitors to enjoy safely while following quarantine guidelines.</p>
-											<div class="reviews-holder">
-												<div class="star-rating">
-													<span><span class="icon-star"></span></span>
-													<span><span class="icon-star"></span></span>
-													<span><span class="icon-star"></span></span>
-													<span><span class="icon-star"></span></span>
-													<span class="disable"><span class="icon-star"></span></span>
-												</div>
-												<div class="info-rate">Based on 75 Reviews</div>
-											</div>
-										</div>
-										<aside class="info-aside">
-											<span class="price">from <span>$2749</span></span>
-											<div class="activity-level">
-												<div class="ico">
-													<span class="icon-level4"></span>
-												</div>
-												<span class="text">BUSAN</span>
-											</div>
-											<a href="#" class="btn btn-default">explore</a>
-										</aside>
-									</div>
-								</div>
-							</article>
-							<article class="article">
-								<div class="thumbnail">
-									<div class="img-wrap">
-										<img src="img/listing/img-37.jpg" height="240" width="350" alt="image description">
-									</div>
-									<div class="description">
-										<div class="col-left">
-											<header class="heading">
-												<h3><a href="packages-detail.php">GANGNAM</a></h3>
-												<div class="info-day">7+ Days</div>
-											</header>
-											<p>Welcome to Gangnam! Gangnam literally means ‘south of the river,’ and this district in South Korea’s capital that lies along the banks of the Han, one of the country’s largest bodies of water. There’s plenty to do and see in this historically rich, fast-developing neighborhood. We explore some of the best.</p>
-											<div class="reviews-holder">
-												<div class="star-rating">
-													<span><span class="icon-star"></span></span>
-													<span><span class="icon-star"></span></span>
-													<span><span class="icon-star"></span></span>
-													<span><span class="icon-star"></span></span>
-													<span class="disable"><span class="icon-star"></span></span>
-												</div>
-												<div class="info-rate">Based on 75 Reviews</div>
-											</div>
-										</div>
-										<aside class="info-aside">
-											<span class="price">from <span>$2749</span></span>
-											<div class="activity-level">
-												<div class="ico">
-													<span class="icon-level8"></span>
-												</div>
-												<span class="text">GANGNAM</span>
-											</div>
-											<a href="#" class="btn btn-default">explore</a>
-										</aside>
-									</div>
-								</div>
-							</article>
+				
+
+
+
+
+
+
+
+
+
 						</div>
 						<!-- pagination wrap -->
 						<nav class="pagination-wrap">
@@ -249,7 +183,7 @@
 											<span>5 Days</span>
 											<span>$299</span>
 										</div>
-										
+
 									</footer>
 								</div>
 							</article>
@@ -265,7 +199,7 @@
 											<span>5 Days</span>
 											<span>$299</span>
 										</div>
-									
+
 									</footer>
 								</div>
 							</article>
@@ -281,7 +215,7 @@
 											<span>5 Days</span>
 											<span>$299</span>
 										</div>
-										
+
 									</footer>
 								</div>
 							</article>
@@ -297,7 +231,7 @@
 											<span>5 Days</span>
 											<span>$299</span>
 										</div>
-										
+
 									</footer>
 								</div>
 							</article>
@@ -336,6 +270,7 @@
 	<script src="js/mailchimp.js"></script>
 	<!-- custom script -->
 	<script src="js/jquery.main.js"></script>
+	  <script src="js/itinerary.js"></script>
 </body>
 
 <!-- Mirrored from html.waituk.com/entrada/list-view-normal.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 17 Sep 2020 05:38:19 GMT -->
