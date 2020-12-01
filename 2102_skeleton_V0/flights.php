@@ -110,15 +110,16 @@
 										</th>
 										<th>
 											<strong class="date-text">Airlines</strong>
-											<span class="sub-text">Airlines</span>
+											<span class="sub-text">Flight Number</span>
+										</th>
+
+										<th>
+											<strong class="date-text">Country</strong>
+											<span class="sub-text">City</span>
 										</th>
 										<th>
-											<strong class="date-text">Price (PP)</strong>
-											<span class="sub-text">Including Flights</span>
-										</th>
-										<th>
-											<strong class="date-text">Price (PP)</strong>
-											<span class="sub-text">Excluding Flights</span>
+											<strong class="date-text">Price</strong>
+											<span class="sub-text">Per pax.</span>
 										</th>
 										<th>
 											&nbsp;
