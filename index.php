@@ -164,7 +164,7 @@ if (isset($_POST['session'])) {
 
 				<!-- article list holder -->
 				<div class="content-block content-spacing" >
-					<div class="container" style="width: 100%;">
+					<div class="container" style="width: 100%; padding:0px;">
 						</br>
 						<header class="content-heading">
 							<h2 class="main-heading">POPULAR ITINERARIES</h2>
