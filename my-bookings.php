@@ -31,7 +31,12 @@
 	<div id="wrapper">
 		<div class="page-wrapper">
 			<!-- main header -->
-		<?php include 'header.php'; ?>
+		<?php include 'header.php';
+		if (!isset($_SESSION['email'])) {
+				echo "<script>alert('Please log in to view my bookings.')</script>";
+			echo'<script>window.location = "login.php";</script>';
+		}
+		 ?>
 			<!-- main container -->
 			<main id="main">
         <!--body-->

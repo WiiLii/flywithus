@@ -1,3 +1,7 @@
+<?php
+
+
+ ?>
 <!DOCTYPE html>
 <html>
 
@@ -29,7 +33,14 @@
 	<div id="wrapper">
 		<div class="page-wrapper">
 			<!-- main header -->
-	<?php include 'header.php'; ?>
+	<?php include 'header.php';
+
+	if (!isset($_SESSION['email'])) {
+			echo "<script>alert('Please log in to view cart.')</script>";
+		echo'<script>window.location = "login.php";</script>';
+	}
+
+	?>
 			<!-- main container -->
 			<main id="main">
 				<!-- top information area -->
@@ -101,7 +112,7 @@
 										<td>
 											<div class="cell">
 												<div class="middle">
-													<span class="price">$2,779/pax</span>
+													<span class="price">$2779/pax</span>
 												</div>
 											</div>
 										</td>
@@ -119,7 +130,7 @@
 										<td>
 											<div class="cell">
 												<div class="middle">
-													<span class="price">$19,453</span>
+													<span class="price">$8337</span>
 												</div>
 											</div>
 										</td>
@@ -168,7 +179,7 @@
 										<td>
 											<div class="cell">
 												<div class="middle">
-													<span class="price">$7200</span>
+													<span class="price">$1200</span>
 												</div>
 											</div>
 										</td>
@@ -200,7 +211,7 @@
 										<td>
 											<div class="cell">
 												<div class="middle">
-													<span class="price">$2,779/pax</span>
+													<span class="price">$2779/pax</span>
 												</div>
 											</div>
 										</td>
@@ -218,7 +229,7 @@
 										<td>
 											<div class="cell">
 												<div class="middle">
-													<span class="price">$10,000</span>
+													<span class="price">8337</span>
 												</div>
 											</div>
 										</td>

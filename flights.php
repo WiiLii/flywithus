@@ -162,7 +162,7 @@
 										<td><div class="cell"><div class="middle">Wed 9 Dec '20</div></div></td>
 										<td><div class="cell"><div class="middle">Singapore Airlines</div></div></td>
 										<td><div class="cell"><div class="middle">SG -> Seoul (Two-way)</div></div></td>
-										<td><div class="cell"><div class="middle">$4,970</div></div></td>
+										<td><div class="cell"><div class="middle">$4970</div></div></td>
 										<td><div class="cell"><div class="middle">
 											<a href="#" class="btn btn-default">BOOK NOW</a>
 										</div></div></td>
@@ -171,7 +171,7 @@
 										<td><div class="cell"><div class="middle">Wed 30 Dec '20</div></div></td>
 										<td><div class="cell"><div class="middle">China Airlines</div></div></td>
 										<td><div class="cell"><div class="middle">SG -> Bangkok (Two-way)</div></div></td>
-										<td><div class="cell"><div class="middle">$3,970</div></div></td>
+										<td><div class="cell"><div class="middle">$3970</div></div></td>
 										<td><div class="cell"><div class="middle">
 											<a href="#" class="btn btn-default">BOOK NOW</a>
 										</div></div></td>
@@ -180,7 +180,7 @@
 										<td><div class="cell"><div class="middle">Wed 23 Dec '20</div></div></td>
 										<td><div class="cell"><div class="middle">Korea Airlines</div></div></td>
 										<td><div class="cell"><div class="middle">SG -> Seoul (Two-way)</div></div></td>
-										<td><div class="cell"><div class="middle">$1,970</div></div></td>
+										<td><div class="cell"><div class="middle">$1970</div></div></td>
 										<td><div class="cell"><div class="middle">
 											<a href="#" class="btn btn-default">BOOK NOW</a>
 										</div></div></td>
@@ -189,7 +189,7 @@
 										<td><div class="cell"><div class="middle">Wed 9 Dec '20</div></div></td>
 										<td><div class="cell"><div class="middle">Thai Airways</div></div></td>
 										<td><div class="cell"><div class="middle">SG -> Bangkok (Two-way)</div></div></td>
-										<td><div class="cell"><div class="middle">$3,970</div></div></td>
+										<td><div class="cell"><div class="middle">$3970</div></div></td>
 										<td><div class="cell"><div class="middle">
 											<a href="#" class="btn btn-default">BOOK NOW</a>
 										</div></div></td>

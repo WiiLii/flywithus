@@ -1,12 +1,17 @@
 <?php
-// base on ur file location 
+session_start();
+if (!isset($_SESSION['email'])) {
+    echo "<script>alert('Please log in to access the survey.')</script>";
+  echo'<script>window.location = "login.php";</script>';
+}
+// base on ur file location
 include_once 'functions.php';
 //include $_SERVER[ 'DOCUMENT_ROOT' ] .'/CF1/functions/sessions.php';
 $connection = initialiseDB();
 ?>
 <!DOCTYPE html>
 <html>
-     
+
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -99,5 +104,5 @@ $connection = initialiseDB();
         <script src="js/getsurveyvalues.js"></script>
     </body>
 
-     
+
 </html>
