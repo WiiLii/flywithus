@@ -95,7 +95,7 @@ if (isset($_POST['city'])) {
 								</div>-->
 
 								<div class="btn-holder">
-									<a href="#" class="btn btn-lg btn-info">BOOK NOW</a>
+									<a href="my-cart.php" class="btn btn-lg btn-info">BOOK NOW</a>
 								</div>
 								<ul class="social-networks social-share">
 									<li>
@@ -262,26 +262,7 @@ if (isset($_POST['city'])) {
 										</li>--->
 									</ol>
 								</div>
-								<div class="col-md-6">
-									<article class="img-article article-light">
-										<div class="img-wrap">
-											<img src="img/generic/img-08.jpg" height="319" width="570" alt="image description">
-										</div>
-										<div class="text-block">
-											<h3><a href="#">Member taking a short break</a></h3>
-											<p>Consider packing your bag with folloing daily essentials.</p>
-										</div>
-									</article>
-									<article class="img-article article-light">
-										<div class="img-wrap">
-											<img src="../../html-i0ipxhws.netdna-ssl.com/entrada/img/generic/img-09.jpg" height="319" width="570" alt="image description">
-										</div>
-										<div class="text-block">
-											<h3><a href="#">Couple enjoying the spectacular view</a></h3>
-											<p>Consider packing your bag with folloing daily essentials.</p>
-										</div>
-									</article>
-								</div>
+
 							</div>
 						</div>
 						<!-- faq and review tab content -->
