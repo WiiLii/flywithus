@@ -4,68 +4,6 @@
     padding: 0 30px;
 }
 
-h2 {
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-}
-
-.name:first-letter {
-    text-transform:uppercase;
-}
-#falseBack{
-    background-color: #222222;
-}
-
-.navbar-inverse {
-    border-color: transparent;
-    margin: 0 auto;
-    max-width: 900px;
-    width: auto;
-    z-index: 100;
-    padding-top: 5px;
-    padding-bottom: 5px;
-}
-
-.navbar-brand {
-    padding: 0;
-}
-
-.navbar-brand>img {
-    height: 100%;
-    padding: 0;
-    width: auto;
-}
-
-#headerContent img {
-    display: block;
-    margin: 0 auto;
-    padding-top: 5px;
-    padding-bottom: 5px;
-}
-
-.footer {
-    padding-top: 0.8em;
-    color: #FFFFFF;
-    width: 100%;
-}
-
-.well h3{
-    color: #108891;
-    padding-left: 0.5em;
-    font-family: 'Lobster', cursive;
-}
-
-.well p{
-    color: #D10052;
-    padding-left: 0.7em;
-    font-size: large;
-    font-weight: 700;
-}
-
-#headerContent {
-    width: 100%;
-    background-color: #464646;
-}
 
 .input-group {
     margin-right: 25em;
@@ -75,32 +13,6 @@ select.form-control {
     -moz-appearance: none;
     -webkit-appearance: none;
     appearance: none;
-}
-
-#loginButton {
-    display: none;
-}
-
-#embedVideo {
-    max-width: 400px;
-}
-
-@media(max-width:767px) {
-    .funkyradio label{
-        font-size: small;
-        font-weight: bold;
-    }
-
-    .navbar-brand>img {
-        height: 100%;
-        padding: 0;
-        width: auto;
-    }
-
-    .input-group {
-        margin-right: 0;
-    }
-
 }
 
 .funkyradio div {
@@ -160,7 +72,7 @@ select.form-control {
 .funkyradio input[type="radio"]:checked ~ label:before,.funkyradio input[type="checkbox"]:checked ~ label:before {
     font-family: "Glyphicons Halflings";
     content: "\e013";
-    text-indent: .8em;
+    text-indent: .01em;
     background-color: #AFA176;
 }
 
@@ -177,14 +89,11 @@ select.form-control {
     font-weight: 700;
 }
 
-#prevBtn {
-    float: left;
-    border-radius: 25px;
-    text-align: justify;
+.question {
+  margin-top: 2em;
 }
 
-#nextBtn, #submitBtn{
-    float: right;
-    border-radius: 25px;
-    text-align: justify;
+#submitBtn{
+    float: center;
+    margin-top: 3em;
 }
