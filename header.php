@@ -90,10 +90,10 @@
                                             </a>
                                         </div>
                                         <div class="text-holder">
-                                            <span class="amount">x 2</span>
+                                            <span class="amount">x 3</span>
                                             <div class="text-wrap">
-                                                <strong class="name"><a href="#">Weekend in Paradise</a></strong>
-                                                <span class="price">$199</span>
+                                                <strong class="name"><a href="#">Thailand Shopping Package</a></strong>
+                                                <span class="price">$2779</span>
                                             </div>
                                         </div>
                                     </li>
@@ -104,10 +104,10 @@
                                             </a>
                                         </div>
                                         <div class="text-holder">
-                                            <span class="amount">x 4</span>
+                                            <span class="amount">x 3</span>
                                             <div class="text-wrap">
-                                                <strong class="name"><a href="#">Water Sports in Spain</a></strong>
-                                                <span class="price">$199</span>
+                                                <strong class="name"><a href="#">JW Marriot Hotel (Beijing)</a></strong>
+                                                <span class="price">$888</span>
                                             </div>
                                         </div>
                                     </li>
@@ -118,17 +118,17 @@
                                             </a>
                                         </div>
                                         <div class="text-holder">
-                                            <span class="amount">x 4</span>
+                                            <span class="amount">x 3</span>
                                             <div class="text-wrap">
-                                                <strong class="name"><a href="#">Beach Party in Greece</a></strong>
-                                                <span class="price">$199</span>
+                                                <strong class="name"><a href="#">Korea Airlines (SG -> Seoul)</a></strong>
+                                                <span class="price">$1999</span>
                                             </div>
                                         </div>
                                     </li>
                                 </ul>
                                 <div class="footer">
                                     <a href="my-cart.php" class="btn btn-primary">View cart</a>
-                                    <span class="total">$3300</span>
+                                    <span class="total">$5000</span>
                                 </div>
                             </div>
                         </div>

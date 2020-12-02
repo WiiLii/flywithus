@@ -66,25 +66,6 @@ if (isset($_POST['session'])) {
 								<!-- main image for revolution slider -->
 								<img src="img/banner/img-01.jpg" alt="image description" data-bgposition="center center" data-kenburns="on" data-duration="30000" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="120" data-rotatestart="0" data-rotateend="0" data-offsetstart="0 0" data-offsetend="0 0" data-bgparallax="10" class="rev-slidebg" data-bgfit="cover" data-no-retina>
 
-								<div class="tp-caption tp-resizeme" id="slide-897-layer-7"
-									data-x="['center','center','center','center']"
-									data-hoffset="['0','0','0','0']"
-									data-y="['top','top','middle','middle']"
-									data-voffset="['160','120','-120','-70']"
-									data-width="none"
-									data-height="none"
-									data-whitespace="nowrap"
-									data-transform_idle="o:1;"
-									data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;s:2000;e:Power2.easeInOut;"
-									data-transform_out="opacity:0;s:300;s:300;"
-									data-mask_in="x:0px;y:0px;s:inherit;e:inherit;"
-									data-start="1500"
-									data-splitin="none"
-									data-splitout="none"
-									data-responsive_offset="on"
-									style="z-index: 9; white-space: nowrap; font-size: 60px; line-height: 100px;text-align:center;">
-									<span class="icon-wildlife"></span>
-								</div>
 
 								<div class="tp-caption banner-heading-sub tp-resizeme rs-parallaxlevel-0"
 									data-x="['center','center','center','center']"
