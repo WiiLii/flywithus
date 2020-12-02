@@ -98,7 +98,7 @@ if (isset($_POST['session'])) {
 									data-splitin="none"
 									data-splitout="none"
 									data-responsive_offset="on"
-									style="z-index: 7; letter-spacing: 0; font-weight: 100; text-align: center; color: #ffffff">EXPEDITION OF UNEXPLORED
+									style="z-index: 7; letter-spacing: 0; font-weight: 100; text-align: center; color: #ffffff">FIGURE OUT YOUR IDEAL 
 								</div>
 
 								<div class="tp-caption banner-heading-sub tp-resizeme rs-parallaxlevel-10"
@@ -120,7 +120,7 @@ if (isset($_POST['session'])) {
 									data-splitin="none"
 									data-splitout="none"
 									data-responsive_offset="on"
-									style="z-index: 8; padding-right: 10px; text-indent: 5px; font-weight: 900; white-space: nowrap;">TERRITORY
+									style="z-index: 8; padding-right: 10px; text-indent: 5px; font-weight: 900; white-space: nowrap;">TRAVEL PLAN
 								</div>
 
 								<div class="tp-caption rev-btn  rs-parallaxlevel-10" id="slide-163-layer-2"

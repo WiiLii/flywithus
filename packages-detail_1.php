@@ -2,8 +2,10 @@
 <html>
     <?php
     include "config.php";
-    $sql = "SELECT * FROM results WHERE userID = 1 ORDER BY submissionTime DESC LIMIT 1";
-    $result = $db->query($sql);
+    $sqlgetSurvey = "SELECT * FROM results WHERE userID = 1 ORDER BY submissionTime DESC LIMIT 1";
+
+
+    $result = $db->query($sqlgetSurvey);
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {
             $age = $row['age']; #'>50'
@@ -21,6 +23,9 @@
         }
     }
     $itineraryCountry = "Korea"; # because of weather? O.o
+    $sqlgetPrice = "SELECT SUM(itineraryPrice) FROM itinerary WHERE itineraryCountry = '$itineraryCountry'AND itineraryType = '$groupDesc';";
+    $sqlitineraryOverview = "SELECT * FROM itinerary WHERE itineraryCountry = '$itineraryCountry' AND itineraryType = '$groupDesc' LIMIT 1";
+    $sqlGetItineraryDays = "SELECT * FROM itinerary WHERE itineraryCountry = '$itineraryCountry' AND itineraryType = '$groupDesc'";
     ?>
     <head>
         <meta charset="utf-8">
@@ -63,6 +68,7 @@
                         <div class="same-height two-columns row">
                             <div class="height col-md-6">
                                 <!-- top image slideshow -->
+
                                 <div id="tour-slide">
                                     <div class="slide">
                                         <div class="bg-stretch">
@@ -81,14 +87,14 @@
                                     <h1 class="small-size"><?php echo "$groupDesc in $itineraryCountry " ?> </h1>
                                     <div class="price">
                                         from <strong>$<?php
-                                        $sql = "SELECT SUM(itineraryPrice) FROM itinerary WHERE itineraryCountry = '$itineraryCountry'AND itineraryType = '$groupDesc';";
-                                        $result = $db->query($sql);
+                                            global $sqlgetPrice;
+                                            $result = $db->query($sqlgetPrice);
                                             if ($result->num_rows > 0) {
                                                 while ($row = $result->fetch_assoc()) {
                                                     echo $row['SUM(itineraryPrice)'];
                                                 }
-                                            }        
-                                        ?></strong>
+                                            }
+                                            ?></strong>
                                     </div>
                                     <div class="btn-holder">
                                         <a href="#" class="btn btn-lg btn-info">BOOK NOW</a>
@@ -138,8 +144,8 @@
                                         <strong class="header-box">All about <?php echo $itineraryCountry; ?></strong>
                                         <div class="detail">
                                             <?php
-                                            $sql = "SELECT * FROM itinerary WHERE itineraryCountry = '$itineraryCountry' AND itineraryType = '$groupDesc' LIMIT 1";
-                                            $result = $db->query($sql);
+                                            global $sqlitineraryOverview;
+                                            $result = $db->query($sqlitineraryOverview);
                                             if ($result->num_rows > 0) {
                                                 while ($row = $result->fetch_assoc()) {
                                                     echo '<p>' . $row["itineraryOverview"] . '</p>';
@@ -169,8 +175,8 @@
                                             </li>
 
                                             <?php
-                                            $sql = "SELECT * FROM itinerary WHERE itineraryCountry = '$itineraryCountry' AND itineraryType = '$groupDesc'";
-                                            $result = $db->query($sql);
+                                            global $sqlGetItineraryDays;
+                                            $result = $db->query($sqlGetItineraryDays);
                                             if ($result->num_rows > 0) {
                                                 $counter = 0;
                                                 while ($row = $result->fetch_assoc()) {
@@ -440,123 +446,45 @@
                             <!-- gallery tab content -->
                             <div role="tabpanel" class="tab-pane" id="tab04">
                                 <ul class="row gallery-list has-center">
-                                    <li class="col-sm-6">
-                                        <a class="fancybox" data-fancybox-group="group" href="img/gallery/img-10-2.jpg" title="Caption Goes Here">
+                                     <?php
+                                    include_once('./simplehtmldom_1_9_1/simple_html_dom.php');
+                                    $result = $db->query($sqlGetItineraryDays);
+                                    if ($result->num_rows > 0) {
+                                        while ($row = $result->fetch_assoc()) {
+                                            $src = "";
+                                            $word = "'" . $row['itineraryName'] . "'";
+                                            $search_keyword = str_replace(' ', '+', $word);
+                                           // echo '<script>alert("'.$search_keyword.'")</script>';
+                                            $newhtml = file_get_html("https://www.google.com/search?q=" . $search_keyword . "&tbm=isch&hl=en&tbs=isz:l");
+                                            try {
+                                                $result_image_source = $newhtml->find('img', 1)->src ?? "no records";
+                                            } catch (Exception $e) {
+                                                
+                                            }
+                                            //echo "$result_image_source";
+                                            if ($result_image_source != "no records") {
+                                                $src = $result_image_source;
+                                                echo ' <li>
+                                        <a class="fancybox" data-fancybox-group="group" href="'. $src .'" target="_blank" title="Caption Goes Here">
                                             <span class="img-holder">
-                                                <img src="img/gallery/img-10.jpg" height="750" width="450" alt="image description">
+                                                <img src="'. $src .'" height="500" width="450" alt="image description">
                                             </span>
                                             <span class="caption">
                                                 <span class="centered">
-                                                    <strong class="title">ANNAPURNA VIEW</strong>
-                                                    <span class="sub-text">The Classic Trek</span>
+                                                    <strong class="title">'. $row['itineraryName'] .'</strong>
+                                                    <span class="sub-text">'. $row['itineraryType'] .'</span>
                                                 </span>
                                             </span>
                                         </a>
-                                    </li>
-                                    <li class="col-sm-6">
-                                        <a class="fancybox" data-fancybox-group="group" href="img/gallery/img-11-2.jpg" title="Caption Goes Here">
-                                            <span class="img-holder">
-                                                <img src="img/gallery/img-11.jpg" height="240" width="370" alt="image description">
-                                            </span>
-                                            <span class="caption">
-                                                <span class="centered">
-                                                    <strong class="title">ANNAPURNA VIEW</strong>
-                                                    <span class="sub-text">The Classic Trek</span>
-                                                </span>
-                                            </span>
-                                        </a>
-                                    </li>
-                                    <li class="col-sm-6">
-                                        <a class="fancybox" data-fancybox-group="group" href="img/gallery/img-12-2.jpg" title="Caption Goes Here">
-                                            <span class="img-holder">
-                                                <img src="img/gallery/img-12.jpg" height="240" width="370" alt="image description">
-                                            </span>
-                                            <span class="caption">
-                                                <span class="centered">
-                                                    <strong class="title">ANNAPURNA VIEW</strong>
-                                                    <span class="sub-text">The Classic Trek</span>
-                                                </span>
-                                            </span>
-                                        </a>
-                                    </li>
-                                    <li class="col-sm-6">
-                                        <a class="fancybox" data-fancybox-group="group" href="img/gallery/img-13-2.jpg" title="Caption Goes Here">
-                                            <span class="img-holder">
-                                                <img src="img/gallery/img-13.jpg" height="240" width="370" alt="image description">
-                                            </span>
-                                            <span class="caption">
-                                                <span class="centered">
-                                                    <strong class="title">ANNAPURNA VIEW</strong>
-                                                    <span class="sub-text">The Classic Trek</span>
-                                                </span>
-                                            </span>
-                                        </a>
-                                    </li>
-                                    <li class="col-sm-6">
-                                        <a class="fancybox" data-fancybox-group="group" href="img/gallery/img-14-2.jpg" title="Caption Goes Here">
-                                            <span class="img-holder">
-                                                <img src="img/gallery/img-14.jpg" height="240" width="370" alt="image description">
-                                            </span>
-                                            <span class="caption">
-                                                <span class="centered">
-                                                    <strong class="title">ANNAPURNA VIEW</strong>
-                                                    <span class="sub-text">The Classic Trek</span>
-                                                </span>
-                                            </span>
-                                        </a>
-                                    </li>
-                                    <li class="col-sm-6">
-                                        <a class="fancybox" data-fancybox-group="group" href="img/gallery/img-15-2.jpg" title="Caption Goes Here">
-                                            <span class="img-holder">
-                                                <img src="img/gallery/img-15.jpg" height="240" width="370" alt="image description">
-                                            </span>
-                                            <span class="caption">
-                                                <span class="centered">
-                                                    <strong class="title">ANNAPURNA VIEW</strong>
-                                                    <span class="sub-text">The Classic Trek</span>
-                                                </span>
-                                            </span>
-                                        </a>
-                                    </li>
-                                    <li class="col-sm-6">
-                                        <a class="fancybox" data-fancybox-group="group" href="img/gallery/img-16-2.jpg" title="Caption Goes Here">
-                                            <span class="img-holder">
-                                                <img src="img/gallery/img-16.jpg" height="240" width="370" alt="image description">
-                                            </span>
-                                            <span class="caption">
-                                                <span class="centered">
-                                                    <strong class="title">ANNAPURNA VIEW</strong>
-                                                    <span class="sub-text">The Classic Trek</span>
-                                                </span>
-                                            </span>
-                                        </a>
-                                    </li>
-                                    <li class="col-sm-6">
-                                        <a class="fancybox" data-fancybox-group="group" href="img/gallery/img-17-2.jpg" title="Caption Goes Here">
-                                            <span class="img-holder">
-                                                <img src="img/gallery/img-17.jpg" height="240" width="370" alt="image description">
-                                            </span>
-                                            <span class="caption">
-                                                <span class="centered">
-                                                    <strong class="title">ANNAPURNA VIEW</strong>
-                                                    <span class="sub-text">The Classic Trek</span>
-                                                </span>
-                                            </span>
-                                        </a>
-                                    </li>
-                                    <li class="col-sm-6">
-                                        <a class="fancybox" data-fancybox-group="group" href="img/gallery/img-18-2.jpg" title="Caption Goes Here">
-                                            <span class="img-holder">
-                                                <img src="img/gallery/img-18.jpg" height="240" width="370" alt="image description">
-                                            </span>
-                                            <span class="caption">
-                                                <span class="centered">
-                                                    <strong class="title">ANNAPURNA VIEW</strong>
-                                                    <span class="sub-text">The Classic Trek</span>
-                                                </span>
-                                            </span>
-                                        </a>
-                                    </li>
+                                    </li>';
+                                            } else {
+                                                
+                                            }
+                                        }
+                                    }
+                                    ?>
+                                    
+                                   
                                 </ul>
                             </div>
                             <!-- dates and prices tab content -->
