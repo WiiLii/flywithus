@@ -72,7 +72,7 @@ if ($result->num_rows > 0) {
 
 				echo'<img src="img/hotels/'.$hotelImg.'.jpg" alt="country image">';?>
                     </center>
-                    <h2><?php echo $hotelsName; ?></h2>
+                    <center><h2><?php echo $hotelsName; ?></h2></center>
 						<!-- list view -->
 						<div class="content-holder list-view">
                             <article class="article">
