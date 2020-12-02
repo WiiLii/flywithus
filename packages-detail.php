@@ -23,8 +23,9 @@
 	<link media="all" rel="stylesheet" href="vendors/fancybox/jquery.fancybox.css">
 	<!-- include main css -->
 	<link media="all" rel="stylesheet" href="css/main.css">
+
 </head>
-<body class="default-page"  onload="getPackagesDetails('Seoul');">
+<body class="default-page" >
 	<div class="preloader" id="pageLoad">
 		<div class="holder">
 			<div class="coffee_cup"></div>
@@ -1044,7 +1045,8 @@
 	<!-- custom script -->
 	<script src="js/sticky-kit-init.js"></script>
 	<script src="js/jquery.main.js"></script>
-		 <script src="js/itinerary.js"></script>
+	 <script src="js/itinerary.js"></script>
+
 </body>
 
 </html>

@@ -55,8 +55,9 @@ for (var i = 0; i < data.table.length; i++) {
 // get package detials ajax
 function getPackagesDetails(id){
   var cityName=id;
+    location.href="packages-detail.php";
 var dayTotal = document.getElementById("dayTotal");
-dayTotal.text("asdasd");
+//dayTotal.innerHTML="asdasd";
   $.ajax({ // ajax from php validation
   url: 'process_packages.php',
   type: 'POST',
@@ -66,9 +67,10 @@ dayTotal.text("asdasd");
 //conslog.(data.table);
 for (var i = 0; i < data.table.length; i++) {
   console.log(data.table[i]);
+dayTotal=data.table[i];
 
 //  document.getElementById("daysTables").innerHTML += data.table;
-//  location.href="packages-detail.php";
+
 }
 //  console.log(data.table);
 

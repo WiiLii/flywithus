@@ -144,7 +144,7 @@ if ($result->num_rows > 0) {
   // output data of each row
     while($row = $result->fetch_assoc()) {
       //  $mytable[]=$row['itineraryCity'];
-         $mytable[]='
+         $mytable[]='<li>
           <a href="#">
             <strong class="title">Day '.$countDAys.'</strong>
             <span>'.$row['itineraryName'].'</span>
@@ -153,7 +153,7 @@ if ($result->num_rows > 0) {
             <div class="slide-holder">
               <p>'.$row['itineraryDesc'].'</p>
             </div>
-          </div>';
+          </div></li>';
         $countDAys++;
     }
 }
