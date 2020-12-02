@@ -276,16 +276,14 @@
 						</div>
 						<div class="cart-option">
 							<div class="coupon-hold">
-								<div class="submit-wrap">
-									<button class="btn btn-default" type="submit">APPLY COUPON</button>
-								</div>
+
 								<div class="input-hold">
 									<input type="text" class="form-control" placeholder="Enter Coupon Code.....">
 								</div>
 							</div>
 							<div class="button-hold">
-								<a href="#" class="btn btn-default">CHECKOUT</a>
-								<a href="#" class="btn btn-default">UPDATE CART</a>
+								<a href="checkout.php" class="btn btn-default">CHECKOUT</a>
+
 							</div>
 						</div>
 					</div>

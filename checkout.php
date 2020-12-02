@@ -208,7 +208,7 @@
 													</tr>
 												</tfoot>
 											</table>
-											<button type="submit" class="btn btn-default">Confirm booking</button>
+											<a type="submit"  href="confirmation.php" class="btn btn-default">Confirm booking</a>
 										</div>
 									</div>
 								</div>

@@ -176,7 +176,7 @@ if ($result->num_rows > 0) {
                                           echo '<td><div class="cell"><div class="middle">'.$country[$i].', '.$pCity[$i].'</div></div></td>';
                                           echo '<td><div class="cell"><div class="middle">'.$room[$i].'</div></div></td>';
                                           echo '<td><div class="cell"><div class="middle">$'.$price[$i].'</div></div></td>';
-                                          echo '<td><div class="cell"><div class="middle"><a href="my-bookings.php" class="btn btn-default">Add to Cart</a> </div></div></td>';
+                                          echo '<td><div class="cell"><div class="middle"><a href="my-cart.php" class="btn btn-default">Add to Cart</a> </div></div></td>';
 
                                             echo '<tr>';
                                           }

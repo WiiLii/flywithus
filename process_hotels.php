@@ -27,6 +27,12 @@ for ($i=0; $i <count($country_arr); $i++) {
    else if ($country == $country_arr[$i] and $price =="2"){
        $sql= "SELECT * FROM hotels where country ='$country' and $selected GROUP by country";
    }
+   else if ($country ==$country_arr[0] and $price =="1"){
+       $sql= "SELECT * FROM hotels where  $selected GROUP by country";
+   }
+   else if ($country == $country_arr[0] and $price =="2"){
+       $sql= "SELECT * FROM hotels where  $selected GROUP by country";
+   }
   }
 
 }
@@ -51,7 +57,7 @@ for ($i=0; $i <count($country_arr); $i++) {
               <span class="icon-world"> </span>'.$row['pCity'].'
             </span>
             <span class="activity">
-              <span class="icon-acitivities"> </span>'.$row['room'].'
+              <span class="icon-acitivities"> </span>'.$row['room'].'Room
             </span>
           </aside>
           <form class="" action="my-info.php" method="post">
