@@ -16,7 +16,7 @@
             $season = $row['season']; # 'Winter'
             $activity = $row['activity']; #'Shopping'
             $days = $row['days'] - 4; #7
-            $budget = $row['budget']; #'$400 to $499'
+            $budget = $row['budget']; #'$400 to $499'   
             $accomodation = $row['accomodation']; # no
         }
     }
@@ -90,87 +90,6 @@
                                             }        
                                         ?></strong>
                                     </div>
-                                    <!--								<div class="description">
-                                                                                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ctetur, adipisci velit, sed quia non numquam eius modi.</p>
-                                                                                                    </div>
-                                                                                                    <ul class="reviews-info">
-                                                                                                            <li>
-                                                                                                                    <div class="info-left">
-                                                                                                                            <strong class="title">Reviews</strong>
-                                                                                                                            <span class="value">75 Reviews</span>
-                                                                                                                    </div>
-                                                                                                                    <div class="info-right">
-                                                                                                                            <div class="star-rating">
-                                                                                                                                    <span><span class="icon-star"></span></span>
-                                                                                                                                    <span><span class="icon-star"></span></span>
-                                                                                                                                    <span><span class="icon-star"></span></span>
-                                                                                                                                    <span><span class="icon-star"></span></span>
-                                                                                                                                    <span class="disable"><span class="icon-star"></span></span>
-                                                                                                                            </div>
-                                                                                                                            <span class="value">5/5</span>
-                                                                                                                    </div>
-                                                                                                            </li>
-                                                                                                            <li>
-                                                                                                                    <div class="info-left">
-                                                                                                                            <strong class="title">Vacation Style</strong>
-                                                                                                                            <span class="value">Adult Group</span>
-                                                                                                                    </div>
-                                                                                                                    <div class="info-right">
-                                                                                                                            <ul class="ico-list">
-                                                                                                                                    <li>
-                                                                                                                                            <span class="icon icon-hiking"></span>
-                                                                                                                                    </li>
-                                                                                                                                    <li>
-                                                                                                                                            <span class="icon icon-mount"></span>
-                                                                                                                                    </li>
-                                                                                                                                    <li>
-                                                                                                                                            <span class="icon icon-camping"></span>
-                                                                                                                                    </li>
-                                                                                                                            </ul>
-                                                                                                                            <span class="value">Camping Trek</span>
-                                                                                                                    </div>
-                                                                                                            </li>
-                                                                                                            <li>
-                                                                                                                    <div class="info-left">
-                                                                                                                            <strong class="title">Activity Level</strong>
-                                                                                                                            <span class="value">Quite Tough</span>
-                                                                                                                    </div>
-                                                                                                                    <div class="info-right">
-                                                                                                                            <ul class="ico-list">
-                                                                                                                                    <li>
-                                                                                                                                            <span class="icon icon-level3"></span>
-                                                                                                                                    </li>
-                                                                                                                                    <li>
-                                                                                                                                            <span class="icon icon-level5"></span>
-                                                                                                                                    </li>
-                                                                                                                                    <li>
-                                                                                                                                            <span class="icon icon-level7"></span>
-                                                                                                                                    </li>
-                                                                                                                            </ul>
-                                                                                                                            <span class="value">9/10</span>
-                                                                                                                    </div>
-                                                                                                            </li>
-                                                                                                            <li>
-                                                                                                                    <div class="info-left">
-                                                                                                                            <strong class="title">Group Size</strong>
-                                                                                                                            <span class="value">Medium Grougs</span>
-                                                                                                                    </div>
-                                                                                                                    <div class="info-right">
-                                                                                                                            <ul class="ico-list">
-                                                                                                                                    <li>
-                                                                                                                                            <span class="icon icon-group-small"></span>
-                                                                                                                                    </li>
-                                                                                                                                    <li>
-                                                                                                                                            <span class="icon icon-group-medium"></span>
-                                                                                                                                    </li>
-                                                                                                                                    <li>
-                                                                                                                                            <span class="icon icon-group-large"></span>
-                                                                                                                                    </li>
-                                                                                                                            </ul>
-                                                                                                                            <span class="value">6/10</span>
-                                                                                                                    </div>
-                                                                                                            </li>
-                                                                                                    </ul>-->
                                     <div class="btn-holder">
                                         <a href="#" class="btn btn-lg btn-info">BOOK NOW</a>
                                     </div>

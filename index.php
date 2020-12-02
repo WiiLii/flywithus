@@ -163,16 +163,15 @@ if (isset($_POST['session'])) {
 				<!--- session for the buttons ya -->
 
 				<!-- article list holder -->
-				<div class="content-block content-spacing">
-					<div class="container">
-						
+				<div class="content-block content-spacing" >
+					<div class="container" style="width: 100%;">
 						</br>
 						<header class="content-heading">
 							<h2 class="main-heading">POPULAR ITINERARIES</h2>
 							<span class="main-subtitle">Check out all our popular destinations!</span>
 							<div class="seperator"></div>
 						</header>
-                                                <nav class="nav-wrap" id="sticky-tab" style="width: 100%;">
+                                                <nav class="nav-wrap" id="sticky-tab">
 							<div class="container">
 								<!-- nav tabs -->
 								<ul class="nav nav-tabs text-center" role="tablist">
@@ -186,7 +185,7 @@ if (isset($_POST['session'])) {
 						<!-- Content -->
 
 						<!-- tab panes -->
-						<div class="container tab-content trip-detail">
+						<div class="container tab-content trip-detail" style="width: 100%">
 							<!-- KOREA tab content -->
 							<div role="tabpanel" class="tab-pane active" id="tab01">
 								<div class="content-holder">
