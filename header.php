@@ -51,14 +51,18 @@
                          </a>
                          <div class="dropdown-menu dropdown-xs">
                            <div class="drop-wrap cart-wrap">
-
+                           <ul class="cart-list">
+                               <div class="text-holder">
+                                 <div class="text-wrap">
+                                   <strong class="name"style="float:rght;"><a href="my-bookings.php">Bookings</a></strong>
+                                 </div>
+                               </div>
+                           </ul>
                              <ul class="cart-list">
 
                                  <div class="text-holder">
-
                                    <div class="text-wrap">
                                      <strong class="name"style="float:rght;"><a href="logout.php">log Out</a></strong>
-
                                    </div>
                                  </div>
                              </ul>
@@ -146,7 +150,7 @@
                                         <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
                                     </div>
                                 </div>
-                                
+
                             </div>
                         </div>
                     </li>
