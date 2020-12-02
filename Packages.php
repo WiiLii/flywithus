@@ -38,7 +38,7 @@
 				<div class="banner-text">
 					<div class="center-text">
 						<div class="container">
-							<h1>Popular Theme Packages</h1>
+							<h1>Popular Packages</h1>
 							<strong class="subtitle">Explore a variety of packages!
 							</br> Whatever your travel preference, you will find suitable holiday packages here. </strong>
 							<!-- breadcrumb -->
