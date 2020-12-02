@@ -139,7 +139,7 @@
                 ?></strong>
                                     </div>
                                     <div class="btn-holder">
-                                        <a href="#" class="btn btn-lg btn-info">BOOK NOW</a>
+                                        <a href="my-cart.php" class="btn btn-lg btn-info">BOOK NOW</a>
                                     </div>
                                     <ul class="social-networks social-share">
                                         <li>

@@ -375,8 +375,8 @@ if (isset($_POST['session'])) {
 																		<span class="disable"><span class="icon-star"></span></span>
 																	</div>
 																	<div class="icons">
-																		<a href="#"><span class="icon-heart"></span></a>
-																		<a href="#"><span class="icon-reply"></span></a>
+																		<a ><span class="icon-heart"></span></a>
+																		<a><span class="icon-reply"></span></a>
 																	</div>
 																	<div class="info-footer">
 																		<span class="price">from <span>$'.$row['itineraryPrice'].'</span></span>

@@ -1,6 +1,7 @@
 <?php
 // base on ur file location
 include_once  'functions.php';
+//include "config.php";
 $connection = initialiseDB();
 ?>
 <!DOCTYPE html>
@@ -13,7 +14,7 @@ $connection = initialiseDB();
         <?php
         session_start();
         $email = $_SESSION['email'];
-        $sql = "SELECT userID from useraccount";
+        $sql = "SELECT userID from useraccount where email='$email'";
               $result= mysqli_query($connection,$sql);
               $getid = mysqli_fetch_assoc($result);
               echo $getid['userID'];
@@ -35,7 +36,7 @@ $connection = initialiseDB();
             //$query = " UPDATE resultstbl SET refAware = ?, refFeed = ? WHERE userID = ? ";
             $query = "INSERT into results (userID, submissionTime, age, relationship, travelGroup, groupDesc, season, activity, days, budget, accomodation) VALUES (?,?,?,?,?,?,?,?,?,?,?)";
             $stmt = mysqli_prepare($connection, $query);
-            mysqli_stmt_bind_param($stmt, "issssssssss", $userID, $submissionTime, $age, $relationship,$travelGroup,$groupDesc,$season,$activity,$days,$budget,$accomodation) or die(mysqli_error($connection));
+            mysqli_stmt_bind_param($stmt, "sssssssssss", $userID, $submissionTime, $age, $relationship,$travelGroup,$groupDesc,$season,$activity,$days,$budget,$accomodation) or die(mysqli_error($connection));
 
             if (!mysqli_stmt_execute($stmt)) {
                 echo "Execute failed: (" . $stmt->errno . ") " . $stmt->error;

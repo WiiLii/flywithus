@@ -91,7 +91,7 @@ if ($result->num_rows > 0) {
         <div class="description">
           <div class="col-left">
             <header class="heading">
-              <h3><a href="packages-detail.php">'.$row['itineraryCountry'].'</a></h3>
+              <h3><a>'.$row['itineraryCountry'].'</a></h3>
               <div class="info-day">7+ Days</div>
             </header>
             <p>'.$row['itineraryOverview'].'</p>

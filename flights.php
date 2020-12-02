@@ -1,3 +1,14 @@
+<?php
+// session_start();
+// include 'config.php';
+// if(isset($_SESSION['email'])){
+// 	echo $_SESSION['email'];
+//
+// }
+// exit;
+ ?>
+
+
 <!DOCTYPE html>
 <html>
 
