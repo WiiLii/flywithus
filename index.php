@@ -1,16 +1,23 @@
 <?php
-
+if (isset($_POST['session'])) {
+	session_start();
+if(!isset($_SESSION['email'])){
+			header('location:login.php');
+}
+else{
+			header('location:my-bookings.php');
+}
+}
 if (isset($_POST['session'])) {
 		session_start();
 	if(!isset($_SESSION['email'])){
-
 				header('location:login.php');
-
 	}
 	else{
 				header('location:survey.php');
 	}
 }
+
 			?>
 <!DOCTYPE html>
 <html>
@@ -143,9 +150,13 @@ if (isset($_POST['session'])) {
 									data-responsive_offset="on">
 									<form class="" action="<?php $_SERVER["PHP_SELF"]; ?>" method="post">
 
-														<?php if (isset($_SESSION['email'])) {
-														echo '<button  class="btn btn-banner" type="submit" data-toggle="modal" data-target="#surveyModal" name="session">survey</button>';
-															echo '&nbsp&nbsp&nbsp&nbsp<button class="btn btn-banner"type="submit" data-toggle="modal" data-target="#surveyModal1" name="session1">Take Survey Again</button>';
+														<?php if ((isset($_SESSION['email'])) && (isset($_SESSION['booking']))) {
+														echo '<button  class="btn btn-banner" type="submit" data-toggle="modal" data-target="#surveyModal" name="booking">Check Booking</button>';
+															echo '<button class="btn btn-banner"type="submit" data-toggle="modal" data-target="#surveyModal1" name="session1">Take Survey Again</button>';
+														}
+														else if ((!isset($_SESSION['booking'])) && (isset($_SESSION['email']))) {
+															echo '<button  class="btn btn-banner" type="submit" data-toggle="modal" data-target="#surveyModal" name="session">survey</button>';
+																//echo '&nbsp&nbsp&nbsp&nbsp<button class="btn btn-banner"type="submit" data-toggle="modal" data-target="#surveyModal1" name="session1">Take Survey Again</button>';
 														}
 														else{
 																echo '<button class="btn btn-banner" type="submit" data-toggle="modal" data-target="#surveyModal1" name="session">survey</button>';
