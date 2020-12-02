@@ -189,7 +189,7 @@ if (isset($_POST['session'])) {
 							<span class="main-subtitle">Check out all our popular destinations!</span>
 							<div class="seperator"></div>
 						</header>
-                                                <nav class="nav-wrap" id="sticky-tab">
+              <nav class="nav-wrap" id="sticky-tab">
 							<div class="container">
 								<!-- nav tabs -->
 								<ul class="nav nav-tabs text-center" role="tablist">
@@ -240,7 +240,7 @@ if (isset($_POST['session'])) {
 																	</div>
 																	<div class="info-footer">
 																		<span class="price">from <span>$'.$row['itineraryPrice'].'</span></span>
-																		<a href="#" class="link-more">Explore</a>
+																		<a href="Packages.php" class="link-more">Explore</a>
 																	</div>
 																</div>
 															</div>
@@ -286,7 +286,7 @@ if (isset($_POST['session'])) {
 																	</div>
 																	<div class="info-footer">
 																		<span class="price">from <span>$'.$row['itineraryPrice'].'</span></span>
-																		<a href="#" class="link-more">Explore</a>
+																		<a href="Packages.php" class="link-more">Explore</a>
 																	</div>
 																</div>
 															</div>
@@ -331,7 +331,7 @@ if (isset($_POST['session'])) {
 																	</div>
 																	<div class="info-footer">
 																		<span class="price">from <span>$'.$row['itineraryPrice'].'</span></span>
-																		<a href="#" class="link-more">Explore</a>
+																		<a href="Packages.php" class="link-more">Explore</a>
 																	</div>
 																</div>
 															</div>
@@ -376,7 +376,7 @@ if (isset($_POST['session'])) {
 																	</div>
 																	<div class="info-footer">
 																		<span class="price">from <span>$'.$row['itineraryPrice'].'</span></span>
-																		<a href="#" class="link-more">Explore</a>
+																		<a href="Packages.php" class="link-more">Explore</a>
 																	</div>
 																</div>
 															</div>
