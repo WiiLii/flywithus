@@ -364,9 +364,10 @@ function generateSurveyForm()
           </div>
           </div>
           <div class="modal-body">
-          <p>Thanks,<span class="name"> '.$name.'!</span> Your perfect vacation awaits.</p>
+          <h3>Thanks,<span class="name"> Friend!</span> Your perfect vacation awaits.</h3>
           </div>
           <div class="modal-footer">
+          <p class="text-muted">Not satisfied with our suggestion?<a href="mailto:someone@example.com"> <u>Send us an email</u> for a customized one!</a></p>
           <button class="btn btn-primary" type="submit" onclick=window.location="index.php">Okay!</button>
           </div>
           </div>
