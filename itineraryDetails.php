@@ -91,7 +91,7 @@
                            // echo '<script>alert("'.$itineraryCheckDay.'")</script>';
                         }
                     }
-                    echo '<script>alert("out, '.$itineraryCheckDay.', '.$itineraryDays.'")</script>';
+                    // echo '<script>alert("out, '.$itineraryCheckDay.', '.$itineraryDays.'")</script>';
                     if ($itineraryCheckDay >= $itineraryDays) {
                         $itineraryCountry = $itineraryCountries[$arr];
                         break;

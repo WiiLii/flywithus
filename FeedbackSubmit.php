@@ -1,5 +1,5 @@
 <?php
-// base on ur file location 
+// base on ur file location
 include_once  'functions.php';
 $connection = initialiseDB();
 ?>
@@ -32,11 +32,6 @@ $connection = initialiseDB();
         date_default_timezone_set('Asia/Singapore');
         $submissionTime = date( "Y-m-d H:i:s" );
 
-       /* if (mysqli_num_rows($result) == 0) {
-            $thankAlert = 'alert("You have already submitted previously!");';
-        } else {
-*/
-
             //$query = " UPDATE resultstbl SET refAware = ?, refFeed = ? WHERE userID = ? ";
             $query = "INSERT into results (userID, submissionTime, age, relationship, travelGroup, groupDesc, season, activity, days, budget, accomodation) VALUES (?,?,?,?,?,?,?,?,?,?,?)";
             $stmt = mysqli_prepare($connection, $query);
@@ -50,11 +45,11 @@ $connection = initialiseDB();
             mysqli_free_result($result);
             mysqli_stmt_close($stmt);
 
-            $thankAlert = 'alert("Thank you for participating in our feedback!");';
+            $thankAlert = 'alert("Submitted!");';
   //      }
 
         $_SESSION['thankAlert'] = $thankAlert;
-        header("Location: index.php");
+        header("Location: itineraryDetails.php");
         ?>
 
     </body>
