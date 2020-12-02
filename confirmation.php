@@ -51,10 +51,11 @@
 				<!-- confirmation block -->
 				<div class="inner-main common-spacing confirmation-block">
 					<div class="container">
-						<h2>Thank you for booking your holidays with Entrada.</h2>
-						<p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi aliquam suscipit libero odio cupiditate, iste facilis veritatis, cumque esse, ipsa nulla? Nam recusandae id eum molestiae odit illum neque sapiente?</span><span>Praesentium ipsam explicabo dignissimos animi odio ratione assumenda omnis obcaecati corporis incidunt sunt in rerum eius nostrum nemo, iusto necessitatibus, voluptates delectus blanditiis. Ut eos praesentium totam, incidunt error minima.</span></p>
+						<h2>Thank you for booking your holidays with Flywithus!</h2>
 					</div>
+					<center><a type="submit"  href="my-bookings.php" class="btn btn-default">Check my bookings</a></center>
 				</div>
+				
 			</main>
 		</div>
 		<!-- main footer -->

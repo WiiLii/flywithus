@@ -57,11 +57,11 @@
 											&nbsp;
 										</th>
 										<th>
-											<strong class="date-text">Selected Tours</strong>
+											<strong class="date-text">Selected Items</strong>
 											<span class="sub-text">Confirmed Dates</span>
 										</th>
 										<th>
-											<strong class="date-text">Price (PP)</strong>
+											<strong class="date-text">Price (SGD)</strong>
 											<span class="sub-text">Updated Today</span>
 										</th>
 										<th>
@@ -70,7 +70,7 @@
 										</th>
 										<th>
 											<strong class="date-text">Total Price</strong>
-											<span class="sub-text">Excluding Flights</span>
+
 										</th>
 									</tr>
 								</thead>
@@ -91,8 +91,8 @@
 															<img src="img/listing/img-40.jpg" height="240" width="350" alt="image description">
 														</div>
 														<div class="text-wrap">
-															<strong class="product-title">Summer Fun Trip to Spain for Family</strong>
-															<time class="time" datetime="2016-11-05">14th Jan 2016</time>
+															<strong class="product-title">Thailand Shopping Package</strong>
+															<time class="time" datetime="2016-11-05">9th Dec 2020 to 15th Dec 2020 </time>
 														</div>
 													</div>
 												</div>
@@ -101,7 +101,7 @@
 										<td>
 											<div class="cell">
 												<div class="middle">
-													<span class="price">$2,779</span>
+													<span class="price">$2,779/pax</span>
 												</div>
 											</div>
 										</td>
@@ -111,7 +111,7 @@
 													<div class="num-hold">
 														<a href="#" class="minus control"><span class="icon-minus-normal"></span></a>
 														<a href="#" class="plus control"><span class="icon-plus-normal"></span></a>
-														<span class="val">7</span>
+														<span class="val">3</span>
 													</div>
 												</div>
 											</div>
@@ -140,8 +140,8 @@
 															<img src="img/listing/img-41.jpg" height="219" width="270" alt="image description">
 														</div>
 														<div class="text-wrap">
-															<strong class="product-title">Summer Fun Trip to Spain for Family</strong>
-															<time class="time" datetime="2016-11-05">14th Jan 2016</time>
+															<strong class="product-title">JW Marriot Hotel (Beijing)</strong>
+															<time class="time" datetime="2016-11-05">25th Dec 2020 to 31st Dec 2020</time>
 														</div>
 													</div>
 												</div>
@@ -150,7 +150,7 @@
 										<td>
 											<div class="cell">
 												<div class="middle">
-													<span class="price">$2,779</span>
+													<span class="price">$400/night</span>
 												</div>
 											</div>
 										</td>
@@ -160,7 +160,7 @@
 													<div class="num-hold">
 														<a href="#" class="minus control"><span class="icon-minus-normal"></span></a>
 														<a href="#" class="plus control"><span class="icon-plus-normal"></span></a>
-														<span class="val">7</span>
+														<span class="val">3</span>
 													</div>
 												</div>
 											</div>
@@ -168,7 +168,7 @@
 										<td>
 											<div class="cell">
 												<div class="middle">
-													<span class="price">$19,453</span>
+													<span class="price">$7200</span>
 												</div>
 											</div>
 										</td>
@@ -189,8 +189,9 @@
 															<img src="img/listing/img-40.jpg" height="228" width="350" alt="image description">
 														</div>
 														<div class="text-wrap">
-															<strong class="product-title">Summer Fun Trip to Spain for Family</strong>
-															<time class="time" datetime="2016-11-05">14th Jan 2016</time>
+															<strong class="product-title">Korea Airlines (SG -> Seoul)</strong>
+															<time class="time" datetime="2016-11-05">Departure: 21st Dec 2020</time>
+															<time class="time" datetime="2016-11-05">Return: 28th Dec 2020</time>
 														</div>
 													</div>
 												</div>
@@ -199,7 +200,7 @@
 										<td>
 											<div class="cell">
 												<div class="middle">
-													<span class="price">$2,779</span>
+													<span class="price">$2,779/pax</span>
 												</div>
 											</div>
 										</td>
@@ -209,7 +210,7 @@
 													<div class="num-hold">
 														<a href="#" class="minus control"><span class="icon-minus-normal"></span></a>
 														<a href="#" class="plus control"><span class="icon-plus-normal"></span></a>
-														<span class="val">7</span>
+														<span class="val">3</span>
 													</div>
 												</div>
 											</div>
@@ -217,56 +218,7 @@
 										<td>
 											<div class="cell">
 												<div class="middle">
-													<span class="price">$19,453</span>
-												</div>
-											</div>
-										</td>
-									</tr>
-									<tr>
-										<td>
-											<div class="cell">
-												<div class="middle">
-													<a class="delete" href="#"><span class="icon-trash"></span></a>
-												</div>
-											</div>
-										</td>
-										<td>
-											<div class="cell">
-												<div class="middle">
-													<div class="info">
-														<div class="img-wrap">
-															<img src="img/listing/img-41.jpg" height="228" width="350" alt="image description">
-														</div>
-														<div class="text-wrap">
-															<strong class="product-title">Summer Fun Trip to Spain for Family</strong>
-															<time class="time" datetime="2016-11-05">14th Jan 2016</time>
-														</div>
-													</div>
-												</div>
-											</div>
-										</td>
-										<td>
-											<div class="cell">
-												<div class="middle">
-													<span class="price">$2,779</span>
-												</div>
-											</div>
-										</td>
-										<td>
-											<div class="cell">
-												<div class="middle">
-													<div class="num-hold">
-														<a href="#" class="minus control"><span class="icon-minus-normal"></span></a>
-														<a href="#" class="plus control"><span class="icon-plus-normal"></span></a>
-														<span class="val">7</span>
-													</div>
-												</div>
-											</div>
-										</td>
-										<td>
-											<div class="cell">
-												<div class="middle">
-													<span class="price">$19,453</span>
+													<span class="price">$10,000</span>
 												</div>
 											</div>
 										</td>
@@ -276,10 +228,6 @@
 						</div>
 						<div class="cart-option">
 							<div class="coupon-hold">
-
-								<div class="input-hold">
-									<input type="text" class="form-control" placeholder="Enter Coupon Code.....">
-								</div>
 							</div>
 							<div class="button-hold">
 								<a href="checkout.php" class="btn btn-default">CHECKOUT</a>
