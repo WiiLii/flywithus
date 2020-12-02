@@ -49,19 +49,8 @@
 					<div class="center-text">
 						<div class="container">
 							<h1>My Bookings</h1>
-							<strong class="subtitle"> Start your journey,
+							<strong class="subtitle"> Prepare yourself,
                             </br> Check your bookings here! </strong>
-							<!-- breadcrumb -->
-							<!--
-                            <nav class="breadcrumbs">
-								<ul>
-									<li><a href="#">HOME</a></li>
-									<li><a href="#">DESTINATION</a></li>
-									<li><a href="#">asia</a></li>
-									<li><span>KOREA</span></li>
-								</ul>
-							</nav>
-                            -->
 						</div>
 					</div>
 				</div>
@@ -76,64 +65,25 @@
                                 <thead>
                                     <tr>
                                         <th>
-                                            <strong class="date-text">Booking</strong>
-                                            <span class="sub-text">Confirmed Dates?</span>
+                                            <strong class="date-text">Image</strong>
                                         </th>
                                         <th>
                                             <strong class="date-text">Name</strong>
-                                            <span class="sub-text">Airlines?</span>
                                         </th>
                                         <th>
                                             <strong class="date-text">Date</strong>
-                                            <span class="sub-text">Including Flights</span>
                                         </th>
                                         <th>
                                             <strong class="date-text">Price</strong>
-                                            <span class="sub-text">Excluding Flights</span>
                                         </th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td><div class="cell"><div class="middle">Fri 18 Oct '16 - Sun 04 Nov '16</div></div></td>
-                                        <td><div class="cell"><div class="middle">Available &amp; Guaranteed</div></div></td>
-                                        <td><div class="cell"><div class="middle">$2,779</div></div></td>
+                                        <td><div class="cell"><div class="middle">IMAGE</div></div></td>
+                                        <td><div class="cell"><div class="middle">Hotel Name / Airline / Package</div></div></td>
+                                        <td><div class="cell"><div class="middle">Date</div></div></td>
                                         <td><div class="cell"><div class="middle">$3,170</div></div></td>
-                                        </div></div></td>
-                                    </tr>
-                                    <tr>
-                                        <td><div class="cell"><div class="middle">Fri 18 Oct '16 - Sun 04 Nov '16</div></div></td>
-                                        <td><div class="cell"><div class="middle">Booked &amp; Guaranteed</div></div></td>
-                                        <td><div class="cell"><div class="middle">$2,679</div></div></td>
-                                        <td><div class="cell"><div class="middle">$3,970</div></div></td>
-                                        </div></div></td>
-                                    </tr>
-                                    <tr>
-                                        <td><div class="cell"><div class="middle">Fri 18 Oct '16 - Sun 04 Nov '16</div></div></td>
-                                        <td><div class="cell"><div class="middle">Available &amp; Guaranteed</div></div></td>
-                                        <td><div class="cell"><div class="middle">$1,779</div></div></td>
-                                        <td><div class="cell"><div class="middle">$3,470</div></div></td>
-                                        </div></div></td>
-                                    </tr>
-                                    <tr>
-                                        <td><div class="cell"><div class="middle">Fri 18 Oct '16 - Sun 04 Nov '16</div></div></td>
-                                        <td><div class="cell"><div class="middle">Available</div></div></td>
-                                        <td><div class="cell"><div class="middle">$2,779</div></div></td>
-                                        <td><div class="cell"><div class="middle">$3,970</div></div></td>
-                                        </div></div></td>
-                                    </tr>
-                                    <tr>
-                                        <td><div class="cell"><div class="middle">Fri 18 Oct '16 - Sun 04 Nov '16</div></div></td>
-                                        <td><div class="cell"><div class="middle">Booked &amp; Guaranteed</div></div></td>
-                                        <td><div class="cell"><div class="middle">$3,779</div></div></td>
-                                        <td><div class="cell"><div class="middle">$4,970</div></div></td>
-                                        </div></div></td>
-                                    </tr>
-                                    <tr>
-                                        <td><div class="cell"><div class="middle">Fri 18 Oct '16 - Sun 04 Nov '16</div></div></td>
-                                        <td><div class="cell"><div class="middle">Available &amp; Guaranteed</div></div></td>
-                                        <td><div class="cell"><div class="middle">$2,879</div></div></td>
-                                        <td><div class="cell"><div class="middle">$3,970</div></div></td>
                                         </div></div></td>
                                     </tr>
                                 </tbody>
