@@ -25,13 +25,18 @@
             <div class="collapse navbar-collapse" id="nav">
                 <!-- main navbar -->
                 <ul class="nav navbar-nav">
+                  <?php
+                      session_start();
+                  if (isset($_SESSION['email'])) {
+                    echo '<li><a href="survey.php">Survey</a></li>';
+                  } ?>
 
                     <li><a href="Packages.php">Packages</a></li>
                     <li><a href="hotels.php" >Hotels</a </li>
                     <li><a href="flights.php">Flights</a></li>
 
                     <?php
-                    session_start();
+
                     if (!isset($_SESSION['email'])) {
                         echo '<li class="visible-xs visible-sm">
                           <a href="login.php">
@@ -69,70 +74,71 @@
                            </div>
                          </div>
                        </li>';
+                       echo '          <li class="visible-xs visible-sm nav-visible dropdown last-dropdown v-divider">
+                                     <a href="my-cart.html" data-toggle="dropdown">
+                                         <span class="icon icon-cart"></span>
+                                         <span class="text hidden-md hidden-lg">Cart</span>
+                                         <span class="text hidden-xs hidden-sm">3</span>
+                                     </a>
+                                     <div class="dropdown-menu dropdown-md">
+                                         <div class="drop-wrap cart-wrap">
+                                             <strong class="title">Shopping Cart</strong>
+                                             <ul class="cart-list">
+                                                 <li>
+                                                     <div class="img">
+                                                         <a href="#">
+                                                             <img src="img/listing/img-16.jpg" height="165" width="170" alt="image description">
+                                                         </a>
+                                                     </div>
+                                                     <div class="text-holder">
+                                                         <span class="amount">x 3</span>
+                                                         <div class="text-wrap">
+                                                             <strong class="name"><a href="#">Thailand Shopping Package</a></strong>
+                                                             <span class="price">$2779</span>
+                                                         </div>
+                                                     </div>
+                                                 </li>
+                                                 <li>
+                                                     <div class="img">
+                                                         <a href="#">
+                                                             <img src="img/listing/img-17.jpg" height="165" width="170" alt="image description">
+                                                         </a>
+                                                     </div>
+                                                     <div class="text-holder">
+                                                         <span class="amount">x 3</span>
+                                                         <div class="text-wrap">
+                                                             <strong class="name"><a href="#">JW Marriot Hotel (Beijing)</a></strong>
+                                                             <span class="price">$888</span>
+                                                         </div>
+                                                     </div>
+                                                 </li>
+                                                 <li>
+                                                     <div class="img">
+                                                         <a href="#">
+                                                             <img src="img/listing/img-18.jpg" height="165" width="170" alt="image description">
+                                                         </a>
+                                                     </div>
+                                                     <div class="text-holder">
+                                                         <span class="amount">x 3</span>
+                                                         <div class="text-wrap">
+                                                             <strong class="name"><a href="#">Korea Airlines (SG -> Seoul)</a></strong>
+                                                             <span class="price">$2779</span>
+                                                         </div>
+                                                     </div>
+                                                 </li>
+                                             </ul>
+                                             <div class="footer">
+                                                 <a href="my-cart.php" class="btn btn-primary">View cart</a>
+                                                 <span class="total">$17784</span>
+                                             </div>
+                                         </div>
+                                     </div>
+                                 </li>';
                     }
                     // code...
                     ?>
 
-                    <li class="visible-xs visible-sm nav-visible dropdown last-dropdown v-divider">
-                        <a href="my-cart.html" data-toggle="dropdown">
-                            <span class="icon icon-cart"></span>
-                            <span class="text hidden-md hidden-lg">Cart</span>
-                            <span class="text hidden-xs hidden-sm">3</span>
-                        </a>
-                        <div class="dropdown-menu dropdown-md">
-                            <div class="drop-wrap cart-wrap">
-                                <strong class="title">Shopping Cart</strong>
-                                <ul class="cart-list">
-                                    <li>
-                                        <div class="img">
-                                            <a href="#">
-                                                <img src="img/listing/img-16.jpg" height="165" width="170" alt="image description">
-                                            </a>
-                                        </div>
-                                        <div class="text-holder">
-                                            <span class="amount">x 3</span>
-                                            <div class="text-wrap">
-                                                <strong class="name"><a href="#">Thailand Shopping Package</a></strong>
-                                                <span class="price">$2779</span>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="img">
-                                            <a href="#">
-                                                <img src="img/listing/img-17.jpg" height="165" width="170" alt="image description">
-                                            </a>
-                                        </div>
-                                        <div class="text-holder">
-                                            <span class="amount">x 3</span>
-                                            <div class="text-wrap">
-                                                <strong class="name"><a href="#">JW Marriot Hotel (Beijing)</a></strong>
-                                                <span class="price">$888</span>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="img">
-                                            <a href="#">
-                                                <img src="img/listing/img-18.jpg" height="165" width="170" alt="image description">
-                                            </a>
-                                        </div>
-                                        <div class="text-holder">
-                                            <span class="amount">x 3</span>
-                                            <div class="text-wrap">
-                                                <strong class="name"><a href="#">Korea Airlines (SG -> Seoul)</a></strong>
-                                                <span class="price">$2779</span>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
-                                <div class="footer">
-                                    <a href="my-cart.php" class="btn btn-primary">View cart</a>
-                                    <span class="total">$17784</span>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
+
                     <li class="dropdown hidden-xs hidden-sm last-dropdown v-divider">
                         <a href="#"><span class="text">LANG</span> <span class="icon-angle-down"></span></a>
                         <div class="dropdown-menu dropdown-sm">
