@@ -17,15 +17,16 @@
             }
             $season = $row['season']; # 'Winter'
             $activity = $row['activity']; #'Shopping'
-            $days = $row['days'] - 4; #7
+            $days = $row['days']; #7
             $budget = $row['budget']; #'$400 to $499'   
             $accomodation = $row['accomodation']; # no
         }
     }
-    $itineraryCountry = "Korea"; # because of weather? O.o
-    $sqlgetPrice = "SELECT SUM(itineraryPrice) FROM itinerary WHERE itineraryCountry = '$itineraryCountry'AND itineraryType = '$groupDesc';";
+    $itineraryDays = $days-2;
+    $itineraryCountry = "Thailand"; # because of weather? O.o
+    $sqlgetPrice = "SELECT SUM(itineraryPrice) FROM itinerary WHERE itineraryCountry = '$itineraryCountry'AND itineraryType = '$groupDesc' LIMIT $itineraryDays;";
     $sqlitineraryOverview = "SELECT * FROM itinerary WHERE itineraryCountry = '$itineraryCountry' AND itineraryType = '$groupDesc' LIMIT 1";
-    $sqlGetItineraryDays = "SELECT * FROM itinerary WHERE itineraryCountry = '$itineraryCountry' AND itineraryType = '$groupDesc'";
+    $sqlGetItineraryDays = "SELECT * FROM itinerary WHERE itineraryCountry = '$itineraryCountry' AND itineraryType = '$groupDesc'LIMIT $itineraryDays";
     ?>
     <head>
         <meta charset="utf-8">
@@ -72,18 +73,19 @@
                                 <div id="tour-slide">
                                     <div class="slide">
                                         <div class="bg-stretch">
-                                            <img src="img/generic/img-17.jpg" alt="image descriprion" height="1104" width="966">
+                                            <img src="img/countries/<?php echo $itineraryCountry?>/img-1.jpg" alt="image descriprion" height="1104" width="966">
                                         </div>
                                     </div>
                                     <div class="slide">
                                         <div class="bg-stretch">
-                                            <img src="img/generic/img-07.jpg" alt="image descriprion" height="1104" width="966">
+                                            <img src="img/countries/<?php echo $itineraryCountry?>/img-2.jpg" alt="image descriprion" height="1104" width="966">
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="height col-md-6 text-col">
                                 <div class="holder">
+                                    <div style="padding: 30px;"></div>
                                     <h1 class="small-size"><?php echo "$groupDesc in $itineraryCountry " ?> </h1>
                                     <div class="price">
                                         from <strong>$<?php
@@ -118,6 +120,7 @@
                                         </li>
                                     </ul>
                                 </div>
+                                 <div style="padding: 10px;"></div>
                             </div>
                         </div>
                     </section>
@@ -128,8 +131,8 @@
                                 <ul class="nav nav-tabs text-center" role="tablist">
                                     <li role="presentation" class="active"><a href="#tab01" aria-controls="tab01" role="tab" data-toggle="tab">Overview</a></li>
                                     <li role="presentation"><a href="#tab02" aria-controls="tab02" role="tab" data-toggle="tab">Itinerary</a></li>
-                                    <li role="presentation"><a href="#tab03" aria-controls="tab03" role="tab" data-toggle="tab">Faq &amp; Review</a></li>
-                                    <li role="presentation"><a href="#tab04" aria-controls="tab04" role="tab" data-toggle="tab">Gallery</a></li>
+                                    <li role="presentation"><a href="#tab03" aria-controls="tab03" role="tab" data-toggle="tab">Gallery</a></li>
+                                    <li role="presentation"><a href="#tab04" aria-controls="tab04" role="tab" data-toggle="tab">Faq &amp; Review</a></li>
                                     <!--<li role="presentation"><a href="#tab05" aria-controls="tab05" role="tab" data-toggle="tab">Dates &amp; Price</a></li>-->
                                 </ul>
                             </div>
@@ -141,7 +144,7 @@
                                 <div class="row">
                                     <div class="col-md-12">
 
-                                        <strong class="header-box">All about <?php echo $itineraryCountry; ?></strong>
+                                        <strong class="header-box" style="font-size: 200%;">All about <?php echo $itineraryCountry; ?></strong>
                                         <div class="detail">
                                             <?php
                                             global $sqlitineraryOverview;
@@ -180,7 +183,7 @@
                                             if ($result->num_rows > 0) {
                                                 $counter = 0;
                                                 while ($row = $result->fetch_assoc()) {
-                                                    if ($counter < $days) {
+                                                    if ($counter < $itineraryDays) {
                                                         echo '<li><a href=""><strong class="title">Day ' . ($counter + 2) . '</strong><span>' . $row['itineraryName'] . '</span></a><div class="slide"><div class="slide-holder"><p>' . $row['itineraryDesc'] . '</p></div></div>';
                                                         $counter += 1;
                                                     } else {
@@ -193,7 +196,7 @@
 
                                             <li>
                                                 <a href="#">
-                                                    <strong class="title">Day <?php echo $days + 2; ?></strong>
+                                                    <strong class="title">Day <?php echo $days; ?></strong>
                                                     <span>Arrive in Singapore</span>
                                                 </a>
                                                 <div class="slide">
@@ -227,7 +230,7 @@
                                 </div>
                             </div>
                             <!-- faq and review tab content -->
-                            <div role="tabpanel" class="tab-pane" id="tab03">
+                            <div role="tabpanel" class="tab-pane" id="tab04">
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="question-select">
@@ -444,7 +447,7 @@
                                 </div>
                             </div>
                             <!-- gallery tab content -->
-                            <div role="tabpanel" class="tab-pane" id="tab04">
+                            <div role="tabpanel" class="tab-pane" id="tab03">
                                 <ul class="row gallery-list has-center">
                                      <?php
                                     include_once('./simplehtmldom_1_9_1/simple_html_dom.php');
