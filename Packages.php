@@ -45,9 +45,7 @@
 							<nav class="breadcrumbs">
 								<ul>
 									<li><a href="#">HOME</a></li>
-									<li><a href="#">DESTINATION</a></li>
-									<li><a href="#">asia</a></li>
-									<li><span>KOREA</span></li>
+									<li><a href="#">PACKAGES</a></li>
 								</ul>
 							</nav>
 						</div>
