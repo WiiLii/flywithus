@@ -90,7 +90,7 @@ if (isset($_POST['session'])) {
 						<ul>
 							<li class="slider-color-schema-dark" data-index="rs-2" data-transition="fade" data-slotamount="7" data-easein="default" data-easeout="default" data-masterspeed="1000" data-rotate="0" data-saveperformance="off" data-title="Slide" data-description="">
 								<!-- main image for revolution slider -->
-								<img src="img/banner/img-01.jpg" alt="image description" data-bgposition="center center" data-kenburns="on" data-duration="30000" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="120" data-rotatestart="0" data-rotateend="0" data-offsetstart="0 0" data-offsetend="0 0" data-bgparallax="10" class="rev-slidebg" data-bgfit="cover" data-no-retina>
+								<img src="img/banner/img-99.jpg" alt="image description" data-bgposition="center center" data-kenburns="on" data-duration="30000" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="120" data-rotatestart="0" data-rotateend="0" data-offsetstart="0 0" data-offsetend="0 0" data-bgparallax="10" class="rev-slidebg" data-bgfit="cover" data-no-retina>
 
 
 								<div class="tp-caption banner-heading-sub tp-resizeme rs-parallaxlevel-0"
@@ -189,7 +189,7 @@ if (isset($_POST['session'])) {
 							<span class="main-subtitle">Check out all our popular destinations!</span>
 							<div class="seperator"></div>
 						</header>
-                                                <nav class="nav-wrap" id="sticky-tab">
+              <nav class="nav-wrap" id="sticky-tab">
 							<div class="container">
 								<!-- nav tabs -->
 								<ul class="nav nav-tabs text-center" role="tablist">
@@ -212,7 +212,8 @@ if (isset($_POST['session'])) {
 							<div role="tabpanel" class="tab-pane active" id="tab01">
 								<div class="content-holder">
 									<div class="row db-3-col">
-									<h1> KOREA </h1>
+									<center><h1> KOREA </h1></center>
+									<div class="seperator"></div>
 									<?php
 								$sql = "SELECT * FROM itinerary WHERE itineraryCountry='Korea' Limit 6";
 							 $result = $db->query($sql);
@@ -240,7 +241,7 @@ if (isset($_POST['session'])) {
 																	</div>
 																	<div class="info-footer">
 																		<span class="price">from <span>$'.$row['itineraryPrice'].'</span></span>
-																		<a href="#" class="link-more">Explore</a>
+																		<a href="Packages.php" class="link-more">Explore</a>
 																	</div>
 																</div>
 															</div>
@@ -258,7 +259,8 @@ if (isset($_POST['session'])) {
 							<div role="tabpanel" class="tab-pane active" id="tab02">
 								<div class="content-holder">
 									<div class="row db-3-col">
-									<h1> CHINA HERE </h1>
+									<center><h1> CHINA  </h1></center>
+									<div class="seperator"></div>
 									<?php
 								$sql = "SELECT * FROM itinerary WHERE itineraryCountry='China' Limit 6";
 							 $result = $db->query($sql);
@@ -286,7 +288,7 @@ if (isset($_POST['session'])) {
 																	</div>
 																	<div class="info-footer">
 																		<span class="price">from <span>$'.$row['itineraryPrice'].'</span></span>
-																		<a href="#" class="link-more">Explore</a>
+																		<a href="Packages.php" class="link-more">Explore</a>
 																	</div>
 																</div>
 															</div>
@@ -303,7 +305,8 @@ if (isset($_POST['session'])) {
 							<div role="tabpanel" class="tab-pane active" id="tab03">
 								<div class="content-holder">
 									<div class="row db-3-col">
-									<h1> THAILAND HERE </h1>
+									<center><h1> THAILAND  </h1></center>
+									<div class="seperator"></div>
 									<?php
 								$sql = "SELECT * FROM itinerary WHERE itineraryCountry='Thailand' Limit 6";
 							 $result = $db->query($sql);
@@ -331,7 +334,7 @@ if (isset($_POST['session'])) {
 																	</div>
 																	<div class="info-footer">
 																		<span class="price">from <span>$'.$row['itineraryPrice'].'</span></span>
-																		<a href="#" class="link-more">Explore</a>
+																		<a href="Packages.php" class="link-more">Explore</a>
 																	</div>
 																</div>
 															</div>
@@ -348,7 +351,8 @@ if (isset($_POST['session'])) {
 							<div role="tabpanel" class="tab-pane active" id="tab04">
 								<div class="content-holder">
 									<div class="row db-3-col">
-									<h1> JAPAN HERE </h1>
+									<center><h1> JAPAN  </h1></center>
+									<div class="seperator"></div>
 									<?php
 								$sql = "SELECT * FROM itinerary WHERE itineraryCountry='Japan' Limit 6";
 							 $result = $db->query($sql);
@@ -376,7 +380,7 @@ if (isset($_POST['session'])) {
 																	</div>
 																	<div class="info-footer">
 																		<span class="price">from <span>$'.$row['itineraryPrice'].'</span></span>
-																		<a href="#" class="link-more">Explore</a>
+																		<a href="Packages.php" class="link-more">Explore</a>
 																	</div>
 																</div>
 															</div>

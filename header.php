@@ -121,14 +121,14 @@
                                             <span class="amount">x 3</span>
                                             <div class="text-wrap">
                                                 <strong class="name"><a href="#">Korea Airlines (SG -> Seoul)</a></strong>
-                                                <span class="price">$1999</span>
+                                                <span class="price">$2779</span>
                                             </div>
                                         </div>
                                     </li>
                                 </ul>
                                 <div class="footer">
                                     <a href="my-cart.php" class="btn btn-primary">View cart</a>
-                                    <span class="total">$5000</span>
+                                    <span class="total">$17784</span>
                                 </div>
                             </div>
                         </div>

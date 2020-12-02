@@ -35,6 +35,24 @@
 			<!-- main container -->
 			<main id="main">
         <!--body-->
+		<section class="banner banner-inner parallax" data-stellar-background-ratio="0.5" id="gridview-2-col">
+				<div class="banner-text">
+					<div class="center-text">
+						<div class="container">
+							<h1>Flights</h1>
+							<strong class="subtitle">Find your dream destination here!
+							</br> Whatever your travel preference, you will find suitable flights here. </strong>
+							<!-- breadcrumb -->
+							<nav class="breadcrumbs">
+								<ul>
+									<li><a href="#">HOME</a></li>
+									<li><a href="#">FLIGHTS</a></li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+				</div>
+			</section>
 				<center><div class="content-block content-sub">
 					<div class="container">
 					<h2>Filters</h2>
@@ -72,6 +90,7 @@
 											<option value="Price Range">Japan</option>
 										</select>
 									</div>
+									<button type="submit"  class="btn btn-default"  name="filter_submit" onclick="searching();"> SEARCH</button>
 
 								</div>
 							</div>
@@ -143,7 +162,7 @@
 										<td><div class="cell"><div class="middle">Wed 9 Dec '20</div></div></td>
 										<td><div class="cell"><div class="middle">Singapore Airlines</div></div></td>
 										<td><div class="cell"><div class="middle">SG -> Seoul (Two-way)</div></div></td>
-										<td><div class="cell"><div class="middle">$4,970</div></div></td>
+										<td><div class="cell"><div class="middle">$4970</div></div></td>
 										<td><div class="cell"><div class="middle">
 											<a href="#" class="btn btn-default">BOOK NOW</a>
 										</div></div></td>
@@ -152,7 +171,7 @@
 										<td><div class="cell"><div class="middle">Wed 30 Dec '20</div></div></td>
 										<td><div class="cell"><div class="middle">China Airlines</div></div></td>
 										<td><div class="cell"><div class="middle">SG -> Bangkok (Two-way)</div></div></td>
-										<td><div class="cell"><div class="middle">$3,970</div></div></td>
+										<td><div class="cell"><div class="middle">$3970</div></div></td>
 										<td><div class="cell"><div class="middle">
 											<a href="#" class="btn btn-default">BOOK NOW</a>
 										</div></div></td>
@@ -161,7 +180,7 @@
 										<td><div class="cell"><div class="middle">Wed 23 Dec '20</div></div></td>
 										<td><div class="cell"><div class="middle">Korea Airlines</div></div></td>
 										<td><div class="cell"><div class="middle">SG -> Seoul (Two-way)</div></div></td>
-										<td><div class="cell"><div class="middle">$1,970</div></div></td>
+										<td><div class="cell"><div class="middle">$1970</div></div></td>
 										<td><div class="cell"><div class="middle">
 											<a href="#" class="btn btn-default">BOOK NOW</a>
 										</div></div></td>
@@ -170,7 +189,7 @@
 										<td><div class="cell"><div class="middle">Wed 9 Dec '20</div></div></td>
 										<td><div class="cell"><div class="middle">Thai Airways</div></div></td>
 										<td><div class="cell"><div class="middle">SG -> Bangkok (Two-way)</div></div></td>
-										<td><div class="cell"><div class="middle">$3,970</div></div></td>
+										<td><div class="cell"><div class="middle">$3970</div></div></td>
 										<td><div class="cell"><div class="middle">
 											<a href="#" class="btn btn-default">BOOK NOW</a>
 										</div></div></td>

@@ -1,12 +1,14 @@
 <?php
-// base on ur file location 
+
+
+// base on ur file location
 include_once 'functions.php';
 //include $_SERVER[ 'DOCUMENT_ROOT' ] .'/CF1/functions/sessions.php';
 $connection = initialiseDB();
 ?>
 <!DOCTYPE html>
 <html>
-     
+
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -37,7 +39,11 @@ $connection = initialiseDB();
         <div id="wrapper">
             <div class="page-wrapper">
                 <!-- main header -->
-                <?php include 'header.php'; ?>
+                <?php include 'header.php';
+                if (!isset($_SESSION['email'])) {
+                    echo "<script>alert('Please log in to access the survey.')</script>";
+                  echo'<script>window.location = "login.php";</script>';
+                } ?>
                 <!-- main banner -->
                 <section class="banner banner-inner parallax" data-stellar-background-ratio="0.5" id="list-view-normal">
                     <div class="banner-text">
@@ -99,5 +105,5 @@ $connection = initialiseDB();
         <script src="js/getsurveyvalues.js"></script>
     </body>
 
-     
+
 </html>

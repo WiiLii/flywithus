@@ -39,7 +39,7 @@
                 session_start();
                 if (!isset($_SESSION['email'])) {
                     echo "<script>alert('Please log in to access the survey.')</script>";
-                    header('Location:login.php');
+                  echo'<script>window.location = "login.php";</script>';
                 } else {
 
                 }

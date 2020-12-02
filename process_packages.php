@@ -114,7 +114,10 @@ if ($result->num_rows > 0) {
               </div>
               <span class="text">'.$row['itineraryCity'].'</span>
             </div>
-            <button href="packages-details.php" type="submit" onclick="getPackagesDetails(\''.$row['itineraryCity'].'\')" class="btn btn-default"value="" >explore</button>
+            <form class="" action="packages-detail.php" method="post">
+              <button href="packages-details.php" type="submit" name="city" class="btn btn-default"value="'.$row['itineraryCity'].'" >explore</button>
+            </form>
+
           </aside>
         </div>
       </div>

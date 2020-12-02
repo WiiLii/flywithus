@@ -46,10 +46,12 @@ if (isset($_POST['regi_submit'])) {
     echo $sql;
           if ($db->query($sql) === TRUE ) {
 
-              echo "success here";
+            //  echo "success here";
               session_start();
                 $_SESSION['email'] = $regi_email;
-                
+
+                    echo "<script>alert(successfully Register')</script>";
+                //  echo'<script>window.location = "login.php";</script>';
                 header('Location: index.php');
           }else{
             echo "fail here";
@@ -103,6 +105,7 @@ else {
   session_start();
   pop_up_alert("success login");
     $_SESSION['email'] = $email;
+      echo "<script>alert(successfully Login')</script>";
     header('Location: index.php');
   }
   else {
