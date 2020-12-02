@@ -44,43 +44,14 @@
 								<div class="filter-slide">
 									<div class="select-col">
 										<select class="filter-select">
-											<option value="Holiday Type">Holiday Type</option>
-											<option value="Holiday Type">Adventurous Trips</option>
-											<option value="Holiday Type">Night Life Trips</option>
-											<option value="Holiday Type">Nature Lover Trips</option>
-											<option value="Holiday Type">Shopping Trips</option>
-											<option value="Holiday Type">Culturally Curious Trips</option>
-											<option value="Holiday Type">Romantic Trips</option>
+											<option value="Holiday Type">Airlines</option>
+											<option value="Holiday Type">Singapore Airlines</option>
+											<option value="Holiday Type">China Airlines</option>
+											<option value="Holiday Type">Korea Airlines</option>
+											<option value="Holiday Type">Thai Airways</option>
 										</select>
 									</div>
-									<div class="select-col">
-										<select class="filter-select">
-											<option value="Country">Country</option>
-											<option value="Country">Korea</option>
-											<option value="Country">China</option>
-											<option value="Country">Thailand</option>
-											<option value="Country">Japan</option>
-										</select>
-									</div>
-									<div class="select-col">
-										<select class="filter-select">
-											<option value="Difficulty">Difficulty</option>
-											<option value="Difficulty">Fairly Easy</option>
-											<option value="Difficulty">Moderate</option>
-											<option value="Difficulty">Challenging</option>
-											<option value="Difficulty">Difficult</option>
-											<option value="Difficulty">Very Difficult</option>
-										</select>
-									</div>
-									<div class="select-col">
-										<select class="filter-select">
-											<option value="Dates">Seasonal</option>
-											<option value="Dates">January - March</option>
-											<option value="Dates">April - June</option>
-											<option value="Dates">July - September</option>
-											<option value="Dates">October - December</option>
-										</select>
-									</div>
+
 									<div class="select-col">
 										<select class="filter-select">
 											<option value="Price Range">Price Range</option>
@@ -91,6 +62,17 @@
 											<option value="Price Range">$3000+</option>
 										</select>
 									</div>
+
+									<div class="select-col">
+										<select class="filter-select">
+											<option value="Price Range">Location</option>
+											<option value="Price Range">Thailand</option>
+											<option value="Price Range">Korea</option>
+											<option value="Price Range">China</option>
+											<option value="Price Range">Japan</option>
+										</select>
+									</div>
+
 								</div>
 							</div>
 						</div>
@@ -105,19 +87,15 @@
 									<tr>
 										<th>
 											<strong class="date-text">Departure Dates</strong>
-											<span class="sub-text">Confirmed Dates</span>
 										</th>
 										<th>
 											<strong class="date-text">Airlines</strong>
-											<span class="sub-text">Airlines</span>
 										</th>
 										<th>
-											<strong class="date-text">Price (PP)</strong>
-											<span class="sub-text">Including Flights</span>
+											<strong class="date-text">Location</strong>
 										</th>
 										<th>
-											<strong class="date-text">Price (PP)</strong>
-											<span class="sub-text">Excluding Flights</span>
+											<strong class="date-text">Price (SGD)</strong>
 										</th>
 										<th>
 											&nbsp;
@@ -126,95 +104,78 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td><div class="cell"><div class="middle">Fri 18 Oct '16 - Sun 04 Nov '16</div></div></td>
-										<td><div class="cell"><div class="middle">Available &amp; Guaranteed</div></div></td>
-										<td><div class="cell"><div class="middle">$2,779</div></div></td>
-										<td><div class="cell"><div class="middle">$3,170</div></div></td>
+										<td><div class="cell"><div class="middle">Wed 9 Dec '20</div></div></td>
+										<td><div class="cell"><div class="middle">Korea Airlines</div></div></td>
+										<td><div class="cell"><div class="middle">SG -> Seoul (Two-way)</div></div></td>
+										<td><div class="cell"><div class="middle">$1900</div></div></td>
 										<td><div class="cell"><div class="middle">
 											<a href="#" class="btn btn-default">BOOK NOW</a>
 										</div></div></td>
 									</tr>
 									<tr>
-										<td><div class="cell"><div class="middle">Fri 18 Oct '16 - Sun 04 Nov '16</div></div></td>
-										<td><div class="cell"><div class="middle">Booked &amp; Guaranteed</div></div></td>
-										<td><div class="cell"><div class="middle">$2,679</div></div></td>
-										<td><div class="cell"><div class="middle">$3,970</div></div></td>
+										<td><div class="cell"><div class="middle">Wed 16 Dec '20</div></div></td>
+										<td><div class="cell"><div class="middle">Singapore Airlines</div></div></td>
+										<td><div class="cell"><div class="middle">SG -> Seoul (Two-way)</div></div></td>
+										<td><div class="cell"><div class="middle">$2200</div></div></td>
 										<td><div class="cell"><div class="middle">
 											<a href="#" class="btn btn-default">BOOK NOW</a>
 										</div></div></td>
 									</tr>
 									<tr>
-										<td><div class="cell"><div class="middle">Fri 18 Oct '16 - Sun 04 Nov '16</div></div></td>
-										<td><div class="cell"><div class="middle">Available &amp; Guaranteed</div></div></td>
-										<td><div class="cell"><div class="middle">$1,779</div></div></td>
-										<td><div class="cell"><div class="middle">$3,470</div></div></td>
+										<td><div class="cell"><div class="middle">Wed 23 Dec '20</div></div></td>
+										<td><div class="cell"><div class="middle">Thai Airways</div></div></td>
+										<td><div class="cell"><div class="middle">SG -> Bangkok (Two-way)</div></div></td>
+										<td><div class="cell"><div class="middle">$888</div></div></td>
 										<td><div class="cell"><div class="middle">
 											<a href="#" class="btn btn-default">BOOK NOW</a>
 										</div></div></td>
 									</tr>
 									<tr>
-										<td><div class="cell"><div class="middle">Fri 18 Oct '16 - Sun 04 Nov '16</div></div></td>
-										<td><div class="cell"><div class="middle">Available</div></div></td>
-										<td><div class="cell"><div class="middle">$2,779</div></div></td>
-										<td><div class="cell"><div class="middle">$3,970</div></div></td>
+										<td><div class="cell"><div class="middle">Wed 30 Dec '20</div></div></td>
+										<td><div class="cell"><div class="middle">China Airlines</div></div></td>
+										<td><div class="cell"><div class="middle">SG -> Beijing (Two-way)</div></div></td>
+										<td><div class="cell"><div class="middle">$1200</div></div></td>
 										<td><div class="cell"><div class="middle">
 											<a href="#" class="btn btn-default">BOOK NOW</a>
 										</div></div></td>
 									</tr>
 									<tr>
-										<td><div class="cell"><div class="middle">Fri 18 Oct '16 - Sun 04 Nov '16</div></div></td>
-										<td><div class="cell"><div class="middle">Booked &amp; Guaranteed</div></div></td>
-										<td><div class="cell"><div class="middle">$3,779</div></div></td>
+										<td><div class="cell"><div class="middle">Wed 9 Dec '20</div></div></td>
+										<td><div class="cell"><div class="middle">Singapore Airlines</div></div></td>
+										<td><div class="cell"><div class="middle">SG -> Seoul (Two-way)</div></div></td>
 										<td><div class="cell"><div class="middle">$4,970</div></div></td>
 										<td><div class="cell"><div class="middle">
 											<a href="#" class="btn btn-default">BOOK NOW</a>
 										</div></div></td>
 									</tr>
 									<tr>
-										<td><div class="cell"><div class="middle">Fri 18 Oct '16 - Sun 04 Nov '16</div></div></td>
-										<td><div class="cell"><div class="middle">Available &amp; Guaranteed</div></div></td>
-										<td><div class="cell"><div class="middle">$2,879</div></div></td>
+										<td><div class="cell"><div class="middle">Wed 30 Dec '20</div></div></td>
+										<td><div class="cell"><div class="middle">China Airlines</div></div></td>
+										<td><div class="cell"><div class="middle">SG -> Bangkok (Two-way)</div></div></td>
 										<td><div class="cell"><div class="middle">$3,970</div></div></td>
 										<td><div class="cell"><div class="middle">
 											<a href="#" class="btn btn-default">BOOK NOW</a>
 										</div></div></td>
 									</tr>
 									<tr>
-										<td><div class="cell"><div class="middle">Fri 18 Oct '16 - Sun 04 Nov '16</div></div></td>
-										<td><div class="cell"><div class="middle">Available &amp; Guaranteed</div></div></td>
-										<td><div class="cell"><div class="middle">$2,679</div></div></td>
+										<td><div class="cell"><div class="middle">Wed 23 Dec '20</div></div></td>
+										<td><div class="cell"><div class="middle">Korea Airlines</div></div></td>
+										<td><div class="cell"><div class="middle">SG -> Seoul (Two-way)</div></div></td>
 										<td><div class="cell"><div class="middle">$1,970</div></div></td>
 										<td><div class="cell"><div class="middle">
 											<a href="#" class="btn btn-default">BOOK NOW</a>
 										</div></div></td>
 									</tr>
 									<tr>
-										<td><div class="cell"><div class="middle">Fri 18 Oct '16 - Sun 04 Nov '16</div></div></td>
-										<td><div class="cell"><div class="middle">Booked &amp; Guaranteed</div></div></td>
-										<td><div class="cell"><div class="middle">$4,779</div></div></td>
+										<td><div class="cell"><div class="middle">Wed 9 Dec '20</div></div></td>
+										<td><div class="cell"><div class="middle">Thai Airways</div></div></td>
+										<td><div class="cell"><div class="middle">SG -> Bangkok (Two-way)</div></div></td>
 										<td><div class="cell"><div class="middle">$3,970</div></div></td>
 										<td><div class="cell"><div class="middle">
 											<a href="#" class="btn btn-default">BOOK NOW</a>
 										</div></div></td>
 									</tr>
-									<tr>
-										<td><div class="cell"><div class="middle">Fri 18 Oct '16 - Sun 04 Nov '16</div></div></td>
-										<td><div class="cell"><div class="middle">Available &amp; Guaranteed</div></div></td>
-										<td><div class="cell"><div class="middle">$5,779</div></div></td>
-										<td><div class="cell"><div class="middle">$3,270</div></div></td>
-										<td><div class="cell"><div class="middle">
-											<a href="#" class="btn btn-default">BOOK NOW</a>
-										</div></div></td>
-									</tr>
-									<tr>
-										<td><div class="cell"><div class="middle">Fri 18 Oct '16 - Sun 04 Nov '16</div></div></td>
-										<td><div class="cell"><div class="middle">Available &amp; Guaranteed</div></div></td>
-										<td><div class="cell"><div class="middle">$2,779</div></div></td>
-										<td><div class="cell"><div class="middle">$3,970</div></div></td>
-										<td><div class="cell"><div class="middle">
-											<a href="#" class="btn btn-default">BOOK NOW</a>
-										</div></div></td>
-									</tr>
+
 								</tbody>
 							</table>
 						</div>
