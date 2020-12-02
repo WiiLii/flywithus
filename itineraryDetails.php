@@ -41,7 +41,7 @@
                     echo "<script>alert('Please log in to access the survey.')</script>";
                     header('Location:login.php');
                 } else {
-                    
+
                 }
                 $session_email = $_SESSION['email'];
                 $sqlgetUserID = "SELECT userID FROM useraccount WHERE email = '$session_email'";
@@ -66,7 +66,7 @@
                         $season = $row['season']; # 'Winter'
                         $activity = $row['activity']; #'Shopping'
                         $days = $row['days']; #7
-                        $budget = $row['budget']; #'$400 to $499'   
+                        $budget = $row['budget']; #'$400 to $499'
                         $accomodation = $row['accomodation']; # no
                     }
                 }
@@ -83,7 +83,7 @@
                     }
                     $sqlsetCountry = "SELECT COUNT(itineraryCountry) FROM itinerary "
                             . "WHERE itineraryCountry = '$itineraryCountries[$arr]' AND "
-                            . "itineraryType = '$groupDesc'LIMIT $itineraryDays";
+                            . "itineraryType = '$activity'LIMIT $itineraryDays";
                     $result = $db->query($sqlsetCountry);
                     if ($result->num_rows > 0) {
                         while ($row = $result->fetch_assoc()) {
@@ -101,9 +101,9 @@
                   //  echo '<script>alert("this is $arr, '.$arr.'")</script>';
                 }
                 global $itineraryCountry;
-                $sqlgetPrice = "SELECT SUM(itineraryPrice) FROM itinerary WHERE itineraryCountry = '$itineraryCountry'AND itineraryType = '$groupDesc' LIMIT $itineraryDays;";
-                $sqlitineraryOverview = "SELECT * FROM itinerary WHERE itineraryCountry = '$itineraryCountry' AND itineraryType = '$groupDesc' LIMIT 1";
-                $sqlGetItineraryDays = "SELECT * FROM itinerary WHERE itineraryCountry = '$itineraryCountry' AND itineraryType = '$groupDesc'LIMIT $itineraryDays";
+                $sqlgetPrice = "SELECT SUM(itineraryPrice) FROM itinerary WHERE itineraryCountry = '$itineraryCountry'AND itineraryType = '$activity' LIMIT $itineraryDays;";
+                $sqlitineraryOverview = "SELECT * FROM itinerary WHERE itineraryCountry = '$itineraryCountry' AND itineraryType = '$activity' LIMIT 1";
+                $sqlGetItineraryDays = "SELECT * FROM itinerary WHERE itineraryCountry = '$itineraryCountry' AND itineraryType = '$activity'LIMIT $itineraryDays";
                 ?>
                 <!-- main container -->
                 <main id="main" style="padding-top: 0px;">
@@ -129,7 +129,7 @@
                             <div class="height col-md-6 text-col">
                                 <div class="holder">
                                     <div style="padding: 30px;"></div>
-                                    <h1 class="small-size"><?php echo "$groupDesc in $itineraryCountry " ?> </h1>
+                                    <h1 class="small-size"><?php echo "$activity in $itineraryCountry " ?> </h1>
                                     <div class="price">
                                         from <strong>$<?php
                 global $sqlgetPrice;
@@ -512,7 +512,7 @@ if ($result->num_rows > 0) {
         try {
             $result_image_source = $newhtml->find('img', 1)->src ?? "no records";
         } catch (Exception $e) {
-            
+
         }
         //echo "$result_image_source";
         if ($result_image_source != "no records") {
@@ -531,7 +531,7 @@ if ($result->num_rows > 0) {
                                         </a>
                                     </li>';
         } else {
-            
+
         }
     }
 }
