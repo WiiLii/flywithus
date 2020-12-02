@@ -44,25 +44,63 @@
 						<div class="content-holder list-view">
                             <article class="article">
                                 <div class="thumbnail">
-                                    <div class="description">
                                             <header class="heading">
-                                                <h3>adding the hotel information here</h3>
+                                                <h2>About Hotel</h2>
                                             </header>
-                                            <p>add something add something add something add something add something add something add something</p>
-                                    </div>
+                                            <p>Generate Hotel Info hereGenerate Hotel Info hereGenerate Hotel Info hereGenerate Hotel Info hereGenerate Hotel Info hereGenerate Hotel Info hereGenerate Hotel Info hereGenerate Hotel Info hereGenerate Hotel Info hereGenerate Hotel Info hereGenerate Hotel Info hereGenerate Hotel Info hereGenerate Hotel Info hereGenerate Hotel Info hereGenerate Hotel Info hereGenerate Hotel Info hereGenerate Hotel Info hereGenerate Hotel Info hereGenerate Hotel Info hereGenerate Hotel Info hereGenerate Hotel Info hereGenerate Hotel Info hereGenerate Hotel Info hereGenerate Hotel Info hereGenerate Hotel Info hereGenerate Hotel Info hereGenerate Hotel Info hereGenerate Hotel Info hereGenerate Hotel Info hereGenerate Hotel Info hereGenerate Hotel Info hereGenerate Hotel Info hereGenerate Hotel Info hereGenerate Hotel Info hereGenerate Hotel Info hereGenerate Hotel Info hereGenerate Hotel Info hereGenerate Hotel Info hereGenerate Hotel Info hereGenerate Hotel Info hereGenerate Hotel Info hereGenerate Hotel Info hereGenerate Hotel Info hereGenerate Hotel Info hereGenerate Hotel Info hereGenerate Hotel Info hereGenerate Hotel Info hereGenerate Hotel Info hereGenerate Hotel Info hereGenerate Hotel Info hereGenerate Hotel Info hereGenerate Hotel Info hereGenerate Hotel Info hereGenerate Hotel Info hereGenerate Hotel Info here</p>
                                 </div>
                             </article>
                         </div>
                         <div class="content-holder list-view">
                             <article class="article">
-                                <div class="thumbnail">
-                                    <div class="description">
-                                            <header class="heading">
-                                                <h3>adding some interesting part here</h3>
-                                            </header>
-                                            <p>add something add something add something add something add something add something add something</p>
-                                    </div>
+                                <div class="container">                        
+                                    <header class="heading">
+                                        <h2>Amenities</h2>
+                                    </header>
+												
+											<div class=col>
+												<div>
+													<h4><span>&#10003; Airport Transit</span></h4>
+													<h4><span>&#10003; Free Parking</span></h4>
+													<h4><span>&#10003; Early Check-In</span></h4>
+													<h4><span>&#10003; Late Check-Out</span></h4>
+												</div>
+											</div>
+											<div class=col>
+												<div>
+													<h4><span>&#10003; Hotel Pub</span></h4>
+													<h4><span>&#10003; Restaurants</span></h4>
+													<h4><span>&#10003; Gym</span></h4>
+													<h4><span>&#10003; Swimming Pool</span></h4>
+												</div>
+											</div>	
+											<div class=col>
+												<div>
+													<h4><span>&#10003; Wifi</span></h4>
+													<h4><span>&#10003; Bath Tub</span></h4>
+													<h4><span>&#10003; Personal Care</span></h4>
+													<h4><span>&#10003; Bathrobes</span></h4>
+												</div>
+											</div>
+											<div class=col>
+												<div>
+													<h3><span>&#10003; Free Breakfast</span></h3>
+													<h3><span>&#10003; In-Room Tablets</span></h3>
+													<h3><span>&#10003; Television</span></h3>
+													<h3><span>&#10003; Room Service</span></h3>
+												</div>
+											</div>
+											<div class=col>
+												<div>
+													<h3><span>&#10003; Washing Machine</span></h3>
+													<h3><span>&#10003; Toiletries</span></h3>
+													<h3><span>&#10003; Air Condition</span></h3>
+													<h3><span>&#10003; Heater</span></h3>
+												</div>
+											</div>
+																												
                                 </div>
+								
                             </article>
                         </div>
                             <div role="tabpanel" class="tab-pane" id="tab06">
@@ -72,20 +110,17 @@
                                     <thead>
                                         <tr>
                                             <th>
-                                                <strong class="date-text">Blah1</strong>
-                                                <span class="sub-text">Confirmed Dates</span>
+                                                <strong class="date-text">Hotel</strong>
                                             </th>
                                             <th>
-                                                <strong class="date-text">Blah2</strong>
-                                                <span class="sub-text">Airlines</span>
+                                                <strong class="date-text">Location</strong>
                                             </th>
                                             <th>
-                                                <strong class="date-text">Blah3</strong>
-                                                <span class="sub-text">Including Flights</span>
+                                                <strong class="date-text">Room Type</strong>
                                             </th>
                                             <th>
-                                                <strong class="date-text">Blah4</strong>
-                                                <span class="sub-text">Excluding Flights</span>
+                                                <strong class="date-text">Room Price (SGD)</strong>
+
                                             </th>
                                             <th>
                                                 &nbsp;
@@ -94,71 +129,18 @@
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td><div class="cell"><div class="middle">Fri 18 Oct '16 - Sun 04 Nov '16</div></div></td>
-                                            <td><div class="cell"><div class="middle">Available &amp; Guaranteed</div></div></td>
-                                            <td><div class="cell"><div class="middle">$2,779</div></div></td>
-                                            <td><div class="cell"><div class="middle">$3,170</div></div></td>
-                                            <td><div class="cell"><div class="middle">
-											<a href="#" class="btn btn-default">Add to Cart</a>
-										    </div></div></td>
-                                        </tr>
-                                        <tr>
-                                            <td><div class="cell"><div class="middle">Fri 18 Oct '16 - Sun 04 Nov '16</div></div></td>
-                                            <td><div class="cell"><div class="middle">Booked &amp; Guaranteed</div></div></td>
-                                            <td><div class="cell"><div class="middle">$2,679</div></div></td>
+                                            <td><div class="cell"><div class="middle">Load Image</div></div></td>
+                                            <td><div class="cell"><div class="middle">Japan, Tokyo</div></div></td>
+                                            <td><div class="cell"><div class="middle">Double</div></div></td>
                                             <td><div class="cell"><div class="middle">$3,970</div></div></td>
                                             <td><div class="cell"><div class="middle">
 											<a href="#" class="btn btn-default">Add to Cart</a>
 										    </div></div></td>
                                         </tr>
-                                        <tr>
-                                            <td><div class="cell"><div class="middle">Fri 18 Oct '16 - Sun 04 Nov '16</div></div></td>
-                                            <td><div class="cell"><div class="middle">Available &amp; Guaranteed</div></div></td>
-                                            <td><div class="cell"><div class="middle">$1,779</div></div></td>
-                                            <td><div class="cell"><div class="middle">$3,470</div></div></td>
-                                            <td><div class="cell"><div class="middle">
-											<a href="#" class="btn btn-default">Add to Cart</a>
-										    </div></div></td>
-                                        </tr>
-                                        <tr>
-                                            <td><div class="cell"><div class="middle">Fri 18 Oct '16 - Sun 04 Nov '16</div></div></td>
-                                            <td><div class="cell"><div class="middle">Available</div></div></td>
-                                            <td><div class="cell"><div class="middle">$2,779</div></div></td>
-                                            <td><div class="cell"><div class="middle">$3,970</div></div></td>
-                                            <td><div class="cell"><div class="middle">
-											<a href="#" class="btn btn-default">Add to Cart</a>
-										    </div></div></td>
-                                        </tr>
-                                    </tbody>
                                 </table>
                             </div>
-						<div class="load-more text-center text-uppercase">
-							<a href="#">MORE DATES &amp; PRICES</a>
-						</div>
 					</div>
 				</div>
-						<!-- pagination wrap -->
-						<nav class="pagination-wrap">
-							<div class="btn-prev">
-								<a href="#" aria-label="Previous">
-									<span class="icon-angle-right"></span>
-								</a>
-							</div>
-							<ul class="pagination">
-								<li><a href="#">1</a></li>
-								<li><a href="#">2</a></li>
-								<li><a href="#">3</a></li>
-								<li class="active"><a href="#">4</a></li>
-								<li><a href="#">5</a></li>
-								<li>...</li>
-								<li><a href="#">7</a></li>
-							</ul>
-							<div class="btn-next">
-								<a href="#" aria-label="Previous">
-									<span class="icon-angle-right"></span>
-								</a>
-							</div>
-						</nav>
 					</div>
 				</div>
 			</main>

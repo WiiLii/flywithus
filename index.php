@@ -169,7 +169,7 @@ if (isset($_POST['session'])) {
 						</br>
 						<header class="content-heading">
 							<h2 class="main-heading">POPULAR ITINERARIES</h2>
-							<span class="main-subtitle">We have a unique way of meeting your adventurous expectations!</span>
+							<span class="main-subtitle">Check out all our popular destinations!</span>
 							<div class="seperator"></div>
 						</header>
                                                 <nav class="nav-wrap" id="sticky-tab" style="width: 100%;">

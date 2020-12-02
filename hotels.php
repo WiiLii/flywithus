@@ -125,7 +125,23 @@
 							</div>
 						</div>
 						<!-- pagination wrap -->
+							<!-- pagination wrap -->
+							<nav class="pagination-wrap">
+							<div class="btn-prev">
+								<a href="#" aria-label="Previous">
+									<span class="icon-angle-right"></span>
+								</a>
+							</div>
+							<ul class="pagination">
+								<li class="active"><a href="#">1</a></li>
 
+							</ul>
+							<div class="btn-next">
+								<a href="#" aria-label="Previous">
+									<span class="icon-angle-right"></span>
+								</a>
+							</div>
+						</nav>
 					</div>
 				
 				<!-- recent block -->

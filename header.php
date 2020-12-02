@@ -125,7 +125,7 @@
                   </li>
                 </ul>
                 <div class="footer">
-                  <a href="my-cart.html" class="btn btn-primary">View cart</a>
+                  <a href="my-cart.php" class="btn btn-primary">View cart</a>
                   <span class="total">$3300</span>
                 </div>
               </div>
