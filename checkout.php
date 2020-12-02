@@ -51,26 +51,6 @@
 				<div class="inner-main common-spacing container">
 					<!-- booking form -->
 					<form class="booking-form" action="#">
-						<div class="row same-height">
-							<div class="col-md-6">
-								<div class="top-box">
-									<a href="#" class="holder height">
-										<span class="left">Are You Returning Customer? </span>
-										<span class="right">Login Here</span>
-										<span class="arrow"></span>
-									</a>
-								</div>
-							</div>
-							<div class="col-md-6">
-								<div class="top-box">
-									<a href="#" class="holder height">
-										<span class="left">Have a Promotional Coupon? </span>
-										<span class="right">Enter Coupon Code</span>
-										<span class="arrow"></span>
-									</a>
-								</div>
-							</div>
-						</div>
 						<div class="row">
 							<div class="col-md-6">
 								<div class="form-holder">
@@ -91,27 +71,27 @@
 											</div>
 										</div>
 										<div class="hold">
-											<label for="cname">Company Name</label>
+											<label for="cname">Name on Card</label>
 											<input type="text" id="cname" class="form-control">
 										</div>
 										<div class="hold">
-											<label for="address">Address</label>
+											<label for="address">Card Number</label>
 											<input type="text" id="address" class="form-control">
 										</div>
 										<div class="hold">
-											<label for="city">City / Town</label>
-											<input type="text" id="city" class="form-control">
+											<label for="city">CVV</label>
+											<input type="password" id="city" class="form-control">
 										</div>
 										<div class="row">
 											<div class="col-md-6">
 												<div class="hold">
-													<label for="em">Email address</label>
+													<label for="em">Expiry Month</label>
 													<input type="email" id="em" class="form-control">
 												</div>
 											</div>
 											<div class="col-md-6">
 												<div class="hold">
-													<label for="phn">Phone</label>
+													<label for="phn">Expiry Year</label>
 													<input type="text" id="phn" class="form-control">
 												</div>
 											</div>
@@ -122,7 +102,7 @@
 													<label class="custom-radio">
 														<input type="radio" name="pay">
 														<span class="check-input"></span>
-														<span class="check-label">Check Payment</span>
+														<span class="check-label">Cheque Payment</span>
 													</label>
 												</header>
 												<div class="info-hold">
@@ -138,7 +118,7 @@
 													</label>
 												</header>
 												<div class="info-hold">
-													<p>If you dont have paypal account - you can still pay using credit cards!</p>
+													<p>Select this option to pay with PayPal</p>
 												</div>
 											</li>
 										</ul>
@@ -177,34 +157,25 @@
 											<table class="product-table">
 												<thead>
 													<tr>
-														<th>Selected Tours</th>
+														<th>Selected Items</th>
 														<th>Total Price</th>
 													</tr>
 												</thead>
 												<tbody>
 													<tr>
 														<td>
-															<span class="title">Everest Trekking &emsp;<span class="amount">x&emsp; 3</span></span>
-															<time datetime="2016-09-29">Booking Date:&emsp; 14th Jan 2016</time>
+															<span class="title">Bangkok Trip Package &emsp;<span class="amount">x&emsp; 3</span></span>
+															<time datetime="2016-09-29">Booking Date:&emsp; 25th Dec 2020</time>
 														</td>
 														<td>
 															<span class="amount">$2,999</span>
-														</td>
-													</tr>
-													<tr>
-														<td>
-															<span class="title">Bungee Jumping &emsp;<span class="amount">x&emsp; 2</span></span>
-															<time datetime="2016-09-29">Booking Date:&emsp; 14th Jan 2016</time>
-														</td>
-														<td>
-															<span class="amount">$1,999</span>
 														</td>
 													</tr>
 												</tbody>
 												<tfoot>
 													<tr>
 														<td>Total Price</td>
-														<td>$4,988</td>
+														<td>$2,999</td>
 													</tr>
 												</tfoot>
 											</table>
