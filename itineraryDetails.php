@@ -215,7 +215,7 @@ if ($result->num_rows > 0) {
                                                 </a>
                                                 <div class="slide">
                                                     <div class="slide-holder">
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ctetur, adipisci velit, sed quia non numquam eius modi.</p>
+                                                        <p>Make your way down to the beautiful Changi Airport to take your flight.</p>
                                                     </div>
                                                 </div>
                                             </li>
@@ -251,7 +251,7 @@ if ($result->num_rows > 0) {
                                                 </a>
                                                 <div class="slide">
                                                     <div class="slide-holder">
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ctetur, adipisci velit, sed quia non numquam eius modi.</p>
+                                                        <p>Welcome back home!</p>
                                                     </div>
                                                 </div>
                                             </li>
