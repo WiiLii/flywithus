@@ -212,7 +212,8 @@ if (isset($_POST['session'])) {
 							<div role="tabpanel" class="tab-pane active" id="tab01">
 								<div class="content-holder">
 									<div class="row db-3-col">
-									<h1> KOREA </h1>
+									<center><h1> KOREA </h1></center>
+									<div class="seperator"></div>
 									<?php
 								$sql = "SELECT * FROM itinerary WHERE itineraryCountry='Korea' Limit 6";
 							 $result = $db->query($sql);
@@ -258,7 +259,8 @@ if (isset($_POST['session'])) {
 							<div role="tabpanel" class="tab-pane active" id="tab02">
 								<div class="content-holder">
 									<div class="row db-3-col">
-									<h1> CHINA HERE </h1>
+									<center><h1> CHINA  </h1></center>
+									<div class="seperator"></div>
 									<?php
 								$sql = "SELECT * FROM itinerary WHERE itineraryCountry='China' Limit 6";
 							 $result = $db->query($sql);
@@ -303,7 +305,8 @@ if (isset($_POST['session'])) {
 							<div role="tabpanel" class="tab-pane active" id="tab03">
 								<div class="content-holder">
 									<div class="row db-3-col">
-									<h1> THAILAND HERE </h1>
+									<center><h1> THAILAND  </h1></center>
+									<div class="seperator"></div>
 									<?php
 								$sql = "SELECT * FROM itinerary WHERE itineraryCountry='Thailand' Limit 6";
 							 $result = $db->query($sql);
@@ -348,7 +351,8 @@ if (isset($_POST['session'])) {
 							<div role="tabpanel" class="tab-pane active" id="tab04">
 								<div class="content-holder">
 									<div class="row db-3-col">
-									<h1> JAPAN HERE </h1>
+									<center><h1> JAPAN  </h1></center>
+									<div class="seperator"></div>
 									<?php
 								$sql = "SELECT * FROM itinerary WHERE itineraryCountry='Japan' Limit 6";
 							 $result = $db->query($sql);

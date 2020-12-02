@@ -35,6 +35,24 @@
 			<!-- main container -->
 			<main id="main">
         <!--body-->
+		<section class="banner banner-inner parallax" data-stellar-background-ratio="0.5" id="gridview-2-col">
+				<div class="banner-text">
+					<div class="center-text">
+						<div class="container">
+							<h1>Flights</h1>
+							<strong class="subtitle">Find your dream destination here!
+							</br> Whatever your travel preference, you will find suitable flights here. </strong>
+							<!-- breadcrumb -->
+							<nav class="breadcrumbs">
+								<ul>
+									<li><a href="#">HOME</a></li>
+									<li><a href="#">FLIGHTS</a></li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+				</div>
+			</section>
 				<center><div class="content-block content-sub">
 					<div class="container">
 					<h2>Filters</h2>
@@ -72,6 +90,7 @@
 											<option value="Price Range">Japan</option>
 										</select>
 									</div>
+									<button type="submit"  class="btn btn-default"  name="filter_submit" onclick="searching();"> SEARCH</button>
 
 								</div>
 							</div>
