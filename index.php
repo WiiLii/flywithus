@@ -1,4 +1,6 @@
 <?php
+$country_arr=array("Japan","Korea","Thailand","China");
+include "config.php";
 if (isset($_POST['session'])) {
 	session_start();
 if(!isset($_SESSION['email'])){
@@ -17,6 +19,30 @@ if (isset($_POST['session'])) {
 				header('location:survey.php');
 	}
 }
+//
+// for ($i=0; $i <count($country_arr); $i++) {
+// 		if ("Japan" == $country_arr[$i]) {
+// 			// code...
+// 		}
+// 	else if ("Korea" == $country_arr[$i]) {
+// 		// code...
+// 	}
+// 	else if ("Thailand" == $country_arr[$i]) {
+// 		// code...
+// 	}
+// 	else if("China" == $country_arr[$i]){
+//
+// 	}
+// }
+//   $sql = "SELECT * FROM itinerary";
+// $result = $db->query($sql);
+// //$mytable = $sql;
+// if ($result->num_rows > 0) {
+//   // output data of each row
+//     while($row = $result->fetch_assoc()) {
+//         echo $row['itineraryDesc'],"------------------------<br>";
+//     }
+// }
 
 			?>
 <!DOCTYPE html>
@@ -86,7 +112,7 @@ if (isset($_POST['session'])) {
 									data-splitin="none"
 									data-splitout="none"
 									data-responsive_offset="on"
-									style="z-index: 7; letter-spacing: 0; font-weight: 100; text-align: center; color: #ffffff">FIGURE OUT YOUR IDEAL 
+									style="z-index: 7; letter-spacing: 0; font-weight: 100; text-align: center; color: #ffffff">FIGURE OUT YOUR IDEAL
 								</div>
 
 								<div class="tp-caption banner-heading-sub tp-resizeme rs-parallaxlevel-10"
@@ -179,172 +205,52 @@ if (isset($_POST['session'])) {
 						<!-- tab panes -->
 						<div class="container tab-content trip-detail" style="width: 100%">
 							<!-- KOREA tab content -->
+
+
+
+
 							<div role="tabpanel" class="tab-pane active" id="tab01">
 								<div class="content-holder">
 									<div class="row db-3-col">
-									<h1> KOREA HERE </h1>
-										<article class="col-sm-6 col-md-4 article has-hover-s3">
-											<div class="img-wrap">
-												<a href="#">
-													<img src="img/listing/img-01.jpg" height="215" width="370" alt="image description">
-												</a>
-												<div class="img-caption text-uppercase">Discover Timeless</div>
-												<div class="hover-article">
-													<div class="star-rating">
-														<span><span class="icon-star"></span></span>
-														<span><span class="icon-star"></span></span>
-														<span><span class="icon-star"></span></span>
-														<span><span class="icon-star"></span></span>
-														<span class="disable"><span class="icon-star"></span></span>
-													</div>
-													<div class="icons">
-														<a href="#"><span class="icon-heart"></span></a>
-														<a href="#"><span class="icon-reply"></span></a>
-													</div>
-													<div class="info-footer">
-														<span class="price">from <span>$2749</span></span>
-														<a href="#" class="link-more">Explore</a>
-													</div>
-												</div>
-											</div>
-											<h3><a href="#">Jungle safari for families</a></h3>
-											<p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum,</p>
-										</article>
-										<article class="col-sm-6 col-md-4 article has-hover-s3">
-											<div class="img-wrap">
-												<a href="#">
-													<img src="img/listing/img-02.jpg" height="215" width="370" alt="image description">
-												</a>
-												<div class="img-caption text-uppercase">Finding Egyptians</div>
-												<div class="hover-article">
-													<div class="star-rating">
-														<span><span class="icon-star"></span></span>
-														<span><span class="icon-star"></span></span>
-														<span><span class="icon-star"></span></span>
-														<span><span class="icon-star"></span></span>
-														<span class="disable"><span class="icon-star"></span></span>
-													</div>
-													<div class="icons">
-														<a href="#"><span class="icon-heart"></span></a>
-														<a href="#"><span class="icon-reply"></span></a>
-													</div>
-													<div class="info-footer">
-														<span class="price">from <span>$2749</span></span>
-														<a href="#" class="link-more">Explore</a>
-													</div>
-												</div>
-											</div>
-											<h3><a href="#">Nature wildlife photography</a></h3>
-											<p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum,</p>
-										</article>
-										<article class="col-sm-6 col-md-4 article has-hover-s3">
-											<div class="img-wrap">
-												<a href="#">
-													<img src="img/listing/img-03.jpg" height="215" width="370" alt="image description">
-												</a>
-												<div class="img-caption text-uppercase">Cave Adventures</div>
-												<div class="hover-article">
-													<div class="star-rating">
-														<span><span class="icon-star"></span></span>
-														<span><span class="icon-star"></span></span>
-														<span><span class="icon-star"></span></span>
-														<span><span class="icon-star"></span></span>
-														<span class="disable"><span class="icon-star"></span></span>
-													</div>
-													<div class="icons">
-														<a href="#"><span class="icon-heart"></span></a>
-														<a href="#"><span class="icon-reply"></span></a>
-													</div>
-													<div class="info-footer">
-														<span class="price">from <span>$2749</span></span>
-														<a href="#" class="link-more">Explore</a>
-													</div>
-												</div>
-											</div>
-											<h3><a href="#">Polar arctic expeditions</a></h3>
-											<p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum,</p>
-										</article>
-										<article class="col-sm-6 col-md-4 article has-hover-s3">
-											<div class="img-wrap">
-												<a href="#">
-													<img src="img/listing/img-04.jpg" height="215" width="370" alt="image description">
-												</a>
-												<div class="img-caption text-uppercase">Peak Climbing</div>
-												<div class="hover-article">
-													<div class="star-rating">
-														<span><span class="icon-star"></span></span>
-														<span><span class="icon-star"></span></span>
-														<span><span class="icon-star"></span></span>
-														<span><span class="icon-star"></span></span>
-														<span class="disable"><span class="icon-star"></span></span>
-													</div>
-													<div class="icons">
-														<a href="#"><span class="icon-heart"></span></a>
-														<a href="#"><span class="icon-reply"></span></a>
-													</div>
-													<div class="info-footer">
-														<span class="price">from <span>$2749</span></span>
-														<a href="#" class="link-more">Explore</a>
-													</div>
-												</div>
-											</div>
-											<h3><a href="#">Marine diving excursions</a></h3>
-											<p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum,</p>
-										</article>
-										<article class="col-sm-6 col-md-4 article has-hover-s3">
-											<div class="img-wrap">
-												<a href="#">
-													<img src="img/listing/img-05.jpg" height="215" width="370" alt="image description">
-												</a>
-												<div class="img-caption text-uppercase">Treasure Hunting</div>
-												<div class="hover-article">
-													<div class="star-rating">
-														<span><span class="icon-star"></span></span>
-														<span><span class="icon-star"></span></span>
-														<span><span class="icon-star"></span></span>
-														<span><span class="icon-star"></span></span>
-														<span class="disable"><span class="icon-star"></span></span>
-													</div>
-													<div class="icons">
-														<a href="#"><span class="icon-heart"></span></a>
-														<a href="#"><span class="icon-reply"></span></a>
-													</div>
-													<div class="info-footer">
-														<span class="price">from <span>$2749</span></span>
-														<a href="#" class="link-more">Explore</a>
-													</div>
-												</div>
-											</div>
-											<h3><a href="#">Go wild at national parks</a></h3>
-											<p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum,</p>
-										</article>
-										<article class="col-sm-6 col-md-4 article has-hover-s3">
-											<div class="img-wrap">
-												<a href="#">
-													<img src="img/listing/img-06.jpg" height="215" width="370" alt="image description">
-												</a>
-												<div class="img-caption text-uppercase">A night with sky</div>
-												<div class="hover-article">
-													<div class="star-rating">
-														<span><span class="icon-star"></span></span>
-														<span><span class="icon-star"></span></span>
-														<span><span class="icon-star"></span></span>
-														<span><span class="icon-star"></span></span>
-														<span class="disable"><span class="icon-star"></span></span>
-													</div>
-													<div class="icons">
-														<a href="#"><span class="icon-heart"></span></a>
-														<a href="#"><span class="icon-reply"></span></a>
-													</div>
-													<div class="info-footer">
-														<span class="price">from <span>$2749</span></span>
-														<a href="#" class="link-more">Explore</a>
-													</div>
-												</div>
-											</div>
-											<h3><a href="#">Educational trips in wild</a></h3>
-											<p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum,</p>
-										</article>
+									<h1> KOREA </h1>
+									<?php
+								$sql = "SELECT * FROM itinerary WHERE itineraryCountry='Korea' Limit 6";
+							 $result = $db->query($sql);
+							 //$mytable = $sql;
+									if ($result->num_rows > 0) {
+										// output data of each row
+											while($row = $result->fetch_assoc()) {
+													echo '	<article class="col-sm-6 col-md-4 article has-hover-s3">
+															<div class="img-wrap">
+																<a href="pros">
+																	<img src="'.$row['itineraryImage'].'" height="215" width="370" alt="image description">
+																</a>
+																<div class="img-caption text-uppercase">'.$row['itineraryName'].'</div>
+																<div class="hover-article">
+																	<div class="star-rating">
+																		<span><span class="icon-star"></span></span>
+																		<span><span class="icon-star"></span></span>
+																		<span><span class="icon-star"></span></span>
+																		<span><span class="icon-star"></span></span>
+																		<span class="disable"><span class="icon-star"></span></span>
+																	</div>
+																	<div class="icons">
+																		<a href="#"><span class="icon-heart"></span></a>
+																		<a href="#"><span class="icon-reply"></span></a>
+																	</div>
+																	<div class="info-footer">
+																		<span class="price">from <span>$'.$row['itineraryPrice'].'</span></span>
+																		<a href="#" class="link-more">Explore</a>
+																	</div>
+																</div>
+															</div>
+															<h3><a href="#">'.$row['itineraryCity'].'</a></h3>
+															<p>'.$row['itineraryDesc'].'</p>
+														</article>';
+											}
+									}
+									 ?>
+
 									</div>
 								</div>
 							</div>
@@ -353,168 +259,43 @@ if (isset($_POST['session'])) {
 								<div class="content-holder">
 									<div class="row db-3-col">
 									<h1> CHINA HERE </h1>
-										<article class="col-sm-6 col-md-4 article has-hover-s3">
-											<div class="img-wrap">
-												<a href="#">
-													<img src="img/listing/img-01.jpg" height="215" width="370" alt="image description">
-												</a>
-												<div class="img-caption text-uppercase">Discover Timeless</div>
-												<div class="hover-article">
-													<div class="star-rating">
-														<span><span class="icon-star"></span></span>
-														<span><span class="icon-star"></span></span>
-														<span><span class="icon-star"></span></span>
-														<span><span class="icon-star"></span></span>
-														<span class="disable"><span class="icon-star"></span></span>
-													</div>
-													<div class="icons">
-														<a href="#"><span class="icon-heart"></span></a>
-														<a href="#"><span class="icon-reply"></span></a>
-													</div>
-													<div class="info-footer">
-														<span class="price">from <span>$2749</span></span>
-														<a href="#" class="link-more">Explore</a>
-													</div>
-												</div>
-											</div>
-											<h3><a href="#">Jungle safari for families</a></h3>
-											<p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum,</p>
-										</article>
-										<article class="col-sm-6 col-md-4 article has-hover-s3">
-											<div class="img-wrap">
-												<a href="#">
-													<img src="img/listing/img-02.jpg" height="215" width="370" alt="image description">
-												</a>
-												<div class="img-caption text-uppercase">Finding Egyptians</div>
-												<div class="hover-article">
-													<div class="star-rating">
-														<span><span class="icon-star"></span></span>
-														<span><span class="icon-star"></span></span>
-														<span><span class="icon-star"></span></span>
-														<span><span class="icon-star"></span></span>
-														<span class="disable"><span class="icon-star"></span></span>
-													</div>
-													<div class="icons">
-														<a href="#"><span class="icon-heart"></span></a>
-														<a href="#"><span class="icon-reply"></span></a>
-													</div>
-													<div class="info-footer">
-														<span class="price">from <span>$2749</span></span>
-														<a href="#" class="link-more">Explore</a>
-													</div>
-												</div>
-											</div>
-											<h3><a href="#">Nature wildlife photography</a></h3>
-											<p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum,</p>
-										</article>
-										<article class="col-sm-6 col-md-4 article has-hover-s3">
-											<div class="img-wrap">
-												<a href="#">
-													<img src="img/listing/img-03.jpg" height="215" width="370" alt="image description">
-												</a>
-												<div class="img-caption text-uppercase">Cave Adventures</div>
-												<div class="hover-article">
-													<div class="star-rating">
-														<span><span class="icon-star"></span></span>
-														<span><span class="icon-star"></span></span>
-														<span><span class="icon-star"></span></span>
-														<span><span class="icon-star"></span></span>
-														<span class="disable"><span class="icon-star"></span></span>
-													</div>
-													<div class="icons">
-														<a href="#"><span class="icon-heart"></span></a>
-														<a href="#"><span class="icon-reply"></span></a>
-													</div>
-													<div class="info-footer">
-														<span class="price">from <span>$2749</span></span>
-														<a href="#" class="link-more">Explore</a>
-													</div>
-												</div>
-											</div>
-											<h3><a href="#">Polar arctic expeditions</a></h3>
-											<p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum,</p>
-										</article>
-										<article class="col-sm-6 col-md-4 article has-hover-s3">
-											<div class="img-wrap">
-												<a href="#">
-													<img src="img/listing/img-04.jpg" height="215" width="370" alt="image description">
-												</a>
-												<div class="img-caption text-uppercase">Peak Climbing</div>
-												<div class="hover-article">
-													<div class="star-rating">
-														<span><span class="icon-star"></span></span>
-														<span><span class="icon-star"></span></span>
-														<span><span class="icon-star"></span></span>
-														<span><span class="icon-star"></span></span>
-														<span class="disable"><span class="icon-star"></span></span>
-													</div>
-													<div class="icons">
-														<a href="#"><span class="icon-heart"></span></a>
-														<a href="#"><span class="icon-reply"></span></a>
-													</div>
-													<div class="info-footer">
-														<span class="price">from <span>$2749</span></span>
-														<a href="#" class="link-more">Explore</a>
-													</div>
-												</div>
-											</div>
-											<h3><a href="#">Marine diving excursions</a></h3>
-											<p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum,</p>
-										</article>
-										<article class="col-sm-6 col-md-4 article has-hover-s3">
-											<div class="img-wrap">
-												<a href="#">
-													<img src="img/listing/img-05.jpg" height="215" width="370" alt="image description">
-												</a>
-												<div class="img-caption text-uppercase">Treasure Hunting</div>
-												<div class="hover-article">
-													<div class="star-rating">
-														<span><span class="icon-star"></span></span>
-														<span><span class="icon-star"></span></span>
-														<span><span class="icon-star"></span></span>
-														<span><span class="icon-star"></span></span>
-														<span class="disable"><span class="icon-star"></span></span>
-													</div>
-													<div class="icons">
-														<a href="#"><span class="icon-heart"></span></a>
-														<a href="#"><span class="icon-reply"></span></a>
-													</div>
-													<div class="info-footer">
-														<span class="price">from <span>$2749</span></span>
-														<a href="#" class="link-more">Explore</a>
-													</div>
-												</div>
-											</div>
-											<h3><a href="#">Go wild at national parks</a></h3>
-											<p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum,</p>
-										</article>
-										<article class="col-sm-6 col-md-4 article has-hover-s3">
-											<div class="img-wrap">
-												<a href="#">
-													<img src="img/listing/img-06.jpg" height="215" width="370" alt="image description">
-												</a>
-												<div class="img-caption text-uppercase">A night with sky</div>
-												<div class="hover-article">
-													<div class="star-rating">
-														<span><span class="icon-star"></span></span>
-														<span><span class="icon-star"></span></span>
-														<span><span class="icon-star"></span></span>
-														<span><span class="icon-star"></span></span>
-														<span class="disable"><span class="icon-star"></span></span>
-													</div>
-													<div class="icons">
-														<a href="#"><span class="icon-heart"></span></a>
-														<a href="#"><span class="icon-reply"></span></a>
-													</div>
-													<div class="info-footer">
-														<span class="price">from <span>$2749</span></span>
-														<a href="#" class="link-more">Explore</a>
-													</div>
-												</div>
-											</div>
-											<h3><a href="#">Educational trips in wild</a></h3>
-											<p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum,</p>
-										</article>
+									<?php
+								$sql = "SELECT * FROM itinerary WHERE itineraryCountry='China' Limit 6";
+							 $result = $db->query($sql);
+							 //$mytable = $sql;
+									if ($result->num_rows > 0) {
+										// output data of each row
+											while($row = $result->fetch_assoc()) {
+													echo '	<article class="col-sm-6 col-md-4 article has-hover-s3">
+															<div class="img-wrap">
+																<a href="pros">
+																	<img src="'.$row['itineraryImage'].'" height="215" width="370" alt="image description">
+																</a>
+																<div class="img-caption text-uppercase">'.$row['itineraryName'].'</div>
+																<div class="hover-article">
+																	<div class="star-rating">
+																		<span><span class="icon-star"></span></span>
+																		<span><span class="icon-star"></span></span>
+																		<span><span class="icon-star"></span></span>
+																		<span><span class="icon-star"></span></span>
+																		<span class="disable"><span class="icon-star"></span></span>
+																	</div>
+																	<div class="icons">
+																		<a href="#"><span class="icon-heart"></span></a>
+																		<a href="#"><span class="icon-reply"></span></a>
+																	</div>
+																	<div class="info-footer">
+																		<span class="price">from <span>$'.$row['itineraryPrice'].'</span></span>
+																		<a href="#" class="link-more">Explore</a>
+																	</div>
+																</div>
+															</div>
+															<h3><a href="#">'.$row['itineraryCity'].'</a></h3>
+															<p>'.$row['itineraryDesc'].'</p>
+														</article>';
+											}
+									}
+									 ?>
 									</div>
 								</div>
 							</div>
@@ -523,168 +304,43 @@ if (isset($_POST['session'])) {
 								<div class="content-holder">
 									<div class="row db-3-col">
 									<h1> THAILAND HERE </h1>
-										<article class="col-sm-6 col-md-4 article has-hover-s3">
-											<div class="img-wrap">
-												<a href="#">
-													<img src="img/listing/img-01.jpg" height="215" width="370" alt="image description">
-												</a>
-												<div class="img-caption text-uppercase">Discover Timeless</div>
-												<div class="hover-article">
-													<div class="star-rating">
-														<span><span class="icon-star"></span></span>
-														<span><span class="icon-star"></span></span>
-														<span><span class="icon-star"></span></span>
-														<span><span class="icon-star"></span></span>
-														<span class="disable"><span class="icon-star"></span></span>
-													</div>
-													<div class="icons">
-														<a href="#"><span class="icon-heart"></span></a>
-														<a href="#"><span class="icon-reply"></span></a>
-													</div>
-													<div class="info-footer">
-														<span class="price">from <span>$2749</span></span>
-														<a href="#" class="link-more">Explore</a>
-													</div>
-												</div>
-											</div>
-											<h3><a href="#">Jungle safari for families</a></h3>
-											<p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum,</p>
-										</article>
-										<article class="col-sm-6 col-md-4 article has-hover-s3">
-											<div class="img-wrap">
-												<a href="#">
-													<img src="img/listing/img-02.jpg" height="215" width="370" alt="image description">
-												</a>
-												<div class="img-caption text-uppercase">Finding Egyptians</div>
-												<div class="hover-article">
-													<div class="star-rating">
-														<span><span class="icon-star"></span></span>
-														<span><span class="icon-star"></span></span>
-														<span><span class="icon-star"></span></span>
-														<span><span class="icon-star"></span></span>
-														<span class="disable"><span class="icon-star"></span></span>
-													</div>
-													<div class="icons">
-														<a href="#"><span class="icon-heart"></span></a>
-														<a href="#"><span class="icon-reply"></span></a>
-													</div>
-													<div class="info-footer">
-														<span class="price">from <span>$2749</span></span>
-														<a href="#" class="link-more">Explore</a>
-													</div>
-												</div>
-											</div>
-											<h3><a href="#">Nature wildlife photography</a></h3>
-											<p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum,</p>
-										</article>
-										<article class="col-sm-6 col-md-4 article has-hover-s3">
-											<div class="img-wrap">
-												<a href="#">
-													<img src="img/listing/img-03.jpg" height="215" width="370" alt="image description">
-												</a>
-												<div class="img-caption text-uppercase">Cave Adventures</div>
-												<div class="hover-article">
-													<div class="star-rating">
-														<span><span class="icon-star"></span></span>
-														<span><span class="icon-star"></span></span>
-														<span><span class="icon-star"></span></span>
-														<span><span class="icon-star"></span></span>
-														<span class="disable"><span class="icon-star"></span></span>
-													</div>
-													<div class="icons">
-														<a href="#"><span class="icon-heart"></span></a>
-														<a href="#"><span class="icon-reply"></span></a>
-													</div>
-													<div class="info-footer">
-														<span class="price">from <span>$2749</span></span>
-														<a href="#" class="link-more">Explore</a>
-													</div>
-												</div>
-											</div>
-											<h3><a href="#">Polar arctic expeditions</a></h3>
-											<p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum,</p>
-										</article>
-										<article class="col-sm-6 col-md-4 article has-hover-s3">
-											<div class="img-wrap">
-												<a href="#">
-													<img src="img/listing/img-04.jpg" height="215" width="370" alt="image description">
-												</a>
-												<div class="img-caption text-uppercase">Peak Climbing</div>
-												<div class="hover-article">
-													<div class="star-rating">
-														<span><span class="icon-star"></span></span>
-														<span><span class="icon-star"></span></span>
-														<span><span class="icon-star"></span></span>
-														<span><span class="icon-star"></span></span>
-														<span class="disable"><span class="icon-star"></span></span>
-													</div>
-													<div class="icons">
-														<a href="#"><span class="icon-heart"></span></a>
-														<a href="#"><span class="icon-reply"></span></a>
-													</div>
-													<div class="info-footer">
-														<span class="price">from <span>$2749</span></span>
-														<a href="#" class="link-more">Explore</a>
-													</div>
-												</div>
-											</div>
-											<h3><a href="#">Marine diving excursions</a></h3>
-											<p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum,</p>
-										</article>
-										<article class="col-sm-6 col-md-4 article has-hover-s3">
-											<div class="img-wrap">
-												<a href="#">
-													<img src="img/listing/img-05.jpg" height="215" width="370" alt="image description">
-												</a>
-												<div class="img-caption text-uppercase">Treasure Hunting</div>
-												<div class="hover-article">
-													<div class="star-rating">
-														<span><span class="icon-star"></span></span>
-														<span><span class="icon-star"></span></span>
-														<span><span class="icon-star"></span></span>
-														<span><span class="icon-star"></span></span>
-														<span class="disable"><span class="icon-star"></span></span>
-													</div>
-													<div class="icons">
-														<a href="#"><span class="icon-heart"></span></a>
-														<a href="#"><span class="icon-reply"></span></a>
-													</div>
-													<div class="info-footer">
-														<span class="price">from <span>$2749</span></span>
-														<a href="#" class="link-more">Explore</a>
-													</div>
-												</div>
-											</div>
-											<h3><a href="#">Go wild at national parks</a></h3>
-											<p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum,</p>
-										</article>
-										<article class="col-sm-6 col-md-4 article has-hover-s3">
-											<div class="img-wrap">
-												<a href="#">
-													<img src="img/listing/img-06.jpg" height="215" width="370" alt="image description">
-												</a>
-												<div class="img-caption text-uppercase">A night with sky</div>
-												<div class="hover-article">
-													<div class="star-rating">
-														<span><span class="icon-star"></span></span>
-														<span><span class="icon-star"></span></span>
-														<span><span class="icon-star"></span></span>
-														<span><span class="icon-star"></span></span>
-														<span class="disable"><span class="icon-star"></span></span>
-													</div>
-													<div class="icons">
-														<a href="#"><span class="icon-heart"></span></a>
-														<a href="#"><span class="icon-reply"></span></a>
-													</div>
-													<div class="info-footer">
-														<span class="price">from <span>$2749</span></span>
-														<a href="#" class="link-more">Explore</a>
-													</div>
-												</div>
-											</div>
-											<h3><a href="#">Educational trips in wild</a></h3>
-											<p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum,</p>
-										</article>
+									<?php
+								$sql = "SELECT * FROM itinerary WHERE itineraryCountry='Thailand' Limit 6";
+							 $result = $db->query($sql);
+							 //$mytable = $sql;
+									if ($result->num_rows > 0) {
+										// output data of each row
+											while($row = $result->fetch_assoc()) {
+													echo '	<article class="col-sm-6 col-md-4 article has-hover-s3">
+															<div class="img-wrap">
+																<a href="pros">
+																	<img src="'.$row['itineraryImage'].'" height="215" width="370" alt="image description">
+																</a>
+																<div class="img-caption text-uppercase">'.$row['itineraryName'].'</div>
+																<div class="hover-article">
+																	<div class="star-rating">
+																		<span><span class="icon-star"></span></span>
+																		<span><span class="icon-star"></span></span>
+																		<span><span class="icon-star"></span></span>
+																		<span><span class="icon-star"></span></span>
+																		<span class="disable"><span class="icon-star"></span></span>
+																	</div>
+																	<div class="icons">
+																		<a href="#"><span class="icon-heart"></span></a>
+																		<a href="#"><span class="icon-reply"></span></a>
+																	</div>
+																	<div class="info-footer">
+																		<span class="price">from <span>$'.$row['itineraryPrice'].'</span></span>
+																		<a href="#" class="link-more">Explore</a>
+																	</div>
+																</div>
+															</div>
+															<h3><a href="#">'.$row['itineraryCity'].'</a></h3>
+															<p>'.$row['itineraryDesc'].'</p>
+														</article>';
+											}
+									}
+									 ?>
 									</div>
 								</div>
 							</div>
@@ -693,168 +349,43 @@ if (isset($_POST['session'])) {
 								<div class="content-holder">
 									<div class="row db-3-col">
 									<h1> JAPAN HERE </h1>
-										<article class="col-sm-6 col-md-4 article has-hover-s3">
-											<div class="img-wrap">
-												<a href="#">
-													<img src="img/listing/img-01.jpg" height="215" width="370" alt="image description">
-												</a>
-												<div class="img-caption text-uppercase">Discover Timeless</div>
-												<div class="hover-article">
-													<div class="star-rating">
-														<span><span class="icon-star"></span></span>
-														<span><span class="icon-star"></span></span>
-														<span><span class="icon-star"></span></span>
-														<span><span class="icon-star"></span></span>
-														<span class="disable"><span class="icon-star"></span></span>
-													</div>
-													<div class="icons">
-														<a href="#"><span class="icon-heart"></span></a>
-														<a href="#"><span class="icon-reply"></span></a>
-													</div>
-													<div class="info-footer">
-														<span class="price">from <span>$2749</span></span>
-														<a href="#" class="link-more">Explore</a>
-													</div>
-												</div>
-											</div>
-											<h3><a href="#">Jungle safari for families</a></h3>
-											<p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum,</p>
-										</article>
-										<article class="col-sm-6 col-md-4 article has-hover-s3">
-											<div class="img-wrap">
-												<a href="#">
-													<img src="img/listing/img-02.jpg" height="215" width="370" alt="image description">
-												</a>
-												<div class="img-caption text-uppercase">Finding Egyptians</div>
-												<div class="hover-article">
-													<div class="star-rating">
-														<span><span class="icon-star"></span></span>
-														<span><span class="icon-star"></span></span>
-														<span><span class="icon-star"></span></span>
-														<span><span class="icon-star"></span></span>
-														<span class="disable"><span class="icon-star"></span></span>
-													</div>
-													<div class="icons">
-														<a href="#"><span class="icon-heart"></span></a>
-														<a href="#"><span class="icon-reply"></span></a>
-													</div>
-													<div class="info-footer">
-														<span class="price">from <span>$2749</span></span>
-														<a href="#" class="link-more">Explore</a>
-													</div>
-												</div>
-											</div>
-											<h3><a href="#">Nature wildlife photography</a></h3>
-											<p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum,</p>
-										</article>
-										<article class="col-sm-6 col-md-4 article has-hover-s3">
-											<div class="img-wrap">
-												<a href="#">
-													<img src="img/listing/img-03.jpg" height="215" width="370" alt="image description">
-												</a>
-												<div class="img-caption text-uppercase">Cave Adventures</div>
-												<div class="hover-article">
-													<div class="star-rating">
-														<span><span class="icon-star"></span></span>
-														<span><span class="icon-star"></span></span>
-														<span><span class="icon-star"></span></span>
-														<span><span class="icon-star"></span></span>
-														<span class="disable"><span class="icon-star"></span></span>
-													</div>
-													<div class="icons">
-														<a href="#"><span class="icon-heart"></span></a>
-														<a href="#"><span class="icon-reply"></span></a>
-													</div>
-													<div class="info-footer">
-														<span class="price">from <span>$2749</span></span>
-														<a href="#" class="link-more">Explore</a>
-													</div>
-												</div>
-											</div>
-											<h3><a href="#">Polar arctic expeditions</a></h3>
-											<p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum,</p>
-										</article>
-										<article class="col-sm-6 col-md-4 article has-hover-s3">
-											<div class="img-wrap">
-												<a href="#">
-													<img src="img/listing/img-04.jpg" height="215" width="370" alt="image description">
-												</a>
-												<div class="img-caption text-uppercase">Peak Climbing</div>
-												<div class="hover-article">
-													<div class="star-rating">
-														<span><span class="icon-star"></span></span>
-														<span><span class="icon-star"></span></span>
-														<span><span class="icon-star"></span></span>
-														<span><span class="icon-star"></span></span>
-														<span class="disable"><span class="icon-star"></span></span>
-													</div>
-													<div class="icons">
-														<a href="#"><span class="icon-heart"></span></a>
-														<a href="#"><span class="icon-reply"></span></a>
-													</div>
-													<div class="info-footer">
-														<span class="price">from <span>$2749</span></span>
-														<a href="#" class="link-more">Explore</a>
-													</div>
-												</div>
-											</div>
-											<h3><a href="#">Marine diving excursions</a></h3>
-											<p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum,</p>
-										</article>
-										<article class="col-sm-6 col-md-4 article has-hover-s3">
-											<div class="img-wrap">
-												<a href="#">
-													<img src="img/listing/img-05.jpg" height="215" width="370" alt="image description">
-												</a>
-												<div class="img-caption text-uppercase">Treasure Hunting</div>
-												<div class="hover-article">
-													<div class="star-rating">
-														<span><span class="icon-star"></span></span>
-														<span><span class="icon-star"></span></span>
-														<span><span class="icon-star"></span></span>
-														<span><span class="icon-star"></span></span>
-														<span class="disable"><span class="icon-star"></span></span>
-													</div>
-													<div class="icons">
-														<a href="#"><span class="icon-heart"></span></a>
-														<a href="#"><span class="icon-reply"></span></a>
-													</div>
-													<div class="info-footer">
-														<span class="price">from <span>$2749</span></span>
-														<a href="#" class="link-more">Explore</a>
-													</div>
-												</div>
-											</div>
-											<h3><a href="#">Go wild at national parks</a></h3>
-											<p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum,</p>
-										</article>
-										<article class="col-sm-6 col-md-4 article has-hover-s3">
-											<div class="img-wrap">
-												<a href="#">
-													<img src="img/listing/img-06.jpg" height="215" width="370" alt="image description">
-												</a>
-												<div class="img-caption text-uppercase">A night with sky</div>
-												<div class="hover-article">
-													<div class="star-rating">
-														<span><span class="icon-star"></span></span>
-														<span><span class="icon-star"></span></span>
-														<span><span class="icon-star"></span></span>
-														<span><span class="icon-star"></span></span>
-														<span class="disable"><span class="icon-star"></span></span>
-													</div>
-													<div class="icons">
-														<a href="#"><span class="icon-heart"></span></a>
-														<a href="#"><span class="icon-reply"></span></a>
-													</div>
-													<div class="info-footer">
-														<span class="price">from <span>$2749</span></span>
-														<a href="#" class="link-more">Explore</a>
-													</div>
-												</div>
-											</div>
-											<h3><a href="#">Educational trips in wild</a></h3>
-											<p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum,</p>
-										</article>
+									<?php
+								$sql = "SELECT * FROM itinerary WHERE itineraryCountry='Japan' Limit 6";
+							 $result = $db->query($sql);
+							 //$mytable = $sql;
+									if ($result->num_rows > 0) {
+										// output data of each row
+											while($row = $result->fetch_assoc()) {
+													echo '	<article class="col-sm-6 col-md-4 article has-hover-s3">
+															<div class="img-wrap">
+																<a href="pros">
+																	<img src="'.$row['itineraryImage'].'" height="215" width="370" alt="image description">
+																</a>
+																<div class="img-caption text-uppercase">'.$row['itineraryName'].'</div>
+																<div class="hover-article">
+																	<div class="star-rating">
+																		<span><span class="icon-star"></span></span>
+																		<span><span class="icon-star"></span></span>
+																		<span><span class="icon-star"></span></span>
+																		<span><span class="icon-star"></span></span>
+																		<span class="disable"><span class="icon-star"></span></span>
+																	</div>
+																	<div class="icons">
+																		<a href="#"><span class="icon-heart"></span></a>
+																		<a href="#"><span class="icon-reply"></span></a>
+																	</div>
+																	<div class="info-footer">
+																		<span class="price">from <span>$'.$row['itineraryPrice'].'</span></span>
+																		<a href="#" class="link-more">Explore</a>
+																	</div>
+																</div>
+															</div>
+															<h3><a href="#">'.$row['itineraryCity'].'</a></h3>
+															<p>'.$row['itineraryDesc'].'</p>
+														</article>';
+											}
+									}
+									 ?>
 									</div>
 								</div>
 							</div>
