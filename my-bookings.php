@@ -85,21 +85,21 @@
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td><div class="cell"><div class="middle">IMAGE</div></div></td>
+                                      <td><div class="cell"><div class="middle"><img src="img\hotels\Grand-Hyatt-Seoul.jpg" width='140px' height='140px'></div></div></td>
                                         <td><div class="cell"><div class="middle">Thailand (Package)</div></div></td>
                                         <td><div class="cell"><div class="middle">12-12-2020 to 12-25-2020</div></div></td>
                                         <td><div class="cell"><div class="middle">$3,170</div></div></td>
                                         </div></div></td>
                                     </tr>
                                     <tr>
-                                        <td><div class="cell"><div class="middle">IMAGE</div></div></td>
+                                      <td><div class="cell"><div class="middle"><img src="img\hotels\JW-Marriott-Hotel-Beijing.jpg" width='140px' height='140px'></div></div></td>
                                         <td><div class="cell"><div class="middle">JW Marriot Beijing</div></div></td>
                                         <td><div class="cell"><div class="middle">12-12-2020 to 12-25-2020</div></div></td>
                                         <td><div class="cell"><div class="middle">$600.00</div></div></td>
                                         </div></div></td>
                                     </tr>
                                     <tr>
-                                        <td><div class="cell"><div class="middle">IMAGE</div></div></td>
+                                        <td><div class="cell"><div class="middle"><img src="img\hotels\L7-Hongdae-by-LOTTE.jpg" width='140px' height='140px'></div></div></td>
                                         <td><div class="cell"><div class="middle">Korea Airlines -> Seoul</div></div></td>
                                         <td><div class="cell"><div class="middle">12-12-2020</div></div></td>
                                         <td><div class="cell"><div class="middle">$699.00</div></div></td>
