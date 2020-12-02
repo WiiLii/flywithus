@@ -8,10 +8,10 @@
        <nav class="col-sm-4 col-lg-2 footer-nav">
          <h3>Destinations</h3>
          <ul class="slide">
-           <li><a href="#">Korea</a></li>
-           <li><a href="#">China</a></li>
-           <li><a href="#">Thailand</a></li>
-           <li><a href="#">Japan</a></li>
+           <li><a href="#tab01">Korea</a></li>
+           <li><a href="#tab02">China</a></li>
+           <li><a href="#tab03">Thailand</a></li>
+           <li><a href="#tab04">Japan</a></li>
          </ul>
        </nav>
        <nav class="col-sm-4 col-lg-2 footer-nav">

@@ -110,7 +110,7 @@ if ($result->num_rows > 0) {
             <span class="price">from <span>'.$row['totalPrice'].'</span></span>
             <div class="activity-level">
               <div class="ico">
-                <span class="icon-level2"></span>
+                <span class=""></span>
               </div>
               <span class="text">'.$row['itineraryCity'].'</span>
             </div>

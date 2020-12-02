@@ -85,7 +85,7 @@
 											</select>
 										</div>
 											<div class="select-col">
-													<button type="submit"  class="btn btn-default"  name="filter_submit" onclick="searching();"> SEARCH</button>
+													<button type="submit"  class="btn btn-default" style="width: 100%;height: 45px;" name="filter_submit" onclick="searching();"> SEARCH</button>
 											</div>
 
 

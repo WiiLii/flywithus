@@ -83,7 +83,7 @@
 										</select>
 									</div>
 									<div class="select-col">
-											<button type="submit"  class="btn btn-default"  name="hotel_filter" onclick="clickHotel();"> SEARCH</button>
+											<button type="submit"  class="btn btn-default" style="width: 100%;height: 45px;" name="hotel_filter" onclick="clickHotel();"> SEARCH</button>
 									</div>
 
 								</div>
