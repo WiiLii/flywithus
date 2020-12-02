@@ -6,6 +6,8 @@ $mytable=array();
 $country_arr=array();
 $total_arr=array();
 $over_arr=array();
+$citys="";
+$countDAys=1;
 if (isset($_POST['action'])) {
 if (($_POST['action'] === 'Search_itinerary')) {
 
@@ -80,6 +82,7 @@ if ($result->num_rows > 0) {
   //   $total_arr[] = $row['totalprice'];
   // $over_arr[] = $row['itineraryOverview'];
   // $mytable[]=$row['totalPrice'];
+  $citys = $row['itineraryCity'];
   $mytable[]='<article class="article">
     <div class="thumbnail">
         <div class="img-wrap">
@@ -111,7 +114,7 @@ if ($result->num_rows > 0) {
               </div>
               <span class="text">'.$row['itineraryCity'].'</span>
             </div>
-            <a href="packages-detail.php" class="btn btn-default"value="'.$row['itineraryID'].'">explore</a>
+            <button href="packages-details.php" type="submit" onclick="getPackagesDetails(\''.$row['itineraryCity'].'\')" class="btn btn-default"value="" >explore</button>
           </aside>
         </div>
       </div>
@@ -131,7 +134,36 @@ echo json_encode($json_array);
 
 $db->close();
 }
+if (($_POST['action'] === 'Details_itinerary')) {
+
+$cityName=$_POST['cityName'];
+  $sql = "SELECT * FROM itinerary where itineraryCity = '$cityName'";
+$result = $db->query($sql);
+//$mytable = $sql;
+if ($result->num_rows > 0) {
+  // output data of each row
+    while($row = $result->fetch_assoc()) {
+      //  $mytable[]=$row['itineraryCity'];
+         $mytable[]='
+          <a href="#">
+            <strong class="title">Day '.$countDAys.'</strong>
+            <span>'.$row['itineraryName'].'</span>
+          </a>
+          <div class="slide">
+            <div class="slide-holder">
+              <p>'.$row['itineraryDesc'].'</p>
+            </div>
+          </div>';
+        $countDAys++;
+    }
 }
+$json_array = array(
+'table' => $mytable);
+echo json_encode($json_array);
+
+  }
+
+}// end of action
 //   $sql = "SELECT * FROM itinerary";
 // $result = $db->query($sql);
 // //$mytable = $sql;

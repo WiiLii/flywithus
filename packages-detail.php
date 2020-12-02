@@ -24,7 +24,7 @@
 	<!-- include main css -->
 	<link media="all" rel="stylesheet" href="css/main.css">
 </head>
-<body class="default-page">
+<body class="default-page"  onload="getPackagesDetails('Seoul');">
 	<div class="preloader" id="pageLoad">
 		<div class="holder">
 			<div class="coffee_cup"></div>
@@ -42,7 +42,7 @@
 					<div class="same-height two-columns row">
 						<div class="height col-md-6">
 							<!-- top image slideshow -->
-							<div id="tour-slide">
+							<div id="tour-slide" >
 								<div class="slide">
 									<div class="bg-stretch">
 										<img src="img/generic/img-17.jpg" alt="image descriprion" height="1104" width="966">
@@ -250,10 +250,11 @@
 							</div>
 						</div>
 						<!-- itinerary tab content -->
-						<div role="tabpanel" class="tab-pane" id="tab02">
+						<div role="tabpanel" class="tab-pane" id="tab02" >
 							<div class="row">
 								<div class="col-md-6">
 									<ol class="detail-accordion">
+										<div id="daysTotal"></div>
 										<li>
 											<a href="#">
 												<strong class="title">Day 1</strong>
@@ -276,7 +277,7 @@
 												</div>
 											</div>
 										</li>
-										<li>
+										<!---<li>
 											<a href="#">
 												<strong class="title">Day 3</strong>
 												<span>Leave for Pokhara</span>
@@ -342,7 +343,7 @@
 													<p>Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. </p>
 												</div>
 											</div>
-										</li>
+										</li>--->
 									</ol>
 								</div>
 								<div class="col-md-6">
@@ -1011,7 +1012,7 @@
 			</main>
 		</div>
 		<!-- main footer -->
-		<?php 'footer.php'; ?>
+		<?php include 'footer.php'; ?>
 	</div>
 	<!-- scroll to top -->
 	<div class="scroll-holder text-center">
@@ -1021,6 +1022,7 @@
 	<script src="vendors/jquery/jquery-2.1.4.min.js"></script>
 	<!-- external scripts -->
 	<script src="vendors/bootstrap/javascripts/bootstrap.min.js"></script>
+
 	<script src="vendors/jquery-placeholder/jquery.placeholder.min.js"></script>
 	<script src="vendors/match-height/jquery.matchHeight.js"></script>
 	<script src="vendors/wow/wow.min.js"></script>
@@ -1042,6 +1044,7 @@
 	<!-- custom script -->
 	<script src="js/sticky-kit-init.js"></script>
 	<script src="js/jquery.main.js"></script>
+		 <script src="js/itinerary.js"></script>
 </body>
 
 </html>

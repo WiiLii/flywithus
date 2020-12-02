@@ -51,3 +51,32 @@ for (var i = 0; i < data.table.length; i++) {
 });
 
 }
+
+// get package detials ajax
+function getPackagesDetails(id){
+  var cityName=id;
+var dayTotal = document.getElementById("dayTotal");
+dayTotal.text("asdasd");
+  $.ajax({ // ajax from php validation
+  url: 'process_packages.php',
+  type: 'POST',
+  dataType: 'JSON',
+  data: {action:'Details_itinerary', cityName:cityName},
+  success: function(data) {
+//conslog.(data.table);
+for (var i = 0; i < data.table.length; i++) {
+  console.log(data.table[i]);
+
+//  document.getElementById("daysTables").innerHTML += data.table;
+//  location.href="packages-detail.php";
+}
+//  console.log(data.table);
+
+  },
+  error: function(request,status,error) {
+    console.log(request);
+    alert(status);
+  },
+  async: false
+});
+}
