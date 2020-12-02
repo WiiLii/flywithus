@@ -1,3 +1,31 @@
+<?php
+include "config.php";
+$country ="";
+$city=$total="";
+$img_arr=$cat_arr=$name_arr=$over_arr=$desc_arr=$price_arr=array();
+
+if (isset($_POST['city'])) {
+	$country= $_POST['city'];
+	  $sql = "SELECT * FROM itinerary where itineraryCity='$country' limit 5";
+	$result = $db->query($sql);
+	//$mytable = $sql;
+	if ($result->num_rows > 0) {
+	  // output data of each row
+	    while($row = $result->fetch_assoc()) {
+					$city=$row['itineraryCity'];
+	        $name_arr[]= $row['itineraryName'];
+					$cat_arr[]= $row['itineraryType'];
+					$over_arr=$row['itineraryOverview'];
+					$price_arr[]=$row['itineraryPrice'];
+					$total=$row['totalPrice'];
+					$img_arr[]=$row['itineraryImage'];
+					$desc_arr[]=$row['itineraryDesc'];
+	    }
+	}
+	//var_dump($desc_arr);
+//	exit;
+}
+ ?>
 <!DOCTYPE html>
 <html>
 
@@ -46,103 +74,26 @@
 							<div id="tour-slide" >
 								<div class="slide">
 									<div class="bg-stretch">
-										<img src="img/generic/img-17.jpg" alt="image descriprion" height="1104" width="966">
+										<img src="<?php echo $img_arr[0] ?>" alt="image descriprion" height="1104" width="966">
 									</div>
 								</div>
 								<div class="slide">
 									<div class="bg-stretch">
-										<img src="img/generic/img-07.jpg" alt="image descriprion" height="1104" width="966">
+										<img src="<?php echo $img_arr[1] ?>" alt="image descriprion" height="1104" width="966">
 									</div>
 								</div>
 							</div>
 						</div>
 						<div class="height col-md-6 text-col">
 							<div class="holder">
-								<h1 class="small-size">Annapurna Circuit Trek</h1>
+								<h1 class="small-size"><?php echo $country; ?></h1>
 								<div class="price">
-									from <strong>US $979</strong>
+									from <strong>$<?php echo $total; ?></strong>
 								</div>
-								<div class="description">
+							<!--	<div class="description">
 									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ctetur, adipisci velit, sed quia non numquam eius modi.</p>
-								</div>
-								<ul class="reviews-info">
-									<li>
-										<div class="info-left">
-											<strong class="title">Reviews</strong>
-											<span class="value">75 Reviews</span>
-										</div>
-										<div class="info-right">
-											<div class="star-rating">
-												<span><span class="icon-star"></span></span>
-												<span><span class="icon-star"></span></span>
-												<span><span class="icon-star"></span></span>
-												<span><span class="icon-star"></span></span>
-												<span class="disable"><span class="icon-star"></span></span>
-											</div>
-											<span class="value">5/5</span>
-										</div>
-									</li>
-									<li>
-										<div class="info-left">
-											<strong class="title">Vacation Style</strong>
-											<span class="value">Adult Group</span>
-										</div>
-										<div class="info-right">
-											<ul class="ico-list">
-												<li>
-													<span class="icon icon-hiking"></span>
-												</li>
-												<li>
-													<span class="icon icon-mount"></span>
-												</li>
-												<li>
-													<span class="icon icon-camping"></span>
-												</li>
-											</ul>
-											<span class="value">Camping Trek</span>
-										</div>
-									</li>
-									<li>
-										<div class="info-left">
-											<strong class="title">Activity Level</strong>
-											<span class="value">Quite Tough</span>
-										</div>
-										<div class="info-right">
-											<ul class="ico-list">
-												<li>
-													<span class="icon icon-level3"></span>
-												</li>
-												<li>
-													<span class="icon icon-level5"></span>
-												</li>
-												<li>
-													<span class="icon icon-level7"></span>
-												</li>
-											</ul>
-											<span class="value">9/10</span>
-										</div>
-									</li>
-									<li>
-										<div class="info-left">
-											<strong class="title">Group Size</strong>
-											<span class="value">Medium Grougs</span>
-										</div>
-										<div class="info-right">
-											<ul class="ico-list">
-												<li>
-													<span class="icon icon-group-small"></span>
-												</li>
-												<li>
-													<span class="icon icon-group-medium"></span>
-												</li>
-												<li>
-													<span class="icon icon-group-large"></span>
-												</li>
-											</ul>
-											<span class="value">6/10</span>
-										</div>
-									</li>
-								</ul>
+								</div>-->
+
 								<div class="btn-holder">
 									<a href="#" class="btn btn-lg btn-info">BOOK NOW</a>
 								</div>
@@ -163,22 +114,7 @@
 											<span class="text">Tweet</span>
 										</a>
 									</li>
-									<li>
-										<a href="#" class="google">
-											<span class="ico">
-												<span class="icon-google-plus"></span>
-											</span>
-											<span class="text">+1</span>
-										</a>
-									</li>
-									<li>
-										<a href="#" class="pin">
-											<span class="ico">
-												<span class="icon-pin"></span>
-											</span>
-											<span class="text">Pin it</span>
-										</a>
-									</li>
+
 								</ul>
 							</div>
 						</div>
@@ -189,11 +125,11 @@
 						<div class="container">
 							<!-- nav tabs -->
 							<ul class="nav nav-tabs text-center" role="tablist">
-								<li role="presentation" class="active"><a href="#tab01" aria-controls="tab01" role="tab" data-toggle="tab">Overview</a></li>
-								<li role="presentation"><a href="#tab02" aria-controls="tab02" role="tab" data-toggle="tab">Itinerary</a></li>
+								<li role="presentation" ><a href="#tab01" aria-controls="tab01" role="tab" data-toggle="tab">Overview</a></li>
+								<li role="presentation"><a href="#tab02"class="active" aria-controls="tab02" role="tab" data-toggle="tab">Itinerary</a></li>
 								<li role="presentation"><a href="#tab03" aria-controls="tab03" role="tab" data-toggle="tab">Faq &amp; Review</a></li>
 								<li role="presentation"><a href="#tab04" aria-controls="tab04" role="tab" data-toggle="tab">Gallery</a></li>
-								<li role="presentation"><a href="#tab05" aria-controls="tab05" role="tab" data-toggle="tab">Dates &amp; Price</a></li>
+
 							</ul>
 						</div>
 					</nav>
@@ -202,79 +138,58 @@
 						<!-- overview tab content -->
 						<div role="tabpanel" class="tab-pane active" id="tab01">
 							<div class="row">
-								<div class="col-md-6">
-									<strong class="header-box">All about the classic Annapurna Circuit Trekking</strong>
+								<h1>All about <?php echo $country; ?></h1>
+								<div class="col-md-12">
+
 									<div class="detail">
-										<p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. </p>
-										<p>Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. </p>
-										<p>Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo.</p>
-										<p>Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi.</p>
-										<p>Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam.</p>
-										<p>Ulins aliquam massa nisl quis neque. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. </p>
-										<p>Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam.</p>
-										<p>Ulins aliquam massa nisl quis neque. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. </p>
-										<p>Ulins aliquam massa nisl quis neque. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. </p>
-										<p>Suspendisse gin orci enim.</p>
+								<p><?php echo $over_arr; ?></p>
 									</div>
 								</div>
-								<div class="col-md-6">
-									<strong class="header-box">The tour package inclusions and exclusions at a glance</strong>
-									<div class="text-box">
-										<div class="holder">
-											<strong class="title">Whats included in this tour</strong>
-											<span class="sub-title">Items that are covered in the cost of tour price.</span>
-											<p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. </p>
-											<ul class="content-list tick-list">
-												<li>All breakfasts, lunches and dinners &amp; dining</li>
-												<li>All accommodation including tea houses en route</li>
-												<li>All transportation including taxis and coaches</li>
-												<li>Flights from Heathrow if booked inc. of flight</li>
-												<li>Tour and trekking guide for entire journey</li>
-											</ul>
-										</div>
-									</div>
-									<div class="text-box not-included">
-										<div class="holder">
-											<strong class="title">Whats not included in this tour</strong>
-											<span class="sub-title">Items that are covered in the cost of tour price.</span>
-											<p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. </p>
-											<ul class="content-list cross-list">
-												<li>Travel insurance and other emergencies</li>
-												<li>Visa fees and entry clearing fees</li>
-												<li>Single room accommodations</li>
-												<li>Liquors, beeers and bootled beverages</li>
-												<li>Photography ccessories like cameras etc.</li>
-											</ul>
-										</div>
-									</div>
-								</div>
+
 							</div>
 						</div>
 						<!-- itinerary tab content -->
 						<div role="tabpanel" class="tab-pane" id="tab02" >
 							<div class="row">
-								<div class="col-md-6">
+								<div class="col-md-12">
 									<ol class="detail-accordion">
-										<div id="daysTotal"></div>
+
 										<li>
 											<a href="#">
 												<strong class="title">Day 1</strong>
-												<span>Depart London</span>
+												<span>Depart Singapore</span>
 											</a>
 											<div class="slide">
 												<div class="slide-holder">
-													<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ctetur, adipisci velit, sed quia non numquam eius modi.</p>
+													<p>Making my way to the airport and travel hours to your destination</p>
 												</div>
 											</div>
 										</li>
+										<?php
+										$num=1;
+										for ($i=0; $i < count($desc_arr) ; $i++) {
+													$num++;
+												echo'<li>
+														 <a href="#">
+																			<strong class="title">Day '.$num.'</strong>
+																			<span>'.$name_arr[$i].'</span>
+																		</a>
+																		<div class="slide">
+																			<div class="slide-holder">
+																				<p>'.$desc_arr[$i].'</p>
+																			</div>
+																		</div>
+																	</li>';
+										}
+										 ?>
 										<li>
 											<a href="#">
-												<strong class="title">Day 2</strong>
-												<span>Arrive in Kathmandu</span>
+												<strong class="title">Day 7</strong>
+												<span>Arrive in Singapore</span>
 											</a>
 											<div class="slide">
 												<div class="slide-holder">
-													<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ctetur, adipisci velit, sed quia non numquam eius modi.</p>
+													<p>Say good bye to the 7 days that you had, and welcome back home!</p>
 												</div>
 											</div>
 										</li>
@@ -589,123 +504,21 @@
 						<!-- gallery tab content -->
 						<div role="tabpanel" class="tab-pane" id="tab04">
 							<ul class="row gallery-list has-center">
+
 								<li class="col-sm-6">
-									<a class="fancybox" data-fancybox-group="group" href="img/gallery/img-10-2.jpg" title="Caption Goes Here">
+									<a class="fancybox" data-fancybox-group="group" href="<?php echo $img_arr[0]; ?>" title="Caption Goes Here">
 										<span class="img-holder">
-											<img src="img/gallery/img-10.jpg" height="750" width="450" alt="image description">
+											<img src="<?php echo $img_arr[3]; ?>" height="240" width="370" alt="image description">
 										</span>
 										<span class="caption">
 											<span class="centered">
-												<strong class="title">ANNAPURNA VIEW</strong>
-												<span class="sub-text">The Classic Trek</span>
+												<strong class="title"><?php echo $name_arr[0]; ?></strong>
+												<span class="sub-text"><?php echo $city; ?></span>
 											</span>
 										</span>
 									</a>
 								</li>
-								<li class="col-sm-6">
-									<a class="fancybox" data-fancybox-group="group" href="img/gallery/img-11-2.jpg" title="Caption Goes Here">
-										<span class="img-holder">
-											<img src="img/gallery/img-11.jpg" height="240" width="370" alt="image description">
-										</span>
-										<span class="caption">
-											<span class="centered">
-												<strong class="title">ANNAPURNA VIEW</strong>
-												<span class="sub-text">The Classic Trek</span>
-											</span>
-										</span>
-									</a>
-								</li>
-								<li class="col-sm-6">
-									<a class="fancybox" data-fancybox-group="group" href="img/gallery/img-12-2.jpg" title="Caption Goes Here">
-										<span class="img-holder">
-											<img src="img/gallery/img-12.jpg" height="240" width="370" alt="image description">
-										</span>
-										<span class="caption">
-											<span class="centered">
-												<strong class="title">ANNAPURNA VIEW</strong>
-												<span class="sub-text">The Classic Trek</span>
-											</span>
-										</span>
-									</a>
-								</li>
-								<li class="col-sm-6">
-									<a class="fancybox" data-fancybox-group="group" href="img/gallery/img-13-2.jpg" title="Caption Goes Here">
-										<span class="img-holder">
-											<img src="img/gallery/img-13.jpg" height="240" width="370" alt="image description">
-										</span>
-										<span class="caption">
-											<span class="centered">
-												<strong class="title">ANNAPURNA VIEW</strong>
-												<span class="sub-text">The Classic Trek</span>
-											</span>
-										</span>
-									</a>
-								</li>
-								<li class="col-sm-6">
-									<a class="fancybox" data-fancybox-group="group" href="img/gallery/img-14-2.jpg" title="Caption Goes Here">
-										<span class="img-holder">
-											<img src="img/gallery/img-14.jpg" height="240" width="370" alt="image description">
-										</span>
-										<span class="caption">
-											<span class="centered">
-												<strong class="title">ANNAPURNA VIEW</strong>
-												<span class="sub-text">The Classic Trek</span>
-											</span>
-										</span>
-									</a>
-								</li>
-								<li class="col-sm-6">
-									<a class="fancybox" data-fancybox-group="group" href="img/gallery/img-15-2.jpg" title="Caption Goes Here">
-										<span class="img-holder">
-											<img src="img/gallery/img-15.jpg" height="240" width="370" alt="image description">
-										</span>
-										<span class="caption">
-											<span class="centered">
-												<strong class="title">ANNAPURNA VIEW</strong>
-												<span class="sub-text">The Classic Trek</span>
-											</span>
-										</span>
-									</a>
-								</li>
-								<li class="col-sm-6">
-									<a class="fancybox" data-fancybox-group="group" href="img/gallery/img-16-2.jpg" title="Caption Goes Here">
-										<span class="img-holder">
-											<img src="img/gallery/img-16.jpg" height="240" width="370" alt="image description">
-										</span>
-										<span class="caption">
-											<span class="centered">
-												<strong class="title">ANNAPURNA VIEW</strong>
-												<span class="sub-text">The Classic Trek</span>
-											</span>
-										</span>
-									</a>
-								</li>
-								<li class="col-sm-6">
-									<a class="fancybox" data-fancybox-group="group" href="img/gallery/img-17-2.jpg" title="Caption Goes Here">
-										<span class="img-holder">
-											<img src="img/gallery/img-17.jpg" height="240" width="370" alt="image description">
-										</span>
-										<span class="caption">
-											<span class="centered">
-												<strong class="title">ANNAPURNA VIEW</strong>
-												<span class="sub-text">The Classic Trek</span>
-											</span>
-										</span>
-									</a>
-								</li>
-								<li class="col-sm-6">
-									<a class="fancybox" data-fancybox-group="group" href="img/gallery/img-18-2.jpg" title="Caption Goes Here">
-										<span class="img-holder">
-											<img src="img/gallery/img-18.jpg" height="240" width="370" alt="image description">
-										</span>
-										<span class="caption">
-											<span class="centered">
-												<strong class="title">ANNAPURNA VIEW</strong>
-												<span class="sub-text">The Classic Trek</span>
-											</span>
-										</span>
-									</a>
-								</li>
+
 							</ul>
 						</div>
 						<!-- dates and prices tab content -->
@@ -830,9 +643,7 @@
 										</tbody>
 									</table>
 								</div>
-								<div class="load-more text-center text-uppercase">
-									<a href="#">MORE DATES &amp; PRICES</a>
-								</div>
+
 							</div>
 						</div>
 					</div>
@@ -843,170 +654,37 @@
 					<div class="container">
 						<h2 class="text-center text-uppercase">RECENTLY VIEWED</h2>
 						<div class="row">
-							<article class="col-sm-6 col-md-3 article">
-								<div class="thumbnail">
-									<h3 class="no-space"><a href="#">Everest Basecamp Trek</a></h3>
-									<strong class="info-title">Everest Region, Nepal</strong>
-									<div class="img-wrap">
-										<img src="img/listing/img-31.jpg" height="210" width="250" alt="image description">
-									</div>
-									<footer>
-										<div class="sub-info">
-											<span>5 Days</span>
-											<span>$299</span>
-										</div>
-										<ul class="ico-list">
-											<li class="pop-opener">
-												<a href="#">
-													<span class="icon-hiking"></span>
-													<span class="popup">
-														Hiking
-													</span>
-												</a>
-											</li>
-											<li class="pop-opener">
-												<a href="#">
-													<span class="icon-mountain"></span>
-													<span class="popup">
-														Mountain
-													</span>
-												</a>
-											</li>
-											<li class="pop-opener">
-												<a href="#">
-													<span class="icon-level5"></span>
-													<span class="popup">
-														Level 5
-													</span>
-												</a>
-											</li>
-										</ul>
-									</footer>
-								</div>
-							</article>
-							<article class="col-sm-6 col-md-3 article">
-								<div class="thumbnail">
-									<h3 class="no-space"><a href="#">Everest Basecamp Trek</a></h3>
-									<strong class="info-title">Everest Region, Nepal</strong>
-									<div class="img-wrap">
-										<img src="img/listing/img-32.jpg" height="210" width="250" alt="image description">
-									</div>
-									<footer>
-										<div class="sub-info">
-											<span>5 Days</span>
-											<span>$299</span>
-										</div>
-										<ul class="ico-list">
-											<li class="pop-opener">
-												<a href="#">
-													<span class="icon-hiking"></span>
-													<span class="popup">
-														Hiking
-													</span>
-												</a>
-											</li>
-											<li class="pop-opener">
-												<a href="#">
-													<span class="icon-mountain"></span>
-													<span class="popup">
-														Mountain
-													</span>
-												</a>
-											</li>
-											<li class="pop-opener">
-												<a href="#">
-													<span class="icon-level5"></span>
-													<span class="popup">
-														Level 5
-													</span>
-												</a>
-											</li>
-										</ul>
-									</footer>
-								</div>
-							</article>
-							<article class="col-sm-6 col-md-3 article">
-								<div class="thumbnail">
-									<h3 class="no-space"><a href="#">Everest Basecamp Trek</a></h3>
-									<strong class="info-title">Everest Region, Nepal</strong>
-									<div class="img-wrap">
-										<img src="img/listing/img-33.jpg" height="210" width="250" alt="image description">
-									</div>
-									<footer>
-										<div class="sub-info">
-											<span>5 Days</span>
-											<span>$299</span>
-										</div>
-										<ul class="ico-list">
-											<li class="pop-opener">
-												<a href="#">
-													<span class="icon-hiking"></span>
-													<span class="popup">
-														Hiking
-													</span>
-												</a>
-											</li>
-											<li class="pop-opener">
-												<a href="#">
-													<span class="icon-mountain"></span>
-													<span class="popup">
-														Mountain
-													</span>
-												</a>
-											</li>
-											<li class="pop-opener">
-												<a href="#">
-													<span class="icon-level5"></span>
-													<span class="popup">
-														Level 5
-													</span>
-												</a>
-											</li>
-										</ul>
-									</footer>
-								</div>
-							</article>
-							<article class="col-sm-6 col-md-3 article">
-								<div class="thumbnail">
-									<h3 class="no-space"><a href="#">Everest Basecamp Trek</a></h3>
-									<strong class="info-title">Everest Region, Nepal</strong>
-									<div class="img-wrap">
-										<img src="img/listing/img-34.jpg" height="210" width="250" alt="image description">
-									</div>
-									<footer>
-										<div class="sub-info">
-											<span>5 Days</span>
-											<span>$299</span>
-										</div>
-										<ul class="ico-list">
-											<li class="pop-opener">
-												<a href="#">
-													<span class="icon-hiking"></span>
-													<span class="popup">
-														Hiking
-													</span>
-												</a>
-											</li>
-											<li class="pop-opener">
-												<a href="#">
-													<span class="icon-mountain"></span>
-													<span class="popup">
-														Mountain
-													</span>
-												</a>
-											</li>
-											<li class="pop-opener">
-												<a href="#">
-													<span class="icon-level5"></span>
-													<span class="popup">
-														Level 5
-													</span>
-												</a>
-											</li>
-										</ul>
-									</footer>
-								</div>
-							</article>
+							<?php
+							$sql = "SELECT * FROM `itinerary` GROUP BY itineraryCountry LIMIT 4";
+						$result = $db->query($sql);
+						//$mytable = $sql;
+						if ($result->num_rows > 0) {
+							// output data of each row
+								while($row = $result->fetch_assoc()) {
+										//echo $row['itinerary'],"------------------------<br>";
+										echo '<article class="col-sm-6 col-md-3 article">
+												<div class="thumbnail">
+													<h3 class="no-space"><a href="pacakages-detail.php"></a>'.$row['itineraryName'].'</h3>
+													<strong class="info-title">'.$row['itineraryCity'].','.$row['itineraryCountry'].'</strong>
+													<div class="img-wrap">
+														<img src="'.$row['itineraryImage'].'" height="200" width="200" alt="image description">
+													</div>
+													<footer>
+														<div class="sub-info">
+															<span>7 Days</span>
+															<span>$'.$row['totalPrice'].'</span>
+														</div>
+
+													</footer>
+												</div>
+											</article>';
+								}
+						}
+
+
+							 ?>
+
+
 						</div>
 					</div>
 				</aside>
