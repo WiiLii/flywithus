@@ -1,35 +1,5 @@
 <!DOCTYPE html>
 <html>
-    <?php
-    include "config.php";
-    $sqlgetSurvey = "SELECT * FROM results WHERE userID = 1 ORDER BY submissionTime DESC LIMIT 1";
-
-
-    $result = $db->query($sqlgetSurvey);
-    if ($result->num_rows > 0) {
-        while ($row = $result->fetch_assoc()) {
-            $age = $row['age']; #'>50'
-            $relationship = $row['relationship']; # married
-            $travelGroup = $row['travelGroup']; #'Solo'
-            $groupDesc = $row['groupDesc']; #'Romantic'
-            if ($groupDesc == "Romantic") {
-                $groupDesc = "Romance";
-            }
-  
-
-            $season = $row['season']; # 'Winter'
-            $activity = $row['activity']; #'Shopping'
-            $days = $row['days']; #7
-            $budget = $row['budget']; #'$400 to $499'
-            $accomodation = $row['accomodation']; # no
-        }
-    }
-    $itineraryDays = $days-2;
-    $itineraryCountry = "Thailand"; # because of weather? O.o
-    $sqlgetPrice = "SELECT SUM(itineraryPrice) FROM itinerary WHERE itineraryCountry = '$itineraryCountry'AND itineraryType = '$groupDesc' LIMIT $itineraryDays;";
-    $sqlitineraryOverview = "SELECT * FROM itinerary WHERE itineraryCountry = '$itineraryCountry' AND itineraryType = '$groupDesc' LIMIT 1";
-    $sqlGetItineraryDays = "SELECT * FROM itinerary WHERE itineraryCountry = '$itineraryCountry' AND itineraryType = '$groupDesc'LIMIT $itineraryDays";
-    ?>
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -63,9 +33,80 @@
         <div id="wrapper">
             <div class="page-wrapper">
                 <!-- main header -->
-                <?php include 'header.php'; ?>
+                <?php
+                include 'header.php';
+                include "config.php";
+                session_start();
+                if (!isset($_SESSION['email'])) {
+                    echo "<script>alert('Please log in to access the survey.')</script>";
+                    header('Location:login.php');
+                } else {
+                    
+                }
+                $session_email = $_SESSION['email'];
+                $sqlgetUserID = "SELECT userID FROM useraccount WHERE email = '$session_email'";
+                $result = $db->query($sqlgetUserID);
+                if ($result->num_rows > 0) {
+                    while ($row = $result->fetch_assoc()) {
+                        $user_id = $row["userID"];
+                    }
+                }
+                global $user_id;
+                $sqlgetSurvey = "SELECT * FROM results WHERE userID = $user_id ORDER BY submissionTime DESC LIMIT 1";
+                $result = $db->query($sqlgetSurvey);
+                if ($result->num_rows > 0) {
+                    while ($row = $result->fetch_assoc()) {
+                        $age = $row['age']; #'>50'
+                        $relationship = $row['relationship']; # married
+                        $travelGroup = $row['travelGroup']; #'Solo'
+                        $groupDesc = $row['groupDesc']; #'Romantic'
+                        if ($groupDesc == "Romantic") {
+                            $groupDesc = "test";
+                        }
+                        $season = $row['season']; # 'Winter'
+                        $activity = $row['activity']; #'Shopping'
+                        $days = $row['days']; #7
+                        $budget = $row['budget']; #'$400 to $499'   
+                        $accomodation = $row['accomodation']; # no
+                    }
+                }
+                $itineraryDays = $days - 2;
+
+                $itineraryCountries = ["Thailand", "China", "Korea", "Japan"];
+                $success = true;
+                $arr = 0;
+                while ($success) {
+                    if ($arr == 4) {
+                        echo '<script>alert("Optimized Itinerary Not Found. Please take the survey again.")</script>';
+                        echo '<script>window.location = "survey.php";</script>';
+                        break;
+                    }
+                    $sqlsetCountry = "SELECT COUNT(itineraryCountry) FROM itinerary "
+                            . "WHERE itineraryCountry = '$itineraryCountries[$arr]' AND "
+                            . "itineraryType = '$groupDesc'LIMIT $itineraryDays";
+                    $result = $db->query($sqlsetCountry);
+                    if ($result->num_rows > 0) {
+                        while ($row = $result->fetch_assoc()) {
+                            $itineraryCheckDay = $row['COUNT(itineraryCountry)'];
+                           // echo '<script>alert("'.$itineraryCheckDay.'")</script>';
+                        }
+                    }
+                    echo '<script>alert("out, '.$itineraryCheckDay.', '.$itineraryDays.'")</script>';
+                    if ($itineraryCheckDay >= $itineraryDays) {
+                        $itineraryCountry = $itineraryCountries[$arr];
+                        break;
+                    } else {
+                        $arr += 1;
+                    }
+                  //  echo '<script>alert("this is $arr, '.$arr.'")</script>';
+                }
+                global $itineraryCountry;
+                $sqlgetPrice = "SELECT SUM(itineraryPrice) FROM itinerary WHERE itineraryCountry = '$itineraryCountry'AND itineraryType = '$groupDesc' LIMIT $itineraryDays;";
+                $sqlitineraryOverview = "SELECT * FROM itinerary WHERE itineraryCountry = '$itineraryCountry' AND itineraryType = '$groupDesc' LIMIT 1";
+                $sqlGetItineraryDays = "SELECT * FROM itinerary WHERE itineraryCountry = '$itineraryCountry' AND itineraryType = '$groupDesc'LIMIT $itineraryDays";
+                ?>
                 <!-- main container -->
-                <main id="main">
+                <main id="main" style="padding-top: 0px;">
                     <!-- main tour information -->
                     <section class="container-fluid trip-info">
                         <div class="same-height two-columns row">
@@ -75,12 +116,12 @@
                                 <div id="tour-slide">
                                     <div class="slide">
                                         <div class="bg-stretch">
-                                            <img src="img/countries/<?php echo $itineraryCountry?>/img-1.jpg" alt="image descriprion" height="1104" width="966">
+                                            <img src="img/countries/<?php echo $itineraryCountry ?>/img-1.jpg" alt="image descriprion" height="1104" width="966">
                                         </div>
                                     </div>
                                     <div class="slide">
                                         <div class="bg-stretch">
-                                            <img src="img/countries/<?php echo $itineraryCountry?>/img-2.jpg" alt="image descriprion" height="1104" width="966">
+                                            <img src="img/countries/<?php echo $itineraryCountry ?>/img-2.jpg" alt="image descriprion" height="1104" width="966">
                                         </div>
                                     </div>
                                 </div>
@@ -91,14 +132,14 @@
                                     <h1 class="small-size"><?php echo "$groupDesc in $itineraryCountry " ?> </h1>
                                     <div class="price">
                                         from <strong>$<?php
-                                            global $sqlgetPrice;
-                                            $result = $db->query($sqlgetPrice);
-                                            if ($result->num_rows > 0) {
-                                                while ($row = $result->fetch_assoc()) {
-                                                    echo $row['SUM(itineraryPrice)'];
-                                                }
-                                            }
-                                            ?></strong>
+                global $sqlgetPrice;
+                $result = $db->query($sqlgetPrice);
+                if ($result->num_rows > 0) {
+                    while ($row = $result->fetch_assoc()) {
+                        echo $row['SUM(itineraryPrice)'];
+                    }
+                }
+                ?></strong>
                                     </div>
                                     <div class="btn-holder">
                                         <a href="#" class="btn btn-lg btn-info">BOOK NOW</a>
@@ -122,7 +163,7 @@
                                         </li>
                                     </ul>
                                 </div>
-                                 <div style="padding: 10px;"></div>
+                                <div style="padding: 10px;"></div>
                             </div>
                         </div>
                     </section>
@@ -148,15 +189,15 @@
 
                                         <strong class="header-box" style="font-size: 200%;">All about <?php echo $itineraryCountry; ?></strong>
                                         <div class="detail">
-                                            <?php
-                                            global $sqlitineraryOverview;
-                                            $result = $db->query($sqlitineraryOverview);
-                                            if ($result->num_rows > 0) {
-                                                while ($row = $result->fetch_assoc()) {
-                                                    echo '<p>' . $row["itineraryOverview"] . '</p>';
-                                                }
-                                            }
-                                            ?>
+<?php
+global $sqlitineraryOverview;
+$result = $db->query($sqlitineraryOverview);
+if ($result->num_rows > 0) {
+    while ($row = $result->fetch_assoc()) {
+        echo '<p>' . $row["itineraryOverview"] . '</p>';
+    }
+}
+?>
                                         </div>
                                     </div>
 
@@ -179,21 +220,28 @@
                                                 </div>
                                             </li>
 
-                                            <?php
-                                            global $sqlGetItineraryDays;
-                                            $result = $db->query($sqlGetItineraryDays);
-                                            if ($result->num_rows > 0) {
-                                                $counter = 0;
-                                                while ($row = $result->fetch_assoc()) {
-                                                    if ($counter < $itineraryDays) {
-                                                        echo '<li><a href=""><strong class="title">Day ' . ($counter + 2) . '</strong><span>' . $row['itineraryName'] . '</span></a><div class="slide"><div class="slide-holder"><p>' . $row['itineraryDesc'] . '</p></div></div>';
-                                                        $counter += 1;
-                                                    } else {
-                                                        break;
-                                                    }
-                                                }
-                                            }
-                                            ?>
+<?php
+global $sqlGetItineraryDays;
+$result = $db->query($sqlGetItineraryDays);
+if ($result->num_rows > 0) {
+    $counter = 0;
+    $dayscounter = 0;
+    while ($row = $result->fetch_assoc()) {
+
+        if ($counter < $itineraryDays) {
+            echo '<li><a href=""><strong class="title">Day ' . ($counter + 2) . '</strong><span>' . $row['itineraryName'] . '</span></a><div class="slide"><div class="slide-holder"><p>' . $row['itineraryDesc'] . '</p></div></div>';
+            $counter += 1;
+        } else {
+            break;
+        }
+        $dayscounter += 1;
+    }
+    if ($dayscounter != $itineraryDays) {
+        echo '<script>alert("Found ' . $dayscounter . ' out of ' . $itineraryDays . ' days. Optimized Itinerary Not Found. Please take the survey again.")</script>';
+        header("location:survey.php");
+    }
+}
+?>
 
 
                                             <li>
@@ -451,43 +499,43 @@
                             <!-- gallery tab content -->
                             <div role="tabpanel" class="tab-pane" id="tab03">
                                 <ul class="row gallery-list has-center">
-                                     <?php
-                                    include_once('./simplehtmldom_1_9_1/simple_html_dom.php');
-                                    $result = $db->query($sqlGetItineraryDays);
-                                    if ($result->num_rows > 0) {
-                                        while ($row = $result->fetch_assoc()) {
-                                            $src = "";
-                                            $word = "'" . $row['itineraryName'] . "'";
-                                            $search_keyword = str_replace(' ', '+', $word);
-                                           // echo '<script>alert("'.$search_keyword.'")</script>';
-                                            $newhtml = file_get_html("https://www.google.com/search?q=" . $search_keyword . "&tbm=isch&hl=en&tbs=isz:l");
-                                            try {
-                                                $result_image_source = $newhtml->find('img', 1)->src ?? "no records";
-                                            } catch (Exception $e) {
-
-                                            }
-                                            //echo "$result_image_source";
-                                            if ($result_image_source != "no records") {
-                                                $src = $result_image_source;
-                                                echo ' <li>
-                                        <a class="fancybox" data-fancybox-group="group" href="'. $src .'" target="_blank" title="Caption Goes Here">
+<?php
+include_once('./simplehtmldom_1_9_1/simple_html_dom.php');
+$result = $db->query($sqlGetItineraryDays);
+if ($result->num_rows > 0) {
+    while ($row = $result->fetch_assoc()) {
+        $src = "";
+        $word = "'" . $row['itineraryName'] . "'";
+        $search_keyword = str_replace(' ', '+', $word);
+        // echo '<script>alert("'.$search_keyword.'")</script>';
+        $newhtml = file_get_html("https://www.google.com/search?q=" . $search_keyword . "&tbm=isch&hl=en&tbs=isz:l");
+        try {
+            $result_image_source = $newhtml->find('img', 1)->src ?? "no records";
+        } catch (Exception $e) {
+            
+        }
+        //echo "$result_image_source";
+        if ($result_image_source != "no records") {
+            $src = $result_image_source;
+            echo ' <li>
+                                        <a class="fancybox" data-fancybox-group="group" href="' . $src . '" target="_blank" title="Caption Goes Here">
                                             <span class="img-holder">
-                                                <img src="'. $src .'" height="500" width="450" alt="image description">
+                                                <img src="' . $src . '" height="500" width="450" alt="image description">
                                             </span>
                                             <span class="caption">
                                                 <span class="centered">
-                                                    <strong class="title">'. $row['itineraryName'] .'</strong>
-                                                    <span class="sub-text">'. $row['itineraryType'] .'</span>
+                                                    <strong class="title">' . $row['itineraryName'] . '</strong>
+                                                    <span class="sub-text">' . $row['itineraryType'] . '</span>
                                                 </span>
                                             </span>
                                         </a>
                                     </li>';
-                                            } else {
-
-                                            }
-                                        }
-                                    }
-                                    ?>
+        } else {
+            
+        }
+    }
+}
+?>
 
 
                                 </ul>
@@ -626,7 +674,7 @@
                 </main>
             </div>
             <!-- main footer -->
-            <?php include 'footer.php'; ?>
+<?php include 'footer.php'; ?>
         </div>
         <!-- scroll to top -->
         <div class="scroll-holder text-center">
