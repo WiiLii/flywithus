@@ -349,17 +349,18 @@ function generateSurveyForm()
         generateQnAForm( $row[ 1 ], $row[ 2 ], $questionIndex );
         $questionIndex++;
     }
-    //echo '<input type="hidden" value="' . $spiceID . '" name="spiceID">';
     echo '<input type="hidden" value="' . ( $questionIndex - 1 ) . '" name="qnsCount">';
     echo '</div>
-          <button class="btn btn-info btn-lg pull-right" data-target="#myModal" data-toggle="modal" type="button">Submit</button>
+          <div class="text-center">
+          <button id="submitBtn" class="btn btn-info btn-lg" data-target="#myModal" data-toggle="modal" type="button">Submit</button>
+          </div>
           <div class="clearfix"></div>
           <div class="modal fade" id="myModal" role="dialog">
           <div class="modal-dialog modal-lg">
           <div class="modal-content">
           <div class="modal-header">
           <div class="bold">
-          <h4 class="modal-title">Aww yeah! <span class="glyphicon glyphicon-heart"></span></h4>
+          <h2 class="modal-title">Aww yeah! <span class="glyphicon glyphicon-heart"></span></h2>
           </div>
           </div>
           <div class="modal-body">
