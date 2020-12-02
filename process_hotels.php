@@ -51,11 +51,14 @@ for ($i=0; $i <count($country_arr); $i++) {
               <span class="icon-world"> </span>'.$row['pCity'].'
             </span>
             <span class="activity">
-              <span class="icon-acitivities"> </span>3 Rooms
+              <span class="icon-acitivities"> </span>'.$row['room'].'
             </span>
           </aside>
-          <a href="my-info.php" class="btn btn-default" value="'.$row["hotelName"].'"> Details</a>
+          <form class="" action="my-info.php" method="post">
+          <button type="submit" class="btn btn-default" name="getHotel" value="'.$row["hotelName"].'"> Details</button>
+              </form>
           <footer>
+
             <span class="price">Only at <span>$'.$row['price'].'</span></span>
           </footer>
         </div>

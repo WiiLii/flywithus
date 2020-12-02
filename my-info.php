@@ -1,7 +1,38 @@
+<?php
+include "config.php";
+$hotelinfo=$hotelImg=$hotelsName="";
+$price=$rm1=$rm2=$rm3=$country=$room=$pCity=array();
+if (isset($_POST['getHotel'])) {
+$hotelsName = $_POST['getHotel'];
+//echo $hotelsName;
+$sql= "SELECT * FROM hotels where hotelName = '$hotelsName'" ;
+$result = $db->query($sql);
+
+if ($result->num_rows > 0) {
+  // output data of each row
+  while($row = $result->fetch_assoc()) {
+      $hotelImg=$row['image'];
+      $hotelinfo=$row['hotelInfo'];
+      $room[]= $row['room'];
+      $country[]=$row['country'];
+      $pCity[]= $row['pCity'];
+      $price[]= $row['price'];
+      $rm1[]= $row['rm1'];
+      $rm2[]= $row['rm2'];
+      $rm3[]= $row['rm3'];
+
+  }
+}
+//exit;
+}
+//var_dump($items_arr);
+
+ ?>
+
 <!DOCTYPE html>
 <html>
 
- 
+
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -37,9 +68,11 @@
 				<div class="content-block content-sub">
 					<div class="container">
                     <center><div class="content-block content-sub">
-					<img src="img/listing/img-03.jpg" alt="country image">
+                      <?php
+
+				echo'<img src="img/hotels/'.$hotelImg.'.jpg" alt="country image">';?>
                     </center>
-                    <h2>*Hotel Name Here*</h2>
+                    <h2><?php echo $hotelsName; ?></h2>
 						<!-- list view -->
 						<div class="content-holder list-view">
                             <article class="article">
@@ -47,17 +80,17 @@
                                             <header class="heading">
                                                 <h2>About Hotel</h2>
                                             </header>
-                                            <p>Generate Hotel Info hereGenerate Hotel Info hereGenerate Hotel Info hereGenerate Hotel Info hereGenerate Hotel Info hereGenerate Hotel Info hereGenerate Hotel Info hereGenerate Hotel Info hereGenerate Hotel Info hereGenerate Hotel Info hereGenerate Hotel Info hereGenerate Hotel Info hereGenerate Hotel Info hereGenerate Hotel Info hereGenerate Hotel Info hereGenerate Hotel Info hereGenerate Hotel Info hereGenerate Hotel Info hereGenerate Hotel Info hereGenerate Hotel Info hereGenerate Hotel Info hereGenerate Hotel Info hereGenerate Hotel Info hereGenerate Hotel Info hereGenerate Hotel Info hereGenerate Hotel Info hereGenerate Hotel Info hereGenerate Hotel Info hereGenerate Hotel Info hereGenerate Hotel Info hereGenerate Hotel Info hereGenerate Hotel Info hereGenerate Hotel Info hereGenerate Hotel Info hereGenerate Hotel Info hereGenerate Hotel Info hereGenerate Hotel Info hereGenerate Hotel Info hereGenerate Hotel Info hereGenerate Hotel Info hereGenerate Hotel Info hereGenerate Hotel Info hereGenerate Hotel Info hereGenerate Hotel Info hereGenerate Hotel Info hereGenerate Hotel Info hereGenerate Hotel Info hereGenerate Hotel Info hereGenerate Hotel Info hereGenerate Hotel Info hereGenerate Hotel Info hereGenerate Hotel Info hereGenerate Hotel Info hereGenerate Hotel Info hereGenerate Hotel Info here</p>
+                                            <p><?php echo $hotelinfo; ?></p>
                                 </div>
                             </article>
                         </div>
                         <div class="content-holder list-view">
                             <article class="article">
-                                <div class="container">                        
+                                <div class="container">
                                     <header class="heading">
                                         <h2>Amenities</h2>
                                     </header>
-												
+
 											<div class=col>
 												<div>
 													<h4><span>&#10003; Airport Transit</span></h4>
@@ -73,7 +106,7 @@
 													<h4><span>&#10003; Gym</span></h4>
 													<h4><span>&#10003; Swimming Pool</span></h4>
 												</div>
-											</div>	
+											</div>
 											<div class=col>
 												<div>
 													<h4><span>&#10003; Wifi</span></h4>
@@ -98,9 +131,9 @@
 													<h3><span>&#10003; Heater</span></h3>
 												</div>
 											</div>
-																												
+
                                 </div>
-								
+
                             </article>
                         </div>
                             <div role="tabpanel" class="tab-pane" id="tab06">
@@ -128,15 +161,26 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <td><div class="cell"><div class="middle">Load Image</div></div></td>
-                                            <td><div class="cell"><div class="middle">Japan, Tokyo</div></div></td>
-                                            <td><div class="cell"><div class="middle">Double</div></div></td>
-                                            <td><div class="cell"><div class="middle">$3,970</div></div></td>
-                                            <td><div class="cell"><div class="middle">
-											<a href="#" class="btn btn-default">Add to Cart</a>
-										    </div></div></td>
-                                        </tr>
+
+                                        <?php
+                                          for ($i=0; $i <count($room) ; $i++) {
+                                            echo '<tr>';
+                                            if ($i == 0) {
+                                            echo'<td><img src="img/hotels/'.$rm1[$i].'.jpg" alt="country image"></td>';
+                                          }else if ($i == 1){
+                                            echo'<td><img src="img/hotels/'.$rm1[$i].'.jpg" alt="country image"></td>';
+                                          }
+                                          else {
+                                            echo'<td><img src="img/hotels/'.$rm1[$i].'.jpg" alt="country image"></td>';
+                                          }
+                                          echo '<td><div class="cell"><div class="middle">'.$country[$i].', '.$pCity[$i].'</div></div></td>';
+                                          echo '<td><div class="cell"><div class="middle">'.$room[$i].'</div></div></td>';
+                                          echo '<td><div class="cell"><div class="middle">$'.$price[$i].'</div></div></td>';
+                                          echo '<td><div class="cell"><div class="middle"><a href="my-bookings.php" class="btn btn-default">Add to Cart</a> </div></div></td>';
+
+                                            echo '<tr>';
+                                          }
+                                         ?>
                                 </table>
                             </div>
 					</div>
@@ -177,5 +221,5 @@
 	<script src="js/jquery.main.js"></script>
 </body>
 
- 
+
 </html>

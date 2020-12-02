@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Addictive Immersive Innovative - Software Methodology</title>
+
+  <!-- Custom fonts for this template-->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+
+  <link href="css/skilltree.css" rel="stylesheet">
+  <!-- Custom styles for this template-->
+  <link href="css/sb-admin-2.min.css" rel="stylesheet">
+
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.js" type="text/javascript"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js" type="text/javascript"></script>
+  <script src="js/tables.js"></script>
+  <script src="js/skilltree.js" type="text/javascript"></script>
+</head>
+
+<body id="page-top">
+
+  <!-- Page Wrapper -->
+  <div id="wrapper">
+
+    <!-- Sidebar -->
+    <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+      <!-- Sidebar - Brand -->
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+        <div class="sidebar-brand-icon rotate-n-15">
+          <i class="fas fa-laugh-wink"></i>
+        </div>
+        <div class="sidebar-brand-text mx-3">Addictive <br/> Immersive <br/> Innovative </div>
+      </a>
+
+      <!-- Divider -->
+      <hr class="sidebar-divider my-0">
+
+      <!-- Nav Item - Dashboard -->
+      <li class="nav-item">
+        <a class="nav-link" href="index.html">
+          <i class="fas fa-fw fa-tachometer-alt"></i>
+          <span>Dashboard</span></a>
+      </li>
+
+      <!-- Divider -->
+      <hr class="sidebar-divider">
+
+      <!-- Heading -->
+      <div class="sidebar-heading">
+        Interface
+      </div>
+
+      <!-- Nav Item - Pages Collapse Menu -->
+      <li class="nav-item" id="navbarModule">
+        <a class="nav-link" href="module.html" >
+          <i class="fas fa-fw fa-folder"></i>
+          <span>Module</span>
+        </a>
+      </li>
+
+      <li class="nav-item" id="navbarClasslist">
+        <a class="nav-link" href="classlist.html">
+          <i class="fas fa-fw fa-folder"></i>
+          <span>Classlist</span>
+        </a>
+      </li>
+
+
+
+      <li class="nav-item active">
+        <a class="nav-link" href="feedback.html">
+          <i class="fas fa-gamepad"></i>
+          <span>Feedback</span>
+        </a>
+      </li>
+
+      <!-- Divider -->
+      <hr class="sidebar-divider d-none d-md-block">
+
+      <!-- Sidebar Toggler (Sidebar) -->
+      <div class="text-center d-none d-md-inline">
+        <button class="rounded-circle border-0" id="sidebarToggle"></button>
+      </div>
+
+    </ul>
+    <!-- End of Sidebar -->
+
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+
+      <!-- Main Content -->
+      <div id="content">
+
+        <!-- Topbar -->
+        <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+          <!-- Sidebar Toggle (Topbar) -->
+          <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+            <i class="fa fa-bars"></i>
+          </button>
+
+
+
+          <!-- Topbar Navbar -->
+          <ul class="navbar-nav ml-auto">
+
+            <div class="topbar-divider d-none d-sm-block"></div>
+
+            <!-- Nav Item - User Information -->
+            <li class="nav-item dropdown no-arrow">
+              <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <div id="emailAddress">
+                  <span class="mr-2 d-none d-lg-inline text-gray-600 small" id="headerName"></span>
+                </div>
+                <img class="img-profile rounded-circle" src="https://source.unsplash.com/QAB-WJcbgJk/60x60">
+              </a>
+              <!-- Dropdown - User Information -->
+              <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+
+                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                  <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                  Logout
+                </a>
+              </div>
+            </li>
+
+          </ul>
+
+        </nav>
+        <!-- End of Topbar -->
+
+        <!-- Begin Page Content -->
+        <div class="container-fluid">
+
+          <div class="skill-tree-wrap" id="skillTree">
+                <div class="container">
+                  <div class="row">
+                    <div class="col col-4 col-title">
+                      <section>
+                        <h1 class="title">GAMER'S COMPANION SKILL TREE</h1><span class="rank">CURRENT RANK</span>
+                        <h2 class="rank-name"> <span>AMATEUR GAMER </span></h2>
+                      </section>
+                      <section>
+                        <div class="spaceship"><img src="https://as2.ftcdn.net/jpg/00/96/19/97/500_F_96199749_kMuvWXhiCb4K8iKuQ7PsJMrmFQCq8Tcj.jpg" srcset="https://images2.imgbox.com/99/46/EW7ZyTWM_o.png 2x" alt="飛船 - 初級" style="width:90%;"/></div>
+                        <div class="introduction">
+                          <canvas id="cvs"></canvas>
+                          <div class="text">Welcome aboard. Your mission is：<br/><span>Complete the journey and master your skills to become the best gamer </span><br/>Good luck, gamer！</div>
+                        </div>
+                      </section>
+                    </div>
+                    <div class="col col-4 col-skill-tree">
+                      <section class="skill-level" id="basics">
+                        <div class="skill-image">
+                          <figure><img src="https://cdn.iconscout.com/icon/premium/png-256-thumb/quiz-2288912-1908771.png" srcset="https://images2.imgbox.com/c6/fb/EFanB30d_o.png 2x" alt="javascript" /></figure>
+                          <div class="arrow"></div>
+                        </div>
+                        <div class="skill-area">
+                          <div class="skill" v-for="skill in getBasics" v-bind:id="skill.sid">
+                            <div class="skill-icon" v-on:click="clickSkillIcon"><i class="material-icons">{{ skill.icon }}</i></div>
+                            <div class="skill-compeleted-num" id="recommended"><span class="compeleted-num">{{skill.name}}</span></div>
+
+                          </div>
+                        </div>
+                      </section>
+                      <section class="skill-level" id="css">
+                        <div class="skill-image">
+                          <figure><img src="https://cdn.iconscout.com/icon/premium/png-256-thumb/project-1690566-1486635.png" srcset="https://images2.imgbox.com/c6/fb/EFanB30d_o.png 2x" alt="javascript" /></figure>
+                          <div class="arrow"></div>
+                        </div>
+                        <div class="skill-area">
+                          <div class="skill" v-for="skill in getCss" v-bind:id="skill.sid">
+                            <div class="skill-icon" v-on:click="clickSkillIcon"><i class="material-icons">{{ skill.icon }}</i></div>
+                            <div class="skill-compeleted-num" id="recommended"><span class="compeleted-num">{{ skill.name }}</span></div>
+
+                        </div>
+                      </section>
+                      <section class="skill-level" id="javascript">
+                        <div class="skill-image">
+                          <figure><img src="https://cdn.iconscout.com/icon/free/png-256/lab-room-board-school-nameplate-plate-study-1-21289.png" srcset="https://images2.imgbox.com/c6/fb/EFanB30d_o.png 2x" alt="javascript" /></figure>
+                          <div class="arrow"></div>
+                        </div>
+                         <div class="skill-area">
+                          <div class="skill" v-for="skill in getJavascript" v-bind:id="skill.sid">
+                            <div class="skill-icon" v-on:click="clickSkillIcon"><i class="material-icons">{{ skill.icon }}</i></div>
+                            <div class="skill-compeleted-num" id="recommended"><span class="compeleted-num">{{ skill.name }}</span></div>
+
+                          </div>
+                        </div>
+                      </section>
+
+                    </div>
+                    <div class="col col-4">
+                      <div class="skill-description" v-bind:id="description.id">
+                        <div class="skill-title">
+                          <div class="icon"><i class="material-icons">{{description.icon}}</i></div>
+                          <h2 class="name">{{description.name}}</h2>
+                        </div>
+
+          <div class="skill-content">
+                          <div class="skills-list recommended" v-if="description.recommendedLength">
+                            <i class="material-icons">settings</i>
+                            <h3>Questions</h3>
+                            <ul>
+                              <li v-for="skill in description.recommended" v-on:click="learning">
+                                <a href="javascript:;">{{skill}}</a>
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="skills-list optional" v-if="description.optionalLength">
+                            <i class="material-icons">filter_tilt_shift</i>
+                            <h3>OPTIONAL</h3>
+                            <ul>
+                              <li v-for="skill in description.optional" v-on:click="optionalLearning">
+                                <a href="javascript:;">{{skill}}</a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+      </div>
+      <!-- End of Main Content -->
+
+      <!-- Footer -->
+      <footer class="sticky-footer bg-white">
+        <div class="container my-auto">
+          <div class="copyright text-center my-auto">
+            <span>Copyright &copy; Addictive Immersive Innovative </span>
+          </div>
+        </div>
+      </footer>
+      <!-- End of Footer -->
+
+    </div>
+    <!-- End of Content Wrapper -->
+
+  </div>
+  <!-- End of Page Wrapper -->
+
+  <!-- Scroll to Top Button-->
+  <a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+  </a>
+
+  <!-- Logout Modal-->
+  <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+          <a class="btn btn-primary" href="login_v1.html">Logout</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap core JavaScript-->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Core plugin JavaScript-->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom scripts for all pages-->
+  <script src="js/sb-admin-2.min.js"></script>
+
+</body>
+
+</html>
