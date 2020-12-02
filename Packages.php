@@ -146,75 +146,47 @@
 
 					</div>
 				</div>
+        <?php
+        include "config.php";
+
+
+
+         ?>
 				<!-- recent block -->
 				<aside class="recent-block recent-list recent-wide-thumbnail">
 					<div class="container">
 						<h2 class="text-center text-uppercase">RECENTLY VIEWED</h2>
 						<div class="row">
-							<article class="col-sm-6 col-md-3 article">
-								<div class="thumbnail">
-									<h3 class="no-space"><a href="#">Everest Basecamp Trek</a></h3>
-									<strong class="info-title">Everest Region, Nepal</strong>
-									<div class="img-wrap">
-										<img src="img/listing/img-31.jpg" height="210" width="250" alt="image description">
-									</div>
-									<footer>
-										<div class="sub-info">
-											<span>5 Days</span>
-											<span>$299</span>
-										</div>
+                  <?php
+                  $sql = "SELECT * FROM `itinerary` GROUP BY itineraryCountry LIMIT 4";
+                $result = $db->query($sql);
+                //$mytable = $sql;
+                if ($result->num_rows > 0) {
+                  // output data of each row
+                    while($row = $result->fetch_assoc()) {
+                        //echo $row['itinerary'],"------------------------<br>";
+                        echo '<article class="col-sm-6 col-md-3 article">
+            								<div class="thumbnail">
+            									<h3 class="no-space"><a href="pacakages-detail.php"></a>'.$row['itineraryName'].'</h3>
+            									<strong class="info-title">'.$row['itineraryCity'].','.$row['itineraryCountry'].'</strong>
+            									<div class="img-wrap">
+            										<img src="'.$row['itineraryImage'].'" height="200" width="200" alt="image description">
+            									</div>
+            									<footer>
+            										<div class="sub-info">
+            											<span>7 Days</span>
+            											<span>$'.$row['totalPrice'].'</span>
+            										</div>
 
-									</footer>
-								</div>
-							</article>
-							<article class="col-sm-6 col-md-3 article">
-								<div class="thumbnail">
-									<h3 class="no-space"><a href="#">Everest Basecamp Trek</a></h3>
-									<strong class="info-title">Everest Region, Nepal</strong>
-									<div class="img-wrap">
-										<img src="img/listing/img-32.jpg" height="210" width="250" alt="image description">
-									</div>
-									<footer>
-										<div class="sub-info">
-											<span>5 Days</span>
-											<span>$299</span>
-										</div>
+            									</footer>
+            								</div>
+            							</article>';
+                    }
+                }
 
-									</footer>
-								</div>
-							</article>
-							<article class="col-sm-6 col-md-3 article">
-								<div class="thumbnail">
-									<h3 class="no-space"><a href="#">Everest Basecamp Trek</a></h3>
-									<strong class="info-title">Everest Region, Nepal</strong>
-									<div class="img-wrap">
-										<img src="img/listing/img-33.jpg" height="210" width="250" alt="image description">
-									</div>
-									<footer>
-										<div class="sub-info">
-											<span>5 Days</span>
-											<span>$299</span>
-										</div>
 
-									</footer>
-								</div>
-							</article>
-							<article class="col-sm-6 col-md-3 article">
-								<div class="thumbnail">
-									<h3 class="no-space"><a href="#">Everest Basecamp Trek</a></h3>
-									<strong class="info-title">Everest Region, Nepal</strong>
-									<div class="img-wrap">
-										<img src="img/listing/img-34.jpg" height="210" width="250" alt="image description">
-									</div>
-									<footer>
-										<div class="sub-info">
-											<span>5 Days</span>
-											<span>$299</span>
-										</div>
+                   ?>
 
-									</footer>
-								</div>
-							</article>
 						</div>
 					</div>
 				</aside>

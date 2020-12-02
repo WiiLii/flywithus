@@ -86,7 +86,7 @@ if ($result->num_rows > 0) {
   $mytable[]='<article class="article">
     <div class="thumbnail">
         <div class="img-wrap">
-          <img src="img/listing/img-35.jpg" height="240" width="350" alt="image description">
+          <img src="'.$row['itineraryImage'].'" height="240" width="350" alt="image description">
         </div>
         <div class="description">
           <div class="col-left">

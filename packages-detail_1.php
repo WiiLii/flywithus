@@ -15,10 +15,12 @@
             if ($groupDesc == "Romantic") {
                 $groupDesc = "Romance";
             }
+  
+
             $season = $row['season']; # 'Winter'
             $activity = $row['activity']; #'Shopping'
             $days = $row['days']; #7
-            $budget = $row['budget']; #'$400 to $499'   
+            $budget = $row['budget']; #'$400 to $499'
             $accomodation = $row['accomodation']; # no
         }
     }
@@ -462,7 +464,7 @@
                                             try {
                                                 $result_image_source = $newhtml->find('img', 1)->src ?? "no records";
                                             } catch (Exception $e) {
-                                                
+
                                             }
                                             //echo "$result_image_source";
                                             if ($result_image_source != "no records") {
@@ -481,13 +483,13 @@
                                         </a>
                                     </li>';
                                             } else {
-                                                
+
                                             }
                                         }
                                     }
                                     ?>
-                                    
-                                   
+
+
                                 </ul>
                             </div>
                             <!-- dates and prices tab content -->
