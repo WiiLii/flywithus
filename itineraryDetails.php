@@ -60,9 +60,6 @@
                         $relationship = $row['relationship']; # married
                         $travelGroup = $row['travelGroup']; #'Solo'
                         $groupDesc = $row['groupDesc']; #'Romantic'
-                        if ($groupDesc == "Romantic") {
-                            $groupDesc = "test";
-                        }
                         $season = $row['season']; # 'Winter'
                         $activity = $row['activity']; #'Shopping'
                         $days = $row['days']; #7
